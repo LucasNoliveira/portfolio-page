@@ -70,7 +70,8 @@ const HeroSection: FC = () => {
                         >
                             <FaComments className="mr-2" /> {/* Ícone de telefone com margem à direita */}
                             {translations.getInTouch}
-                        </a>                        <a
+                        </a>
+                        <a
                             href="/path-to-your-resume.pdf" // Substitua pelo caminho do seu currículo
                             download
                             className="inline-flex items-center bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-gray-700 transition duration-300"
