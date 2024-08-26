@@ -6,6 +6,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql, SiJavascript, SiDocker, SiJest, SiPython, SiKubernetes, SiIcloud } from 'react-icons/si';
 import { FaDownload, FaComments } from 'react-icons/fa';
+import Popup from "./Popup.tsx";
 
 const skillIcons = {
     React: <FaReact className="h-6 w-6 text-blue-600" />,
@@ -32,8 +33,17 @@ const allSkills = [
 const HeroSection: FC = () => {
     const { translations } = useLanguage();
     const [showAll, setShowAll] = useState(false);
+    const [isPopupVisible, setIsPopupVisible] = useState(false);
 
     const displayedSkills = showAll ? allSkills : allSkills.slice(0, 6);
+
+    const handleGetInTouchButtonClick = () => {
+        setIsPopupVisible(true);
+    };
+
+    const closeGetInTouchPopup = () => {
+        setIsPopupVisible(false);
+    };
 
     return (
         <section className="bg-gray-100 py-20">
@@ -65,12 +75,15 @@ const HeroSection: FC = () => {
                     {/* Botões abaixo da imagem */}
                     <div className="flex flex-col md:flex-row mt-8 gap-4">
                         <a
-                            href="#contact"
+                            href="#"
+                            onClick={handleGetInTouchButtonClick}
                             className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300"
                         >
-                            <FaComments className="mr-2" /> {/* Ícone de telefone com margem à direita */}
+                            <FaComments className="mr-2" />
                             {translations.getInTouch}
                         </a>
+
+                        {isPopupVisible && <Popup onClose={closeGetInTouchPopup} />}
                         <a
                             href="/path-to-your-resume.pdf" // Substitua pelo caminho do seu currículo
                             download
