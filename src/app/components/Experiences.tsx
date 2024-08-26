@@ -10,7 +10,7 @@ import { useRef } from 'react';
 const ExperienceSection: FC = () => {
     const { translations } = useLanguage();
     const ref = useRef(null);
-    const isInView = useInView(ref, { amount: 0.5, once: false }); // Aqui usamos "amount"
+    const isInView = useInView(ref, { amount: 0.4, once: true }); // Aqui usamos "amount"
 
     return (
         <section ref={ref} className="bg-gray-50 py-20" id='experiences'>
