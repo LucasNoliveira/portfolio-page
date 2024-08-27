@@ -9,7 +9,7 @@ export const es = {
   experience: "Experiencia",
   showMore: "Mostrar Más",
   showLess: "Mostrar Menos",
-
+  professionalBackground: "Trayectoria Profesional",
   experiences: [
     {
       company: 'Tech Innovators',
@@ -26,4 +26,51 @@ export const es = {
       description: 'Desarrollé aplicaciones web responsivas y optimicé interfaces de usuario utilizando Tailwind CSS y TypeScript.',
     },
   ],
+  services: [
+    {
+      title: "Desarrollo Web",
+      description: "Construcción de sitios web modernos y responsivos utilizando las últimas tecnologías web.",
+      icon: "development",
+    },
+    {
+      title: "Diseño UI/UX",
+      description: "Creación de interfaces intuitivas y hermosas que brindan una experiencia de usuario perfecta.",
+      icon: "design",
+    },
+    {
+      title: "Desarrollo Móvil",
+      description: "Creación de aplicaciones móviles multiplataforma con React Native.",
+      icon: "mobile",
+    },
+    {
+      title: "Desarrollo Backend",
+      description: "Desarrollo de sistemas backend robustos y escalables con Node.js, Python y más.",
+      icon: "database",
+    },
+  ],
+  servicesTitle: "Servicios",
+  servicesSubtitle: "Qué Puedo Hacer Por Ti",
+  learnMore: "Aprende Más",
+  projectsList: [
+    {
+      title: 'Sitio Web de Portafolio',
+      shortDescription: 'Un sitio web de portafolio personal para mostrar mis habilidades, proyectos y experiencia.',
+      image: '/portfolio-website.png',
+      link: 'https://www.myportfolio.com',
+    },
+    {
+      title: 'Plataforma de Comercio Electrónico',
+      shortDescription: 'Una plataforma avanzada de comercio electrónico con integración de pagos, carrito de compras y autenticación de usuarios.',
+      image: '/ecommerce-platform.png',
+      link: 'https://www.ecommerceplatform.com',
+    },
+    {
+      title: 'App de Gestión de Tareas',
+      shortDescription: 'Una aplicación de gestión de tareas para ayudar a los equipos a organizar su trabajo y mejorar la productividad.',
+      image: '/task-management-app.png',
+      link: 'https://www.taskmanagementapp.com',
+    },
+  ],
+  viewProject: "Ver Proyecto",
+  hoverDescription: "Explora el proyecto",
 };

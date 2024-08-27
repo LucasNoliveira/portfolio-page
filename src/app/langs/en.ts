@@ -9,6 +9,7 @@ export const en = {
   experience: "Experience",
   showMore: "Show More",
   showLess: "Show Less",
+  professionalBackground: "Professional Background",
   experiences: [
     {
       company: 'Mont Capital Asset',
@@ -42,4 +43,51 @@ export const en = {
       `,
     },
   ],
+  services: [
+    {
+      title: "Web Development",
+      description: "Building modern, responsive websites using the latest web technologies.",
+      icon: "development",
+    },
+    {
+      title: "UI/UX Design",
+      description: "Crafting intuitive and beautiful user interfaces that provide a seamless user experience.",
+      icon: "design",
+    },
+    {
+      title: "Mobile Development",
+      description: "Creating cross-platform mobile applications with React Native.",
+      icon: "mobile",
+    },
+    {
+      title: "Backend Development",
+      description: "Developing robust and scalable backend systems with Node.js, Python, and more.",
+      icon: "database",
+    },
+  ],
+  servicesTitle: "Services",
+  servicesSubtitle: "What I Can Do For You",
+  learnMore: "Learn More",
+  projectsList: [
+    {
+      title: 'Portfolio Website',
+      shortDescription: 'A personal portfolio website to showcase my skills, projects, and experience.',
+      image: '/portfolio-website.png',
+      link: 'https://www.myportfolio.com',
+    },
+    {
+      title: 'E-commerce Platform',
+      shortDescription: 'An advanced e-commerce platform with payment integration, shopping cart, and user authentication.',
+      image: '/ecommerce-platform.png',
+      link: 'https://www.ecommerceplatform.com',
+    },
+    {
+      title: 'Task Management App',
+      shortDescription: 'A task management app to help teams organize their work and improve productivity.',
+      image: '/task-management-app.png',
+      link: 'https://www.taskmanagementapp.com',
+    },
+  ],
+  viewProject: "View Project",
+  hoverDescription: "Explore the project",
 };

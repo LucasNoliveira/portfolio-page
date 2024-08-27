@@ -9,6 +9,7 @@ export const pt = {
   experience: "Experiência",
   showMore: "Mostrar Mais",
   showLess: "Mostrar Menos",
+  professionalBackground: "Histórico Profissional",
   experiences: [
     {
       company: 'Mont Capital Asset',
@@ -24,6 +25,52 @@ export const pt = {
       endDate: 'Abr 2024',
       description: 'Desenvolvi aplicações web responsivas e otimizei interfaces de usuário usando Tailwind CSS e TypeScript.',
     },
-    // Adicione mais experiências conforme necessário
   ],
+  services: [
+    {
+      title: "Desenvolvimento Web",
+      description: "Construção de sites modernos e responsivos usando as tecnologias web mais recentes.",
+      icon: "development",
+    },
+    {
+      title: "Design UI/UX",
+      description: "Criação de interfaces intuitivas e bonitas que proporcionam uma experiência de usuário perfeita.",
+      icon: "design",
+    },
+    {
+      title: "Desenvolvimento Mobile",
+      description: "Criação de aplicativos móveis multiplataforma com React Native.",
+      icon: "mobile",
+    },
+    {
+      title: "Desenvolvimento Backend",
+      description: "Desenvolvimento de sistemas backend robustos e escaláveis com Node.js, Python, e mais.",
+      icon: "database",
+    },
+  ],
+  servicesTitle: "Serviços",
+  servicesSubtitle: "O Que Posso Fazer Por Você",
+  learnMore: "Saiba Mais",
+  projectsList: [
+    {
+      title: 'Website de Portfólio',
+      shortDescription: 'Um website de portfólio pessoal para mostrar minhas habilidades, projetos e experiência.',
+      image: '/portfolio-website.png',
+      link: 'https://www.myportfolio.com',
+    },
+    {
+      title: 'Plataforma de E-commerce',
+      shortDescription: 'Uma plataforma de e-commerce avançada com integração de pagamento, carrinho de compras e autenticação de usuários.',
+      image: '/ecommerce-platform.png',
+      link: 'https://www.ecommerceplatform.com',
+    },
+    {
+      title: 'App de Gestão de Tarefas',
+      shortDescription: 'Um aplicativo de gestão de tarefas para ajudar equipes a organizar seu trabalho e melhorar a produtividade.',
+      image: '/task-management-app.png',
+      link: 'https://www.taskmanagementapp.com',
+    },
+  ],
+  viewProject: "Ver Projeto",
+  hoverDescription: "Explore o projeto",
 };
