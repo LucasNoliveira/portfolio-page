@@ -22,6 +22,7 @@ body {
   color: rgb(var(--background-start-rgb));
   background: white;
   font-family: "Kanit", sans-serif;
+  overflow-x: hidden;
 }
 
 @layer utilities {
