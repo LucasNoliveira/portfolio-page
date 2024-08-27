@@ -15,6 +15,7 @@ const ExperienceSection: FC = () => {
     return (
         <section ref={ref} className="bg-gray-50 py-20" id='experiences'>
             <div className="container mx-auto px-4">
+            <div className="w-4/5 mx-auto">
                 <motion.div 
                     initial={{ opacity: 0, y: 50 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -28,9 +29,9 @@ const ExperienceSection: FC = () => {
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                     >
-                        <h2 className="text-3xl font-bold text-gray-800 text-center md:text-left mb-12 md:mb-8 flex items-center justify-center md:justify-start">
+                        <h2 className="text-3xl font-bold text-gray-800 text-center md:text-center mb-12 md:mb-8 flex items-center justify-center md:justify-start">
                             <FiBriefcase className="mr-2" />
-                            {translations.experience}
+                            {translations.professionalBackground}
                         </h2>
 
                         <div className="relative">
@@ -64,6 +65,7 @@ const ExperienceSection: FC = () => {
                         />
                     </motion.div>
                 </motion.div>
+                </div>
             </div>
         </section>
     );
