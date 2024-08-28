@@ -89,7 +89,7 @@ const HeroSection: FC = () => {
                             download
                             className="inline-flex items-center bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-gray-700 transition duration-300"
                         >
-                            <FaDownload className="mr-2" /> {/* Ícone de download com margem à direita */}
+                            <FaDownload className="mr-2" />
                             {translations.downloadCV}
                         </a>
                     </div>
