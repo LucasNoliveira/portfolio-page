@@ -1,3 +1,5 @@
+import ExperienceSummary from "../components/ExperienceSummary";
+
 export const en = {
   about: "About",
   projects: "Projects",
@@ -9,7 +11,18 @@ export const en = {
   experience: "Experience",
   showMore: "Show More",
   showLess: "Show Less",
+  sendMeAnEmail: "Send me an Email",
+  sendMeAWhatsapp: "Send me a WhatsApp message",
+  sendMeATelegram: "Send me a Telegram message",
+  sendMeADiscord: "Send me a Discord message",
+  hiThere: "Hi there! 👋",
+  welcomeMessage: "Check out some of my projects, and if you like them, let me know about your next project. Enjoy your visit!",
   professionalBackground: "Professional Background",
+  ExperienceSummary: {
+    techXp: { name: "Technology Experience", experienceYears: '3' },
+    webDevXp: { name: "Web Development", experienceYears: '2' },
+    services: { name: "Services Provided", quantity: '27' }
+  },
   experiences: [
     {
       company: 'Mont Capital Asset',

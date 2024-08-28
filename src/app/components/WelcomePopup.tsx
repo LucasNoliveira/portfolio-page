@@ -1,9 +1,11 @@
 'use client';
 import React, { useEffect, useState } from "react";
+import { useLanguage } from '../context/LanguageContext';
 
 const WelcomePopup: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [isRendered, setIsRendered] = useState(false);
+    const { translations } = useLanguage()
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -28,9 +30,9 @@ const WelcomePopup: React.FC = () => {
                 }`}
         >
             <div className="text-base font-medium">
-                <strong>Hi there! 👋</strong>
+                <strong>{translations.hiThere}</strong>
                 <br />
-                Explore my awesome projects and if you like them, tell me about your next project. Enjoy your visit!
+                {translations.welcomeMessage}
             </div>
             <button
                 onClick={handleClose}

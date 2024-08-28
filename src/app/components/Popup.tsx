@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaEnvelope, FaWhatsapp, FaTelegramPlane, FaDiscord } from "react-icons/fa";
+import { useLanguage } from '../context/LanguageContext';
 
 interface PopupProps {
   onClose: () => void;
@@ -7,6 +8,7 @@ interface PopupProps {
 
 const Popup: React.FC<PopupProps> = ({ onClose }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const { translations } = useLanguage();
 
   useEffect(() => {
     setIsVisible(true);
@@ -35,7 +37,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
             className="flex items-center bg-blue-600 text-white px-4 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
           >
             <FaEnvelope className="mr-2" />
-            Send me an Email
+            {translations.sendMeAnEmail}
           </a>
           <a
             href="https://wa.me/+551972571089"
@@ -44,7 +46,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
             className="flex items-center bg-green-600 text-white px-4 py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300"
           >
             <FaWhatsapp className="mr-2" />
-            Send me a WhatsApp
+            {translations.sendMeAWhatsapp}
           </a>
           <a
             href="https://t.me/lucasnoliveira126"
@@ -53,7 +55,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
             className="flex items-center bg-blue-500 text-white px-4 py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
           >
             <FaTelegramPlane className="mr-2" />
-            Send me a Telegram
+            {translations.sendMeATelegram}
           </a>
           <a
             href="https://discord.com/users/yagami_rukasu"
@@ -62,7 +64,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
             className="flex items-center bg-indigo-600 text-white px-4 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300"
           >
             <FaDiscord className="mr-2" />
-            Send me a Discord Message
+            {translations.sendMeADiscord}
           </a>
         </div>
         <button

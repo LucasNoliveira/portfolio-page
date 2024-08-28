@@ -9,7 +9,18 @@ export const pt = {
   experience: "Experiência",
   showMore: "Mostrar Mais",
   showLess: "Mostrar Menos",
+  sendMeAnEmail: "Me envie um Email",
+  sendMeAWhatsapp: "Me envie um WhatsApp",
+  sendMeATelegram: "Me envie um Telegram",
+  sendMeADiscord: "Me envie um Discord",
+  hiThere: "Olá! 👋",
+  welcomeMessage: "Explore meus projetos e, se gostar deles, me conte um pouco sobre o seu próximo projeto. Aproveite a visita!",
   professionalBackground: "Histórico Profissional",
+  ExperienceSummary: {
+    techXp: { name: "Experiência em Tecnologia", experienceYears: "3" },
+    webDevXp: { name: "Desenvolvimento WEB", experienceYears: "2" },
+    services: { name: "Serviços prestados", quantity: "27" }
+  },
   experiences: [
     {
       company: 'Mont Capital Asset',

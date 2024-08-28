@@ -9,7 +9,18 @@ export const es = {
   experience: "Experiencia",
   showMore: "Mostrar Más",
   showLess: "Mostrar Menos",
+  sendMeAnEmail: "Envíame un correo electrónico",
+  sendMeAWhatsapp: "Envíame un mensaje por WhatsApp",
+  sendMeATelegram: "Envíame un mensaje por Telegram",
+  sendMeADiscord: "Envíame un mensaje por Discord",
+  hiThere: "Holla! 👋",
+  welcomeMessage: "Explora mis proyectos y, si te gustan, cuéntame sobre tu próximo proyecto. ¡Disfruta de la visita!",
   professionalBackground: "Trayectoria Profesional",
+  ExperienceSummary: {
+    techXp: { name: "Experiencia en Tecnología", experienceYears: '3'},
+    webDevXp: { name: "Desarrollo WEB", experienceYears: '2'},
+    services: { name: "Servicios prestados", quantity: '27'}
+  },
   experiences: [
     {
       company: 'Tech Innovators',
