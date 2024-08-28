@@ -132,7 +132,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white text-2xl bg-gray-800 p-2 rounded-full hover:bg-gray-600 transition-all duration-300"
+                        className="text-white text-2xl bg-gray-800 p-2 rounded-full hover:bg-gray-600 transition-all duration-300 cursor-pointer"
                     >
                         <FiGithub />
                     </a>
@@ -140,7 +140,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white text-2xl bg-gray-800 p-2 rounded-full hover:bg-gray-600 transition-all duration-300"
+                        className="text-white text-2xl bg-gray-800 p-2 rounded-full hover:bg-gray-600 transition-all duration-300 cursor-pointer"
                     >
                         <FiEye />
                     </a>
