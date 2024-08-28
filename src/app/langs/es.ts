@@ -13,13 +13,14 @@ export const es = {
   sendMeAWhatsapp: "Envíame un mensaje por WhatsApp",
   sendMeATelegram: "Envíame un mensaje por Telegram",
   sendMeADiscord: "Envíame un mensaje por Discord",
+  close: "Cerrar",
   hiThere: "Holla! 👋",
   welcomeMessage: "Explora mis proyectos y, si te gustan, cuéntame sobre tu próximo proyecto. ¡Disfruta de la visita!",
   professionalBackground: "Trayectoria Profesional",
   ExperienceSummary: {
-    techXp: { name: "Experiencia en Tecnología", experienceYears: '3'},
-    webDevXp: { name: "Desarrollo WEB", experienceYears: '2'},
-    services: { name: "Servicios prestados", quantity: '27'}
+    techXp: { name: "Experiencia en Tecnología", experienceYears: '3' },
+    webDevXp: { name: "Desarrollo WEB", experienceYears: '2' },
+    services: { name: "Servicios prestados", quantity: '27' }
   },
   experiences: [
     {
@@ -80,6 +81,24 @@ export const es = {
       shortDescription: 'Una aplicación de gestión de tareas para ayudar a los equipos a organizar su trabajo y mejorar la productividad.',
       image: '/task-management-app.png',
       link: 'https://www.taskmanagementapp.com',
+    },
+    {
+      title: 'Panel de Redes Sociales',
+      shortDescription: 'Un panel para gestionar y analizar cuentas de redes sociales con análisis en tiempo real y programación de publicaciones.',
+      image: '/social-media-dashboard.png',
+      link: 'https://www.socialmediadashboard.com',
+    },
+    {
+      title: 'Sitio de Listado Inmobiliario',
+      shortDescription: 'Una plataforma para navegar y gestionar listados inmobiliarios con filtros de búsqueda avanzados y detalles de las propiedades.',
+      image: '/real-estate-listing.png',
+      link: 'https://www.realestatelistingsite.com',
+    },
+    {
+      title: 'App de Seguimiento de Fitness',
+      shortDescription: 'Una aplicación móvil para rastrear actividades físicas, establecer metas y monitorear el progreso con integración a dispositivos de salud.',
+      image: '/fitness-tracker-app.png',
+      link: 'https://www.fitnesstrackerapp.com',
     },
   ],
   viewProject: "Ver Proyecto",

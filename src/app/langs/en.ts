@@ -15,6 +15,7 @@ export const en = {
   sendMeAWhatsapp: "Send me a WhatsApp message",
   sendMeATelegram: "Send me a Telegram message",
   sendMeADiscord: "Send me a Discord message",
+  close: "Close",
   hiThere: "Hi there! 👋",
   welcomeMessage: "Check out some of my projects, and if you like them, let me know about your next project. Enjoy your visit!",
   professionalBackground: "Professional Background",
@@ -87,20 +88,49 @@ export const en = {
       shortDescription: 'A personal portfolio website to showcase my skills, projects, and experience.',
       image: '/portfolio-website.png',
       link: 'https://www.myportfolio.com',
+      github: "#"
     },
     {
       title: 'E-commerce Platform',
       shortDescription: 'An advanced e-commerce platform with payment integration, shopping cart, and user authentication.',
       image: '/ecommerce-platform.png',
       link: 'https://www.ecommerceplatform.com',
+      github: "#"
     },
     {
       title: 'Task Management App',
       shortDescription: 'A task management app to help teams organize their work and improve productivity.',
       image: '/task-management-app.png',
       link: 'https://www.taskmanagementapp.com',
+      github: "#"
+    },
+    {
+      title: 'Social Media Dashboard',
+      shortDescription: 'A dashboard for managing and analyzing social media accounts with real-time analytics and post scheduling.',
+      image: '/social-media-dashboard.png',
+      link: 'https://www.socialmediadashboard.com',
+      github: "#"
+    },
+    {
+      title: 'Real Estate Listing Site',
+      shortDescription: 'A platform for browsing and managing real estate listings with advanced search filters and property details.',
+      image: '/real-estate-listing.png',
+      link: 'https://www.realestatelistingsite.com',
+      github: "#"
+    },
+    {
+      title: 'Fitness Tracker App',
+      shortDescription: 'A mobile app for tracking fitness activities, setting goals, and monitoring progress with integration to health devices.',
+      image: '/fitness-tracker-app.png',
+      link: 'https://www.fitnesstrackerapp.com',
+      github: "#"
     },
   ],
   viewProject: "View Project",
   hoverDescription: "Explore the project",
+  rightsReserved: "Rights Reserved",
+  privacyPolicy: "Privacy Policy",
+  termsOfService: "Terms of Service",
+  cookiePolicy: "Cookie Policy",
+  github: "#"
 };
