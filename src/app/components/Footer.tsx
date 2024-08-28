@@ -21,7 +21,6 @@ const Footer: FC = () => {
                         </p>
                     </div>
 
-                    {/* Quick Links */}
                     <div className="flex flex-col items-center md:items-start">
                         <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
                         <nav className="flex flex-col space-y-2">
@@ -58,7 +57,7 @@ const Footer: FC = () => {
                             <a
                                 href="https://www.linkedin.com/in/seu-perfil"
                                 aria-label="LinkedIn"
-                                className="text-gray-400 hover:text-blue-600 transition-colors duration-300"
+                                className="text-gray-400 hover:text-blue-600 hover:bg-white transition-colors duration-300"
                             >
                                 <FaLinkedin className="h-6 w-6" />
                             </a>
