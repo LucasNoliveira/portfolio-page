@@ -74,7 +74,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ service, isInView, index }) => {
                     {description}
                 </p>
                 <motion.button
-                    className="mt-6 px-4 py-2 rounded-lg font-semibold bg-white text-blue-600 border border-blue-600 transition-colors duration-300 hover:bg-blue-600 hover:text-white"
+                    className="mt-6 px-4 py-2 rounded-lg font-semibold bg-gray-700 text-gray-50 border border-gray-500 transition-colors duration-300 hover:bg-gray-800"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
