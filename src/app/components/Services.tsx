@@ -22,7 +22,7 @@ const ServicesSection: FC = () => {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-8">
-                    {translations.services.map((service: any, index: number) => (
+                    {translations.servicesList.map((service: any, index: number) => (
                         <ServiceCard
                             key={index}
                             service={service}
