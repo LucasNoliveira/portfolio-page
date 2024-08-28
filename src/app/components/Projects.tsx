@@ -147,7 +147,14 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                 </div>
             </div>
             <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800">{project.title}</h3>
+                <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl font-bold text-gray-800 hover:underline"
+                >
+                    {project.title}
+                </a>
                 <p className="text-gray-600 mt-4 line-clamp-3">{project.description}</p>
                 <a
                     href={project.link}
