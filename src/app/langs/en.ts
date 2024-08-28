@@ -1,8 +1,10 @@
 import ExperienceSummary from "../components/ExperienceSummary";
 
 export const en = {
+  home: "Home",
   about: "About",
   projects: "Projects",
+  services: "Services",
   contact: "Contact",
   downloadCV: "Download Resume",
   readOnline: "Read Online",
@@ -57,7 +59,7 @@ export const en = {
       `,
     },
   ],
-  services: [
+  servicesList: [
     {
       title: "Web Development",
       description: "Building modern, responsive websites using the latest web technologies.",

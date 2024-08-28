@@ -1,6 +1,8 @@
 export const es = {
+  home: "Home",
   about: "Sobre",
   projects: "Proyectos",
+  services: "Servicios",
   contact: "Contacto",
   downloadCV: "Descargar Resumen",
   readOnline: "Leer en línea",
@@ -38,7 +40,7 @@ export const es = {
       description: 'Desarrollé aplicaciones web responsivas y optimicé interfaces de usuario utilizando Tailwind CSS y TypeScript.',
     },
   ],
-  services: [
+  servicesList: [
     {
       title: "Desarrollo Web",
       description: "Construcción de sitios web modernos y responsivos utilizando las últimas tecnologías web.",
