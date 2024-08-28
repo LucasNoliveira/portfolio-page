@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Bars3Icon, XMarkIcon, ChevronDownIcon, GlobeAltIcon, UserIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, ChevronDownIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import { useLanguage } from '../context/LanguageContext';
 
 const Header: React.FC = () => {
@@ -57,8 +57,11 @@ const Header: React.FC = () => {
 
                 {/* Adicionando borda com cantos arredondados */}
                 <div className="hidden md:flex space-x-6 items-center mx-auto border border-gray-300 rounded-full p-1 px-8">
-                <Link href="/about" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.about}</Link>
+                    <Link href="/" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.home}</Link>
+                    <Link href="/about" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.about}</Link>
                     <Link href="#experiences" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.experience}</Link>
+                    <Link href="#services" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.services}</Link>
+                    <Link href="#professional-background" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.professionalBackground}</Link>
                     <Link href="/projects" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.projects}</Link>
                     <Link href="/contact" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.contact}</Link>
                     <div className="relative" ref={dropdownRef}>
@@ -105,8 +108,11 @@ const Header: React.FC = () => {
             {/* Mobile Menu */ }
     <div className={`md:hidden fixed inset-0 bg-white overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
         <nav className="space-y-2 p-5 flex flex-col h-full items-center justify-center">
+            <Link href="/" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.home}</Link>
             <Link href="/about" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.about}</Link>
             <Link href="/experience" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.experience}</Link>
+            <Link href="#services" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.services}</Link>
+            <Link href="#professional-background" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.professionalBackground}</Link>
             <Link href="/projects" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.projects}</Link>
             <Link href="/contact" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.contact}</Link>
             <div className="w-full flex justify-center space-x-2">
