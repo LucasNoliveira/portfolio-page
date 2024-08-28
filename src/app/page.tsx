@@ -11,6 +11,7 @@ import ProjectsSection from "./components/Projects";
 import WelcomePopup from "./components/WelcomePopup.tsx";
 import ExperienceSummary from "./components/ExperienceSummary";
 import ServicesSection from "./components/Services";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const Home: NextPage = () => {
     const [showPopup, setShowPopup] = useState(false);
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
                     <ExperienceSection />
                     <ProjectsSection />
                 </main>
+                <ScrollToTopButton />
                 {showPopup && <WelcomePopup />}
             </LanguageProvider>
         </div>
