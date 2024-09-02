@@ -7,8 +7,8 @@ import HeroSection from "./components/Hero";
 import './globals.css'
 import { LanguageProvider } from './context/LanguageContext';
 import ExperienceSection from "./components/Experiences";
-import ProjectsSection from "./components/Projects";
-import WelcomePopup from "./components/WelcomePopup.tsx";
+import ProjectsSection from "./components/ProjectsSection";
+import WelcomePopup from "./components/WelcomePopup";
 import ExperienceSummary from "./components/ExperienceSummary";
 import ServicesSection from "./components/Services";
 import ScrollToTopButton from "./components/ScrollToTopButton";
@@ -33,8 +33,8 @@ const Home: NextPage = () => {
                     <HeroSection />
                 </main>
                 <ExperienceSummary />
-                <ServicesSection />
                 <ExperienceSection />
+                <ServicesSection />
                 <ProjectsSection />
                 <ScrollToTopButton />
                 {showPopup && <WelcomePopup />}
