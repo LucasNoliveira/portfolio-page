@@ -13,6 +13,7 @@ import ExperienceSummary from "./components/ExperienceSummary";
 import ServicesSection from "./components/Services";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Footer from "./components/Footer";
+import ContactSection from "./components/Contact";
 
 const Home: NextPage = () => {
     const [showPopup, setShowPopup] = useState(false);
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
                 <ExperienceSection />
                 <ServicesSection />
                 <ProjectsSection />
+                <ContactSection />
                 <ScrollToTopButton />
                 {showPopup && <WelcomePopup />}
                 <Footer />
