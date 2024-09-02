@@ -48,31 +48,28 @@ const HeroSection: FC = () => {
     return (
         <section className="bg-gray-100 py-20">
             <div className="container mx-auto flex flex-col md:flex-row items-center">
-                {/* Imagem à esquerda */}
                 <div className="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center border-yellow">
                     <div className="relative inline-block">
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full border-2 border-transparent -z-10"></div>
                         <Image
-                            src="/me.png" // substitua pelo caminho da sua imagem
+                            src="/me.png"
                             alt="Lucas Oliveira"
                             width={400}
                             height={400}
                             className="rounded-full bg-[#222]"
                         />
                     </div>
-                    {/* Ícones de redes sociais */}
                     <div className="flex space-x-4 mt-6">
-                        <a href="https://www.linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-700 transition duration-300">
+                        <a href="https://www.linkedin.com/in/lucasnevesoliveira" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-700 transition duration-300">
                             <FaLinkedin className="h-8 w-8" />
                         </a>
-                        <a href="https://github.com/seu-perfil" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900 transition duration-300">
+                        <a href="https://github.com/lucasnoliveira" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900 transition duration-300">
                             <FaGithub className="h-8 w-8" />
                         </a>
-                        <a href="mailto:seu-email@gmail.com" className="text-gray-700 hover:text-red-600 transition duration-300">
+                        <a href="mailto:lucanoliveira@gmail.com" className="text-gray-700 hover:text-red-600 transition duration-300">
                             <FaEnvelope className="h-8 w-8" />
                         </a>
                     </div>
-                    {/* Botões abaixo da imagem */}
                     <div className="flex flex-col md:flex-row mt-8 gap-4">
                         <a
                             href="#"
@@ -85,7 +82,7 @@ const HeroSection: FC = () => {
 
                         {isPopupVisible && <Popup onClose={closeGetInTouchPopup} />}
                         <a
-                            href="/path-to-your-resume.pdf" // Substitua pelo caminho do seu currículo
+                            href="/path-to-your-resume.pdf"
                             download
                             className="inline-flex items-center bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-gray-700 transition duration-300"
                         >
@@ -95,7 +92,6 @@ const HeroSection: FC = () => {
                     </div>
                 </div>
 
-                {/* Texto à direita */}
                 <div className="w-full md:w-1/2 text-center md:text-left">
                     <h1 className="text-4xl md:text-6xl font-bold text-gray-800">
                         <span className="text-blue-600">Lucas</span> Oliveira
@@ -121,7 +117,6 @@ const HeroSection: FC = () => {
                         ))}
                     </div>
 
-                    {/* Botão de mostrar mais/menos */}
                     <div className="mt-6 text-center">
                         <button
                             onClick={() => setShowAll(!showAll)}
