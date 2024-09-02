@@ -61,7 +61,6 @@ const Header: React.FC = () => {
                     <Link href="/about" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.about}</Link>
                     <Link href="#experiences" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.experience}</Link>
                     <Link href="#services" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.services}</Link>
-                    <Link href="#professional-background" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.professionalBackground}</Link>
                     <Link href="/projects" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.projects}</Link>
                     <Link href="/contact" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.contact}</Link>
                     <div className="relative" ref={dropdownRef}>
@@ -112,7 +111,6 @@ const Header: React.FC = () => {
             <Link href="/about" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.about}</Link>
             <Link href="/experience" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.experience}</Link>
             <Link href="#services" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.services}</Link>
-            <Link href="#professional-background" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.professionalBackground}</Link>
             <Link href="/projects" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.projects}</Link>
             <Link href="/contact" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.contact}</Link>
             <div className="w-full flex justify-center space-x-2">
