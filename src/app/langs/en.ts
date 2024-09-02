@@ -29,25 +29,27 @@ export const en = {
   experiences: [
     {
       company: 'Mont Capital Asset',
+      logo: '/img/company_logos/montcapitalasset_logo.jpeg',
       role: 'Full Stack Python Developer',
       startDate: 'Apr 2024',
       endDate: 'Present',
       description: `
-        - Backend development with Python, Django, Flask, FastAPI, as well as other technologies like Node.js, Express, Sequelize.
+      - Backend development with Python, Django, Flask, FastAPI, as well as other technologies like Node.js, Express, Sequelize.
         - Creating interfaces with React, TypeScript, Material UI, Styled Components, HTML, CSS.
         - Handling SOAP/REST requests, Webservices.
         - Implementing WebSockets, socket.io for real-time communication.
         - Managing databases: MySQL, PostgreSQL, MongoDB.
         - Containerizing applications with Docker, Docker Compose, Kubernetes.
         - Utilizing AWS Services: EC2, RDS, S3.
-      `,
-    },
-    {
-      company: 'Vitta Group Franchising',
-      role: 'Full Stack Web Developer',
-      startDate: 'Oct 2023',
-      endDate: 'Apr 2024',
-      description: `
+        `,
+      },
+      {
+        company: 'Vitta Group Franchising',
+        logo: '/img/company_logos/vitta_logo.jpeg',
+        role: 'Full Stack Web Developer',
+        startDate: 'Oct 2023',
+        endDate: 'Apr 2024',
+        description: `
         - Development of applications in React.js
         - Project, implementation, and maintenance of APIs using JavaScript, Node.js, and Django, including RESTful APIs
         - Creation, modeling, and administration of PostgreSQL databases
@@ -90,42 +92,48 @@ export const en = {
       shortDescription: 'A personal portfolio website to showcase my skills, projects, and experience.',
       image: '/portfolio-website.png',
       link: 'https://www.myportfolio.com',
-      github: "#"
+      github: "#",
+      techStack: ["Typescript", "React", "Nextjs", "TailwindCSS", "Git", "GitHub"]
     },
     {
       title: 'E-commerce Platform',
       shortDescription: 'An advanced e-commerce platform with payment integration, shopping cart, and user authentication.',
       image: '/ecommerce-platform.png',
       link: 'https://www.ecommerceplatform.com',
-      github: "#"
+      github: "#",
+      techStack: ["React", "Django", "PostgreSQL"]
     },
     {
       title: 'Task Management App',
       shortDescription: 'A task management app to help teams organize their work and improve productivity.',
       image: '/task-management-app.png',
       link: 'https://www.taskmanagementapp.com',
-      github: "#"
+      github: "#",
+      techStack: ["Nextjs"]
     },
     {
       title: 'Social Media Dashboard',
       shortDescription: 'A dashboard for managing and analyzing social media accounts with real-time analytics and post scheduling.',
       image: '/social-media-dashboard.png',
       link: 'https://www.socialmediadashboard.com',
-      github: "#"
+      github: "#",
+      techStack: ["PHP", "jQuery", "Bootstrap"]
     },
     {
       title: 'Real Estate Listing Site',
       shortDescription: 'A platform for browsing and managing real estate listings with advanced search filters and property details.',
       image: '/real-estate-listing.png',
       link: 'https://www.realestatelistingsite.com',
-      github: "#"
+      github: "#",
+      techStack: ["Node"]
     },
     {
       title: 'Fitness Tracker App',
       shortDescription: 'A mobile app for tracking fitness activities, setting goals, and monitoring progress with integration to health devices.',
       image: '/fitness-tracker-app.png',
       link: 'https://www.fitnesstrackerapp.com',
-      github: "#"
+      github: "#",
+      techStack: ["Kotlin"]
     },
   ],
   viewProject: "View Project",
@@ -134,5 +142,4 @@ export const en = {
   privacyPolicy: "Privacy Policy",
   termsOfService: "Terms of Service",
   cookiePolicy: "Cookie Policy",
-  github: "#"
 };

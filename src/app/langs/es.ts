@@ -71,36 +71,48 @@ export const es = {
       shortDescription: 'Un sitio web de portafolio personal para mostrar mis habilidades, proyectos y experiencia.',
       image: '/portfolio-website.png',
       link: 'https://www.myportfolio.com',
+      github: "#",
+      techStack: ["Typescript", "React", "Nextjs", "TailwindCSS"]
     },
     {
       title: 'Plataforma de Comercio Electrónico',
       shortDescription: 'Una plataforma avanzada de comercio electrónico con integración de pagos, carrito de compras y autenticación de usuarios.',
       image: '/ecommerce-platform.png',
       link: 'https://www.ecommerceplatform.com',
+      github: '#',
+      techStack: ["React", "Django", "PostgreSQL"]
     },
     {
       title: 'App de Gestión de Tareas',
       shortDescription: 'Una aplicación de gestión de tareas para ayudar a los equipos a organizar su trabajo y mejorar la productividad.',
       image: '/task-management-app.png',
       link: 'https://www.taskmanagementapp.com',
+      github: "#",
+      techStack: ["Nextjs"]
     },
     {
       title: 'Panel de Redes Sociales',
       shortDescription: 'Un panel para gestionar y analizar cuentas de redes sociales con análisis en tiempo real y programación de publicaciones.',
       image: '/social-media-dashboard.png',
       link: 'https://www.socialmediadashboard.com',
+      github: "#",
+      techStack: ["PHP", "jQuery", "Bootstrap"]
     },
     {
       title: 'Sitio de Listado Inmobiliario',
       shortDescription: 'Una plataforma para navegar y gestionar listados inmobiliarios con filtros de búsqueda avanzados y detalles de las propiedades.',
       image: '/real-estate-listing.png',
       link: 'https://www.realestatelistingsite.com',
+      github: "#",
+      techStack: ["Node"]
     },
     {
       title: 'App de Seguimiento de Fitness',
       shortDescription: 'Una aplicación móvil para rastrear actividades físicas, establecer metas y monitorear el progreso con integración a dispositivos de salud.',
       image: '/fitness-tracker-app.png',
       link: 'https://www.fitnesstrackerapp.com',
+      github: "#",
+      techStack: ["Kotlin"]
     },
   ],
   viewProject: "Ver Proyecto",

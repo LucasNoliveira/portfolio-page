@@ -27,6 +27,7 @@ export const pt = {
   experiences: [
     {
       company: 'Mont Capital Asset',
+      logo: '/img/company_logos/montcapitalasset_logo.jpeg',
       role: 'Desenvolvedor Full Stack Python',
       startDate: 'Jan 2022',
       endDate: 'Presente',
@@ -34,6 +35,7 @@ export const pt = {
     },
     {
       company: 'Vitta Group Franchising',
+      logo: '/img/company_logos/vitta_logo.jpeg',
       role: 'Desenvolvedor Web Full Stack',
       startDate: 'Out 2023',
       endDate: 'Abr 2024',
@@ -71,36 +73,48 @@ export const pt = {
       shortDescription: 'Um website de portfólio pessoal para mostrar minhas habilidades, projetos e experiência.',
       image: '/portfolio-website.png',
       link: 'https://www.myportfolio.com',
+      github: "#",
+      techStack: ["Typescript", "React", "Nextjs", "TailwindCSS"]
     },
     {
       title: 'Plataforma de E-commerce',
       shortDescription: 'Uma plataforma de e-commerce avançada com integração de pagamento, carrinho de compras e autenticação de usuários.',
       image: '/ecommerce-platform.png',
       link: 'https://www.ecommerceplatform.com',
+      github: '#',
+      techStack: ["React", "Django", "PostgreSQL"]
     },
     {
       title: 'App de Gestão de Tarefas',
       shortDescription: 'Um aplicativo de gestão de tarefas para ajudar equipes a organizar seu trabalho e melhorar a produtividade.',
       image: '/task-management-app.png',
       link: 'https://www.taskmanagementapp.com',
+      github: "#",
+      techStack: ["Nextjs"]
     },
     {
       title: 'Painel de Mídias Sociais',
       shortDescription: 'Um painel para gerenciar e analisar contas de mídias sociais com análises em tempo real e agendamento de posts.',
       image: '/social-media-dashboard.png',
       link: 'https://www.socialmediadashboard.com',
+      github: "#",
+      techStack: ["PHP", "jQuery", "Bootstrap"]
     },
     {
       title: 'Site de Listagem Imobiliária',
       shortDescription: 'Uma plataforma para navegar e gerenciar listagens imobiliárias com filtros de pesquisa avançados e detalhes das propriedades.',
       image: '/real-estate-listing.png',
       link: 'https://www.realestatelistingsite.com',
+      github: "#",
+      techStack: ["Node"]
     },
     {
       title: 'App de Rastreamento de Fitness',
       shortDescription: 'Um aplicativo móvel para rastrear atividades físicas, definir metas e monitorar o progresso com integração a dispositivos de saúde.',
       image: '/fitness-tracker-app.png',
       link: 'https://www.fitnesstrackerapp.com',
+      github: "#",
+      techStack: ["Kotlin"]
     },
   ],
   viewProject: "Ver Projeto",
