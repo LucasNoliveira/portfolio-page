@@ -38,7 +38,7 @@ const ExperienceSummary: FC = () => {
                         <ExperienceBlock
                             icon={<FaLaptopCode className="text-white h-8 w-8" />}
                             title={translations.ExperienceSummary.techXp.name}
-                            description={hasAnimated ? <CountUp end={3} duration={4} suffix=" Years" /> : `${translations.ExperienceSummary.techXp.experienceYears}`} // Duration increased to 4 seconds
+                            description={hasAnimated ? <CountUp end={3} duration={4} suffix={ ` ${translations.years}`} /> : `${translations.ExperienceSummary.techXp.experienceYears}`} // Duration increased to 4 seconds
                             backgroundColor="bg-blue-500"
                             textColor="text-white"
                         />
@@ -51,7 +51,7 @@ const ExperienceSummary: FC = () => {
                         <ExperienceBlock
                             icon={<FaCog className="text-white h-8 w-8" />}
                             title={translations.ExperienceSummary.webDevXp.name}
-                            description={hasAnimated ? <CountUp end={2} duration={4} suffix=" Years" /> : `${translations.ExperienceSummary.webDevXp.experienceYears}`} // Duration increased to 4 seconds
+                            description={hasAnimated ? <CountUp end={2} duration={4} suffix={ ` ${translations.years}`} /> : `${translations.ExperienceSummary.webDevXp.experienceYears}`} // Duration increased to 4 seconds
                             backgroundColor="bg-teal-500"
                             textColor="text-white"
                         />

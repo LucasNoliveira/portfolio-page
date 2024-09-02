@@ -24,22 +24,39 @@ export const pt = {
     webDevXp: { name: "Desenvolvimento WEB", experienceYears: "2" },
     services: { name: "Serviços prestados", quantity: "27" }
   },
+  years: "Anos",
   experiences: [
     {
       company: 'Mont Capital Asset',
       logo: '/img/company_logos/montcapitalasset_logo.jpeg',
       role: 'Desenvolvedor Full Stack Python',
+      techStack: ["Typescript", "React", "Nextjs", "TailwindCSS", "Node", "Python", "Django", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Git", "GitHub", "AWS"],
       startDate: 'Jan 2022',
       endDate: 'Presente',
-      description: 'Liderando a equipe de desenvolvimento frontend, com foco na construção de aplicações web escaláveis e de alto desempenho utilizando React e Next.js.',
+      description: `- Desenvolvimento Backend com Python, Django, Flask, FastAPI, além de outras tecnologias como Node.js, Express, Sequelize
+      - Criação de interfaces com React, Typescript, Material UI, Styled Components, HTML, CSS
+      - Requisições SOAP/REST, Webservices, JWT
+      - GitHub Actions, Pipelines CI/CD
+      - WebSockets, socket.io
+      - MySQL, PostgreSQL, MongoDB
+      - Conteinerização de aplicações com Docker, Docker Compose, Kubernetes
+      - AWS EC2, RDS, S3`,
     },
     {
       company: 'Vitta Group Franchising',
       logo: '/img/company_logos/vitta_logo.jpeg',
       role: 'Desenvolvedor Web Full Stack',
+      techStack: [ "React", "HTML", "CSS", "JavaScript", "Node", "Python", "Django", "PostgreSQL", "Git", "GitHub"],
       startDate: 'Out 2023',
       endDate: 'Abr 2024',
-      description: 'Desenvolvi aplicações web responsivas e otimizei interfaces de usuário usando Tailwind CSS e TypeScript.',
+      description: `- Desenvolvimento de aplicações em React.js
+      - Projeto, implementação e manutenção de APIs com JavaScript, Node.js e Django, RESTful APIs
+      - Criação, modelagem e administração de banco de dados PostgreSQL
+      - Utilização do Postman e Insomnia para testes de API
+      - Configuração de servidor VPS Linux Locaweb para servir aplicações React com Back-End em Django utilizando Nginx
+      - Desenvolvimento de scripts para automação de tarefas e aumento de produtividade
+      - Desenvolvimento e manutenção de Landing Pages com WordPress e Elementor para design e layout
+      - Análise de desempenho e implementação de SEO`,
     },
   ],
   servicesList: [
@@ -67,6 +84,8 @@ export const pt = {
   servicesTitle: "Serviços",
   servicesSubtitle: "O Que Posso Fazer Por Você",
   learnMore: "Saiba Mais",
+  someThingsBuilt: 'Algumas coisas que eu construí',
+  viewMoreProjects: 'Ver Mais Projetos',
   projectsList: [
     {
       title: 'Website de Portfólio',

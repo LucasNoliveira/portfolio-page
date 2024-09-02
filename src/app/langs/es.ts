@@ -24,21 +24,69 @@ export const es = {
     webDevXp: { name: "Desarrollo WEB", experienceYears: '2' },
     services: { name: "Servicios prestados", quantity: '27' }
   },
-  experiences: [
+  years: "Años",
+  "experiences": [
     {
-      company: 'Tech Innovators',
-      role: 'Desarrollador Frontend Senior',
-      startDate: 'Ene 2022',
-      endDate: 'Presente',
-      description: 'Liderando el equipo de desarrollo frontend, centrándome en construir aplicaciones web escalables y de alto rendimiento utilizando React y Next.js.',
+      "company": "Mont Capital Asset",
+      "logo": "/img/company_logos/montcapitalasset_logo.jpeg",
+      "role": "Desarrollador Full Stack Python",
+      "techStack": [
+        "Typescript",
+        "React",
+        "Nextjs",
+        "TailwindCSS",
+        "Node",
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Docker",
+        "Git",
+        "GitHub",
+        "AWS"
+      ],
+      "startDate": "Abr 2024",
+      "endDate": "Presente",
+      "description": `
+        - Desarrollo de backend con Python, Django, Flask, FastAPI, así como otras tecnologías como Node.js, Express, Sequelize.
+        - Creación de interfaces con React, TypeScript, Material UI, Styled Components, HTML, CSS.
+        - Manejo de solicitudes SOAP/REST, Webservices.
+        - Implementación de WebSockets, socket.io para comunicación en tiempo real.
+        - Gestión de bases de datos: MySQL, PostgreSQL, MongoDB.
+        - Contenerización de aplicaciones con Docker, Docker Compose, Kubernetes.
+        - Utilización de servicios de AWS: EC2, RDS, S3.
+      `,
     },
     {
-      company: 'Creative Solutions',
-      role: 'Desarrollador Full Stack Python',
-      startDate: 'Jun 2020',
-      endDate: 'Dic 2021',
-      description: 'Desarrollé aplicaciones web responsivas y optimicé interfaces de usuario utilizando Tailwind CSS y TypeScript.',
-    },
+      "company": "Vitta Group Franchising",
+      "logo": "/img/company_logos/vitta_logo.jpeg",
+      "role": "Desarrollador Web Full Stack",
+      "techStack": [
+        "React",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node",
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Git",
+        "GitHub"
+      ],
+      "startDate": "Oct 2023",
+      "endDate": "Abr 2024",
+      "description": `
+        - Desarrollo de aplicaciones en React.js
+        - Proyecto, implementación y mantenimiento de APIs usando JavaScript, Node.js y Django, incluyendo APIs RESTful.
+        - Creación, modelado y administración de bases de datos PostgreSQL.
+        - Utilización de Postman para pruebas de API.
+        - Configuración de servidor VPS Linux para alojar aplicaciones React con backend Django usando Nginx.
+        - Desarrollo de scripts para automatización de tareas y mejora de la productividad.
+        - Desarrollo y mantenimiento de Landing Pages con WordPress y Elementor para diseño y maquetación.
+        - Análisis de rendimiento e implementación de SEO.
+      `,
+    }
   ],
   servicesList: [
     {
@@ -65,6 +113,7 @@ export const es = {
   servicesTitle: "Servicios",
   servicesSubtitle: "Qué Puedo Hacer Por Ti",
   learnMore: "Aprende Más",
+  someThingsBuilt: 'Algunas cosas que he construido',
   projectsList: [
     {
       title: 'Sitio Web de Portafolio',
@@ -116,5 +165,6 @@ export const es = {
     },
   ],
   viewProject: "Ver Proyecto",
+  viewMoreProjects: 'Ver Más Proyectos',
   hoverDescription: "Explora el proyecto",
 };

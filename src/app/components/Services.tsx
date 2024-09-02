@@ -48,6 +48,7 @@ interface ServiceCardProps {
 
 const ServiceCard: FC<ServiceCardProps> = ({ service, isInView, index }) => {
     const { title, description, icon } = service;
+    const { translations } = useLanguage();
 
     const iconMap: Record<string, JSX.Element> = {
         development: <FaCode className="w-8 h-8 text-blue-600" />,
@@ -79,7 +80,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ service, isInView, index }) => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
                 >
-                    Learn More
+                    {translations.learnMore}
                 </motion.button>
             </div>
         </motion.div>

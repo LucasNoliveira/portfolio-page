@@ -50,7 +50,7 @@ const ProjectsSection: FC = () => {
                 </motion.h2>
 
                 <p className="text-lg text-gray-700 mb-12 text-center max-w-2xl mx-auto">
-                    Some things I’ve built
+                    {translations.someThingsBuilt}
                 </p>
 
                 <motion.div
@@ -77,7 +77,7 @@ const ProjectsSection: FC = () => {
                         href="#more-projects" // Update this with the correct link if necessary
                         className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300"
                     >
-                        Ver Mais Projetos
+                        {translations.viewMoreProjects}
                         <svg
                             className="ml-2 h-5 w-5 transition-transform duration-300"
                             fill="none"

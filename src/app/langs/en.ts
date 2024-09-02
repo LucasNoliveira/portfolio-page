@@ -26,11 +26,13 @@ export const en = {
     webDevXp: { name: "Web Development", experienceYears: '2' },
     services: { name: "Services Provided", quantity: '27' }
   },
+  years: "Years",
   experiences: [
     {
       company: 'Mont Capital Asset',
       logo: '/img/company_logos/montcapitalasset_logo.jpeg',
       role: 'Full Stack Python Developer',
+      techStack: ["Typescript", "React", "Nextjs", "TailwindCSS", "Node", "Python", "Django", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Git", "GitHub", "AWS"],
       startDate: 'Apr 2024',
       endDate: 'Present',
       description: `
@@ -47,6 +49,7 @@ export const en = {
         company: 'Vitta Group Franchising',
         logo: '/img/company_logos/vitta_logo.jpeg',
         role: 'Full Stack Web Developer',
+        techStack: [ "React", "HTML", "CSS", "JavaScript", "Node", "Python", "Django", "PostgreSQL", "Git", "GitHub"],
         startDate: 'Oct 2023',
         endDate: 'Apr 2024',
         description: `
@@ -136,8 +139,20 @@ export const en = {
       techStack: ["Kotlin"]
     },
   ],
+  someThingsBuilt: 'Some things I’ve built',
   viewProject: "View Project",
+  viewMoreProjects: 'View More Projects',
   hoverDescription: "Explore the project",
+  contactIntro: "I'd love to hear from you! Whether you have a project in mind, want to collaborate, or just want to say hi, feel free to reach out. Let's create something amazing together.",
+  phoneLabel: "Phone",
+  locationLabel: "Location",
+  nameLabel: "Name",
+  emailLabel: "Email",
+  messageLabel: "Message",
+  sendMessage: 'Send Message',
+  requiredField: "Este campo é obrigatório!",
+  invalidEmail: "Este email é inválido!",
+  thankYouMessage: "Thank You for you message!",
   rightsReserved: "Rights Reserved",
   privacyPolicy: "Privacy Policy",
   termsOfService: "Terms of Service",
