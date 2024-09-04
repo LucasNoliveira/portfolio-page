@@ -50,7 +50,7 @@ export const pt = {
       company: 'Vitta Group Franchising',
       logo: '/img/company_logos/vitta_logo.jpeg',
       role: 'Desenvolvedor Web Full Stack',
-      techStack: [ "React", "HTML", "CSS", "JavaScript", "Node", "Python", "Django", "PostgreSQL", "Git", "GitHub"],
+      techStack: ["React", "HTML", "CSS", "JavaScript", "Node", "Python", "Django", "PostgreSQL", "Git", "GitHub"],
       startDate: 'Out 2023',
       endDate: 'Abr 2024',
       description: `- Desenvolvimento de aplicações em React.js
@@ -84,7 +84,6 @@ export const pt = {
   servicesSubtitle: "O Que Posso Fazer Por Você",
   learnMore: "Saiba Mais",
   someThingsBuilt: 'Algumas coisas que eu construí',
-  viewMoreProjects: 'Ver Mais Projetos',
   projectsList: [
     {
       title: 'Website de Portfólio',
@@ -136,13 +135,17 @@ export const pt = {
     },
   ],
   viewProject: "Ver Projeto",
+  viewMoreProjects: 'Ver Mais Projetos',
   hoverDescription: "Explore o projeto",
   contactIntro: "Adoraria ouvir de você! Se você tem um projeto em mente, quer colaborar, ou apenas quer dizer oi, sinta-se à vontade para entrar em contato. Vamos criar algo incrível juntos.",
+  phoneLabel: "Phone",
+  locationLabel: "Location",
+  emailLabel: "Email",
   elevatingYourWebXp: "Elevando sua experiência web com tecnologia de ponta e design elegante.",
   quickLinks: "Links Rápidos",
   contactUs: "Entre em contato",
+  rightsReserved: "Direitos Reservados",
   privacyPolicy: "Política de Privacidade",
   termsOfService: "Termos de Serviço",
   cookiePolicy: "Política de Cookies",
-  rightsReserved: "Direitos Reservados"
 };

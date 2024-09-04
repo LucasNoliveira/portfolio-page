@@ -34,21 +34,7 @@ export const es = {
       "company": "Mont Capital Asset",
       "logo": "/img/company_logos/montcapitalasset_logo.jpeg",
       "role": "Desarrollador Full Stack Python",
-      "techStack": [
-        "Typescript",
-        "React",
-        "Nextjs",
-        "TailwindCSS",
-        "Node",
-        "Python",
-        "Django",
-        "PostgreSQL",
-        "MySQL",
-        "MongoDB",
-        "Docker",
-        "Git",
-        "GitHub",
-        "AWS"
+      "techStack": [ "Typescript", "React","Nextjs", "TailwindCSS", "Node", "Python", "Django", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Git", "GitHub", "AWS"
       ],
       "startDate": "Abr 2024",
       "endDate": "Presente",
@@ -66,17 +52,7 @@ export const es = {
       "company": "Vitta Group Franchising",
       "logo": "/img/company_logos/vitta_logo.jpeg",
       "role": "Desarrollador Web Full Stack",
-      "techStack": [
-        "React",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Node",
-        "Python",
-        "Django",
-        "PostgreSQL",
-        "Git",
-        "GitHub"
+      "techStack": ["React", "HTML", "CSS", "JavaScript", "Node", "Python", "Django", "PostgreSQL", "Git", "GitHub"
       ],
       "startDate": "Oct 2023",
       "endDate": "Abr 2024",
@@ -167,11 +143,14 @@ export const es = {
   viewMoreProjects: 'Ver Más Proyectos',
   hoverDescription: "Explora el proyecto",
   contactIntro: "¡Me encantaría saber de ti! Si tienes un proyecto en mente, quieres colaborar o simplemente saludar, no dudes en ponerte en contacto. Creemos algo increíble juntos.",
+  phoneLabel: "Teléfono",
+  locationLabel: "Ubicación",
+  emailLabel: "Correo Electrónico",
   elevatingYourWebXp: "Elevando tu experiencia web con tecnología de vanguardia y diseño elegante.",
   quickLinks: "Enlaces Rápidos",
   contactUs: "Contáctanos",
+  rightsReserved: "Derechos Reservados",
   privacyPolicy: "Política de Privacidad",
   termsOfService: "Términos de Servicio",
   cookiePolicy: "Política de Cookies",
-  rightsReserved: "Derechos Reservados"
 };

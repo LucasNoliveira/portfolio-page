@@ -64,19 +64,6 @@ const ContactSection: FC = () => {
                     </motion.div>
                 </div>
 
-                <motion.div
-                    className="flex flex-col items-center mt-12"
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, ease: 'easeOut' }}
-                >
-                    <p className="text-lg lg:text-xl text-gray-300 text-center mb-4">
-                        {translations.letUsKnow}
-                    </p>
-                    <p className="text-gray-300 text-center">
-                        {translations.contactDetails}
-                    </p>
-                </motion.div>
             </div>
         </section>
     );

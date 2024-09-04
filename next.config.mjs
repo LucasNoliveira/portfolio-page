@@ -1,4 +1,5 @@
 import path from 'path';
+import MiniCssExtractPlugin  from 'mini-css-extract-plugin';
 
 export default {
   webpack(config, { isServer }) {
@@ -10,6 +11,7 @@ export default {
 
     return config;
   },
+  plugins: [new MiniCssExtractPlugin()],
 
   // Comentando ou removendo a configuração de i18n para desativar rotas baseadas em idiomas
   // i18n: {
