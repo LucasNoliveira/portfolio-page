@@ -17,12 +17,12 @@ const Footer: FC = () => {
                             Lucas Oliveira
                         </Link>
                         <p className="text-center md:text-left text-gray-400">
-                            Elevating your web experience with cutting-edge technology and elegant design.
+                            {translations.elevatingYourWebXp}
                         </p>
                     </div>
 
                     <div className="flex flex-col items-center md:items-start">
-                        <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+                        <h3 className="text-xl font-semibold mb-4">{translations.quickLinks}</h3>
                         <nav className="flex flex-col space-y-2">
                             <Link href="#about" className="hover:text-white transition-colors duration-300">
                                 {translations.about}
@@ -37,11 +37,11 @@ const Footer: FC = () => {
                     </div>
 
                     <div className="flex flex-col items-center md:items-start">
-                        <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+                        <h3 className="text-xl font-semibold mb-4">{translations.contactUs}</h3>
                         <ul className="space-y-2">
                             <li className="flex items-center">
                                 <FaEnvelope className="text-teal-500 mr-2" />
-                                <a href="mailto:info@yourbrand.com" className="hover:text-white hover:underline transition-colors duration-300">
+                                <a href="mailto:lucasnoliveira126@gmail.com" className="hover:text-white hover:underline transition-colors duration-300">
                                     lucasnoliveira126@gmail.com
                                 </a>
                             </li>
