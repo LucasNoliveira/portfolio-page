@@ -18,13 +18,17 @@ export const pt = {
   close: "Fechar",
   hiThere: "Olá! 👋",
   welcomeMessage: "Explore meus projetos e, se gostar deles, me conte um pouco sobre o seu próximo projeto. Aproveite a visita!",
+  aboutMe: "Sobre Mim",
+  aboutIntro: "Olá! Eu sou o Lucas, um Desenvolvedor Web Full Stack com paixão por criar aplicações web dinâmicas e interativas.",
+  profile: "Perfil",
+  profileDescription: "Eu me especializo em desenvolver soluções front-end e back-end, com foco em design centrado no usuário e código eficiente.",
   professionalBackground: "Histórico Profissional",
   ExperienceSummary: {
     techXp: { name: "Experiência em Tecnologia", experienceYears: "3" },
     webDevXp: { name: "Desenvolvimento WEB", experienceYears: "2" },
     services: { name: "Serviços prestados", quantity: "27" }
   },
-  years: "Anos",
+  years: "anos",
   experiences: [
     {
       company: 'Mont Capital Asset',
@@ -66,19 +70,14 @@ export const pt = {
       icon: "development",
     },
     {
-      title: "Design UI/UX",
-      description: "Criação de interfaces intuitivas e bonitas que proporcionam uma experiência de usuário perfeita.",
-      icon: "design",
+      title: "Desenvolvimento Backend",
+      description: "Desenvolvimento de sistemas backend robustos e escaláveis com Node.js, Python, e mais.",
+      icon: "database",
     },
     {
       title: "Desenvolvimento Mobile",
       description: "Criação de aplicativos móveis multiplataforma com React Native.",
       icon: "mobile",
-    },
-    {
-      title: "Desenvolvimento Backend",
-      description: "Desenvolvimento de sistemas backend robustos e escaláveis com Node.js, Python, e mais.",
-      icon: "database",
     },
   ],
   servicesTitle: "Serviços",
@@ -138,4 +137,12 @@ export const pt = {
   ],
   viewProject: "Ver Projeto",
   hoverDescription: "Explore o projeto",
+  contactIntro: "Adoraria ouvir de você! Se você tem um projeto em mente, quer colaborar, ou apenas quer dizer oi, sinta-se à vontade para entrar em contato. Vamos criar algo incrível juntos.",
+  elevatingYourWebXp: "Elevando sua experiência web com tecnologia de ponta e design elegante.",
+  quickLinks: "Links Rápidos",
+  contactUs: "Entre em contato",
+  privacyPolicy: "Política de Privacidade",
+  termsOfService: "Termos de Serviço",
+  cookiePolicy: "Política de Cookies",
+  rightsReserved: "Direitos Reservados"
 };
