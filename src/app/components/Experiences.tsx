@@ -86,6 +86,14 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                     {exp.company}
                 </h3>
                 <p className="text-xl text-gray-700">{exp.role}</p>
+                
+                {/* Duration for mobile and smaller screens */}
+                <div
+                    className="text-gray-800 text-sm font-semibold mt-2 md:hidden"
+                >
+                    {exp.startDate} - {exp.endDate}
+                </div>
+
                 <p className="text-base text-gray-600 mt-4 whitespace-pre-line">{exp.description}</p>
                 {exp.techStack && (
                     <div className="mt-4">
@@ -95,9 +103,9 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                 )}
             </div>
 
-            {/* Duration */}
+            {/* Duration for desktop */}
             <div
-                className={`absolute ${
+                className={`absolute hidden md:block ${
                     index % 2 === 0 ? 'left-1/2 translate-x-8' : 'right-1/2 -translate-x-8 mr-3'
                 } bg-gray-100 text-gray-800 text-sm font-semibold px-4 py-2 rounded-full ml-3`}
             >
