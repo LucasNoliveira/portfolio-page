@@ -90,6 +90,7 @@ const Header: React.FC = () => {
                     <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('EN')}>English</button>
                     <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('PT')}>Português</button>
                     <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('ES')}>Español</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('JP')}>日本語</button>
                 </div>
             </div>
 
@@ -133,6 +134,7 @@ const Header: React.FC = () => {
                 <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('EN')}>English</button>
                 <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('PT')}>Português</button>
                 <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('ES')}>Español</button>
+                <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('JP')}>日本語</button>
             </div>
         </nav>
     </div>
