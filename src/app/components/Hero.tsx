@@ -8,7 +8,9 @@ import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql, SiJavascript, SiDo
 import { FaDownload, FaComments } from 'react-icons/fa';
 import Popup from "./Popup";
 
-const skillIcons = {
+type SkillIconKeys = 'React' | 'Next.js' | 'TypeScript' | 'Tailwind CSS' | 'Node.js' | 'GraphQL' | 'JavaScript' | 'Docker' | 'Jest' | 'Express' | 'Python' | 'Django' | 'AWS' | 'Kubernetes';
+
+const skillIcons: Record<SkillIconKeys, JSX.Element> = {
     React: <FaReact className="h-6 w-6 text-blue-600" />,
     'Next.js': <SiNextdotjs className="h-6 w-6 text-black" />,
     TypeScript: <SiTypescript className="h-6 w-6 text-blue-600" />,
@@ -110,7 +112,7 @@ const HeroSection: FC = () => {
                         {displayedSkills.map((skill) => (
                             <div key={skill} className="flex items-center border p-4 rounded-md hover:bg-gray-100 transition duration-300">
                                 <div className="mr-3">
-                                    {skillIcons[skill]}
+                                    {skillIcons[skill as SkillIconKeys]}
                                 </div>
                                 <p className="text-lg font-semibold text-gray-700">{skill}</p>
                             </div>
