@@ -6,6 +6,7 @@ import Slider from 'react-slick';
 import { NextArrow, PrevArrow } from './CustomArrows';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import ProjectCard from './ProjectCard';
 
 const ProjectsSection: FC = () => {
     const { translations } = useLanguage();
