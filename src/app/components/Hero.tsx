@@ -31,6 +31,7 @@ const allSkills = [
     'TypeScript', 'JavaScript', 'React', 'Next.js', 'Node.js', 'Express', 'Tailwind CSS', 'Docker', 'Kubernetes', 'GraphQL', 'Jest', 'Python', 'Django', 'AWS',
 ];
 
+
 const HeroSection: FC = () => {
     const { translations } = useLanguage();
     const [showAll, setShowAll] = useState(false);
@@ -47,22 +48,20 @@ const HeroSection: FC = () => {
     };
 
     return (
-        <section className="bg-gray-100 py-16 lg:py-20">
-            <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-8">
-                {/* Left Side */}
-                <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <div className="relative inline-block mb-6">
+        <section className="bg-gray-100 py-20 mt-3">
+            <div className="container mx-auto flex flex-col md:flex-row items-center">
+                <div className="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center border-yellow">
+                    <div className="relative inline-block">
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full border-2 border-transparent -z-10"></div>
                         <Image
                             src="/img/undraw.svg"
                             alt="Lucas Oliveira"
-                            width={300}
-                            height={300}
-                            className='rounded-full'
-                            sizes="(max-width: 768px) 100vw, 50vw"
+                            width={400}
+                            height={400}
+                            className='mb-2'
                         />
                     </div>
-                    <div className="flex space-x-4 mb-6">
+                    <div className="flex space-x-4 mt-6">
                         <a href="https://www.linkedin.com/in/lucasnevesoliveira" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-700 transition duration-300">
                             <FaLinkedin className="h-8 w-8" />
                         </a>
@@ -73,7 +72,7 @@ const HeroSection: FC = () => {
                             <FaEnvelope className="h-8 w-8" />
                         </a>
                     </div>
-                    <div className="flex flex-col md:flex-row gap-4 mb-6">
+                    <div className="flex flex-col md:flex-row mt-8 gap-4">
                         <a
                             href="#"
                             onClick={handleGetInTouchButtonClick}
@@ -95,29 +94,32 @@ const HeroSection: FC = () => {
                     </div>
                 </div>
 
-                {/* Right Side */}
-                <div className="w-full lg:w-1/2 text-center lg:text-left">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
+                <div className="w-full md:w-1/2 text-center md:text-left">
+                    <h1 className="text-4xl md:text-6xl font-bold text-gray-800">
                         <span className="text-blue-600">Lucas</span> Oliveira
                     </h1>
-                    <hr className="my-4 border-t-2 border-blue-600 mx-auto lg:mx-0 w-24" />
-                    <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-4">
+                    <hr className="my-4 border-t-4 border-blue-600 mx-auto md:mx-0 w-24" />
+
+                    <p className="text-xl md:text-2xl text-gray-600 mt-4">
                         Full Stack Web Developer
                     </p>
-                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-500 mb-6">
+
+                    <p className="max-w-lg text-gray-500 mt-6">
                         {translations.heroDescription}
                     </p>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-6">
+
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-0 mt-10">
                         {displayedSkills.map((skill) => (
                             <div key={skill} className="flex items-center border p-4 rounded-md hover:bg-gray-100 transition duration-300">
                                 <div className="mr-3">
                                     {skillIcons[skill as SkillIconKeys]}
                                 </div>
-                                <p className="text-sm sm:text-base font-semibold text-gray-700">{skill}</p>
+                                <p className="text-lg font-semibold text-gray-700">{skill}</p>
                             </div>
                         ))}
                     </div>
-                    <div className="text-center">
+
+                    <div className="mt-6 text-center">
                         <button
                             onClick={() => setShowAll(!showAll)}
                             className="bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition duration-300 px-4 py-2 rounded-full text-lg font-semibold"
