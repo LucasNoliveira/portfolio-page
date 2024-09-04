@@ -58,7 +58,7 @@ const ExperienceSection: FC = () => {
         <section className="bg-gray-800 py-20 px-10" id="experience">
             <div className="container mx-auto px-4">
                 <motion.h2
-                    className="text-3xl font-bold text-gray-100 text-center mb-6"
+                    className="text-3xl font-bold text-gray-50 text-center mb-6"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -117,8 +117,8 @@ const ExperienceSection: FC = () => {
                                     {/* Duration */}
                                     <div
                                         className={`absolute ${
-                                            index % 2 === 0 ? 'left-1/2 translate-x-8' : 'right-1/2 -translate-x-8'
-                                        } bg-gray-800 text-gray-200 text-sm font-semibold px-4 py-2 rounded-full`}
+                                            index % 2 === 0 ? 'left-1/2 translate-x-8' : 'right-1/2 -translate-x-8 mr-3'
+                                        } bg-gray-100 text-gray-800 text-sm font-semibold px-4 py-2 rounded-full ml-3`}
                                     >
                                         {exp.startDate} - {exp.endDate}
                                     </div>

@@ -24,10 +24,10 @@ const ExperienceSummary: FC = () => {
     }, [inView]);
 
     return (
-        <section className="bg-gray-50 py-10" id="experience-summary">
+        <section className="bg-gray-900 py-10" id="experience-summary">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-gray-800">{translations.experience}</h2>
+                    <h2 className="text-3xl font-bold text-gray-50">{translations.experience}</h2>
                 </div>
                 <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <motion.div

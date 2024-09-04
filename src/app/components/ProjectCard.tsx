@@ -98,11 +98,11 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center mt-4 bg-blue-600 text-white px-3 py-1 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 text-base md:text-lg lg:text-xl"
+                    className="group inline-flex items-center mt-4 bg-blue-600 text-white px-3 py-1 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 text-base md:text-lg lg:text-xl"
                 >
                     {translations.viewProject}
                     <svg
-                        className="ml-2 h-5 w-5 transition-transform duration-300"
+                        className="ml-2 h-5 w-5 transition-transform duration-300 transform group-hover:translate-x-1"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
