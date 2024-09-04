@@ -18,6 +18,8 @@ const ProjectsSection: FC = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
+        lazyLoad: true,
+        arrows: false,
         autoplaySpeed: 3000,
         nextArrow: <NextArrow className="hidden lg:block" />,
         prevArrow: <PrevArrow className="hidden lg:block" />,
