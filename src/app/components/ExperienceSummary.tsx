@@ -7,8 +7,11 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
 const ExperienceSummary: FC = () => {
+    const isMobile = window.innerWidth <= 640; // Ajuste o valor conforme o tamanho de tela para dispositivos móveis
+    const threshold = isMobile ? 0.3 : 0.8;
+
     const { ref, inView } = useInView({
-        threshold: 0.8,
+        threshold: threshold,
     });
 
     const [hasAnimated, setHasAnimated] = useState(false);
