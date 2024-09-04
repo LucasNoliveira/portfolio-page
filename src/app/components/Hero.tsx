@@ -2,10 +2,9 @@
 import Image from 'next/image';
 import { FC, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaDownload, FaComments } from 'react-icons/fa';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql, SiJavascript, SiDocker, SiJest, SiPython, SiKubernetes, SiIcloud } from 'react-icons/si';
-import { FaDownload, FaComments } from 'react-icons/fa';
 import Popup from "./Popup";
 
 type SkillIconKeys = 'React' | 'Next.js' | 'TypeScript' | 'Tailwind CSS' | 'Node.js' | 'GraphQL' | 'JavaScript' | 'Docker' | 'Jest' | 'Express' | 'Python' | 'Django' | 'AWS' | 'Kubernetes';
@@ -31,7 +30,6 @@ const allSkills = [
     'TypeScript', 'JavaScript', 'React', 'Next.js', 'Node.js', 'Express', 'Tailwind CSS', 'Docker', 'Kubernetes', 'GraphQL', 'Jest', 'Python', 'Django', 'AWS',
 ];
 
-
 const HeroSection: FC = () => {
     const { translations } = useLanguage();
     const [showAll, setShowAll] = useState(false);
@@ -50,7 +48,7 @@ const HeroSection: FC = () => {
     return (
         <section className="bg-gray-100 py-20 mt-3">
             <div className="container mx-auto flex flex-col md:flex-row items-center">
-                <div className="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center border-yellow">
+                <div className="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center">
                     <div className="relative inline-block">
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full border-2 border-transparent -z-10"></div>
                         <Image
@@ -58,7 +56,8 @@ const HeroSection: FC = () => {
                             alt="Lucas Oliveira"
                             width={400}
                             height={400}
-                            className='mb-2'
+                            className="mb-2 md:w-96 md:h-96 w-64 h-64"
+                            priority
                         />
                     </div>
                     <div className="flex space-x-4 mt-6">
