@@ -138,8 +138,8 @@ export const pt = {
   viewMoreProjects: 'Ver Mais Projetos',
   hoverDescription: "Explore o projeto",
   contactIntro: "Adoraria ouvir de você! Se você tem um projeto em mente, quer colaborar, ou apenas quer dizer oi, sinta-se à vontade para entrar em contato. Vamos criar algo incrível juntos.",
-  phoneLabel: "Phone",
-  locationLabel: "Location",
+  phoneLabel: "Telefone",
+  locationLabel: "Localização",
   emailLabel: "Email",
   elevatingYourWebXp: "Elevando sua experiência web com tecnologia de ponta e design elegante.",
   quickLinks: "Links Rápidos",
@@ -148,4 +148,6 @@ export const pt = {
   privacyPolicy: "Política de Privacidade",
   termsOfService: "Termos de Serviço",
   cookiePolicy: "Política de Cookies",
+  readMore: "Ler mais",
+  readLess: "Ler menos",
 };

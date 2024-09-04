@@ -154,4 +154,6 @@ export const jp = {
     privacyPolicy: "プライバシーポリシー",
     termsOfService: "利用規約",
     cookiePolicy: "クッキーポリシー",
+    readMore: "続きを読む",
+    readLess: "折りたたむ",
 }

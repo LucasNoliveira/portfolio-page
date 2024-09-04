@@ -154,4 +154,6 @@ export const en = {
   privacyPolicy: "Privacy Policy",
   termsOfService: "Terms of Service",
   cookiePolicy: "Cookie Policy",
+  readMore: "Read more",
+  readLess: "Read less",
 };

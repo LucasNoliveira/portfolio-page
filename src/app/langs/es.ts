@@ -153,4 +153,6 @@ export const es = {
   privacyPolicy: "Política de Privacidad",
   termsOfService: "Términos de Servicio",
   cookiePolicy: "Política de Cookies",
+  readMore: "Leer más",
+  readLess: "Leer menos",
 };
