@@ -46,17 +46,17 @@ const HeroSection: FC = () => {
     };
 
     return (
-        <section className="bg-gray-100 py-20">
+        <section className="bg-gray-100 py-20 mt-3">
             <div className="container mx-auto flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center border-yellow">
                     <div className="relative inline-block">
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full border-2 border-transparent -z-10"></div>
                         <Image
-                            src="/me.png"
+                            src="/img/undraw.svg"
                             alt="Lucas Oliveira"
                             width={400}
                             height={400}
-                            className="rounded-full bg-[#222]"
+                            className='mb-2'
                         />
                     </div>
                     <div className="flex space-x-4 mt-6">
