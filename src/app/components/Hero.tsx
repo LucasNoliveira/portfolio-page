@@ -76,7 +76,7 @@ const HeroSection: FC = () => {
                         <a
                             href="#"
                             onClick={handleGetInTouchButtonClick}
-                            className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300"
+                            className="inline-flex justify-center items-center bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300"
                         >
                             <FaComments className="mr-2" />
                             {translations.getInTouch}
@@ -86,7 +86,7 @@ const HeroSection: FC = () => {
                         <a
                             href="/path-to-your-resume.pdf"
                             download
-                            className="inline-flex items-center bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-gray-700 transition duration-300"
+                            className="inline-flex justify-center items-center bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-gray-700 transition duration-300"
                         >
                             <FaDownload className="mr-2" />
                             {translations.downloadCV}
