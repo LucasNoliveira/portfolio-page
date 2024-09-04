@@ -15,6 +15,8 @@ const Header: React.FC = () => {
     const dropdownRef = useRef<HTMLDivElement>(null);
     const languageRef = useRef<HTMLDivElement>(null);
 
+    type Language = 'EN' | 'PT' | 'ES' | 'JP';
+
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
