@@ -52,15 +52,15 @@ export const en = {
         - Containerizing applications with Docker, Docker Compose, Kubernetes.
         - Utilizing AWS Services: EC2, RDS, S3.
         `,
-      },
-      {
-        company: 'Vitta Group Franchising',
-        logo: '/img/company_logos/vitta_logo.jpeg',
-        role: 'Full Stack Web Developer',
-        techStack: [ "React", "HTML", "CSS", "JavaScript", "Node", "Python", "Django", "PostgreSQL", "Git", "GitHub"],
-        startDate: 'Oct 2023',
-        endDate: 'Apr 2024',
-        description: `
+    },
+    {
+      company: 'Vitta Group Franchising',
+      logo: '/img/company_logos/vitta_logo.jpeg',
+      role: 'Full Stack Web Developer',
+      techStack: ["React", "HTML", "CSS", "JavaScript", "Node", "Python", "Django", "PostgreSQL", "Git", "GitHub"],
+      startDate: 'Oct 2023',
+      endDate: 'Apr 2024',
+      description: `
         - Development of applications in React.js
         - Project, implementation, and maintenance of APIs using JavaScript, Node.js, and Django, including RESTful APIs
         - Creation, modeling, and administration of PostgreSQL databases
@@ -152,6 +152,8 @@ export const en = {
   nameLabel: "Name",
   emailLabel: "Email",
   messageLabel: "Message",
+  letUsKnow: "Let us know how we can assist you.",
+  contactDetails: "Feel free to contact us for any inquiries or collaborations. We're here to help!",
   sendMessage: 'Send Message',
   requiredField: "Este campo é obrigatório!",
   invalidEmail: "Este email é inválido!",
