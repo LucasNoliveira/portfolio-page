@@ -118,7 +118,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                             className="text-blue-600 cursor-pointer hover:underline"
                             onClick={() => setShowMore(!showMore)}
                         >
-                            {showMore ? translations.readLess : translations.readMore}
+                            {showMore ? translations.readLess  : translations.readMore}
                             </span>
                     )}
                 </div>
