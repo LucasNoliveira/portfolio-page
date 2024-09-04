@@ -1,15 +1,28 @@
 'use client';
-import { FC, useState } from 'react';
+import { FC, useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
 import { techColors } from './techTags'; // Ensure techColors is imported
 
 const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
     const [showAllTechs, setShowAllTechs] = useState(false);
+    const [showMore, setShowMore] = useState(false);
+    const [isTruncated, setIsTruncated] = useState(false);
+    const descriptionRef = useRef<HTMLParagraphElement>(null);
+    const { translations } = useLanguage();
+
 
     const toggleTechStack = () => {
         setShowAllTechs(!showAllTechs);
     };
+
+    useEffect(() => {
+        if (descriptionRef.current) {
+            // Verifica se a altura do parágrafo é maior que o limite de 5 linhas
+            const isOverflowing = descriptionRef.current.scrollHeight > descriptionRef.current.clientHeight;
+            setIsTruncated(isOverflowing);
+        }
+    }, []);
 
     const renderTechStack = (techStack: string[], showAll: boolean) => {
         const maxVisibleItems = 4;
@@ -93,7 +106,23 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                     {exp.startDate} - {exp.endDate}
                 </div>
 
-                <p className="text-base text-gray-600 mt-4 whitespace-pre-line">{exp.description}</p>
+                <div className="relative">
+                    <p
+                        ref={descriptionRef}
+                        className={`text-base text-gray-600 whitespace-pre-line ${!showMore ? 'line-clamp-5' : ''}`}
+                    >
+                        {exp.description}
+                    </p>
+                    {isTruncated && (
+                        <span
+                            className="text-blue-600 cursor-pointer hover:underline"
+                            onClick={() => setShowMore(!showMore)}
+                        >
+                            {showMore ? translations.readLess : translations.readMore}
+                            </span>
+                    )}
+                </div>
+
                 {exp.techStack && (
                     <div className="mt-4">
                         <h4 className="text-gray-700 font-semibold">Tech Stack:</h4>
