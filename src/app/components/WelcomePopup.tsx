@@ -10,7 +10,7 @@ const WelcomePopup: React.FC = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsVisible(true);
-        }, 100); // Minimum delay to allow animation start
+        }, 100); // Atraso mínimo para permitir o início da animação
 
         setIsRendered(true);
 
@@ -19,25 +19,24 @@ const WelcomePopup: React.FC = () => {
 
     const handleClose = () => {
         setIsVisible(false);
-        setTimeout(() => setIsRendered(false), 300); // Transition duration
+        setTimeout(() => setIsRendered(false), 300); // Duração da transição
     };
 
     if (!isRendered) return null;
 
     return (
         <div
-            className={`fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 
-            w-80 sm:w-96 md:w-1/2 lg:w-1/3 xl:w-1/4 
-            ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            className={`fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 w-72 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                }`}
         >
-            <div className="text-sm sm:text-base lg:text-lg font-medium">
+            <div className="text-base font-medium">
                 <strong>{translations.hiThere}</strong>
                 <br />
                 {translations.welcomeMessage}
             </div>
             <button
                 onClick={handleClose}
-                className="mt-2 text-blue-600 absolute top-2 right-2 text-base sm:text-lg"
+                className="mt-2 text-blue-600 absolute top-2 right-2 text-lg"
             >
                 ✕
             </button>
