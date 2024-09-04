@@ -6,7 +6,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql, SiJavascript, SiDocker, SiJest, SiPython, SiKubernetes, SiIcloud } from 'react-icons/si';
 import { FaDownload, FaComments } from 'react-icons/fa';
-import Popup from "./Popup.tsx";
+import Popup from "./Popup";
 
 const skillIcons = {
     React: <FaReact className="h-6 w-6 text-blue-600" />,
