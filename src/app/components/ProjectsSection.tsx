@@ -4,7 +4,6 @@ import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import { NextArrow, PrevArrow } from './CustomArrows';
-import ProjectCard from './ProjectCard';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -19,8 +18,8 @@ const ProjectsSection: FC = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow className="hidden lg:block" />,
+        prevArrow: <PrevArrow className="hidden lg:block" />,
         responsive: [
             {
                 breakpoint: 1200,
