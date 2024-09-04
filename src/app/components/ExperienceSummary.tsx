@@ -7,8 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
 const ExperienceSummary: FC = () => {
-    const isMobile = window.innerWidth <= 640; // Ajuste o valor conforme o tamanho de tela para dispositivos móveis
-    const threshold = isMobile ? 0.3 : 0.8;
+    const [threshold, setThreshold] = useState(0.8);
 
     const { ref, inView } = useInView({
         threshold: threshold,
@@ -17,6 +16,24 @@ const ExperienceSummary: FC = () => {
     const [hasAnimated, setHasAnimated] = useState(false);
     const hasAnimatedRef = useRef(false);
     const { translations } = useLanguage();
+
+    useEffect(() => {
+        // Atualize o threshold baseado no tamanho da tela no lado do cliente
+        const handleResize = () => {
+            setThreshold(window.innerWidth <= 640 ? 0.3 : 0.8);
+        };
+
+        // Defina o threshold inicial
+        handleResize();
+
+        // Adicione o listener para redimensionamento da janela
+        window.addEventListener('resize', handleResize);
+
+        // Limpeza do listener ao desmontar o componente
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         if (inView && !hasAnimatedRef.current) {
