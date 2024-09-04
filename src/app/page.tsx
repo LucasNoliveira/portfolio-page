@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import HeroSection from "./components/Hero";
+import AboutSection from "./components/About";
 import './globals.css'
 import { LanguageProvider } from './context/LanguageContext';
 import ExperienceSection from "./components/Experiences";
@@ -30,9 +31,10 @@ const Home: NextPage = () => {
         <div>
             <LanguageProvider>
                 <Header />
-                <main className="p-4">
+                <main>
                     <HeroSection />
                 </main>
+                <AboutSection />
                 <ExperienceSummary />
                 <ExperienceSection />
                 <ServicesSection />
