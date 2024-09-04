@@ -57,16 +57,16 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                 <Image
                     src={project.image}
                     alt={project.title}
-                    width={500}
-                    height={300}
-                    className="object-cover w-full h-48"
+                    width={600} // Ajuste para imagens maiores
+                    height={400} // Ajuste para manter a proporção
+                    className="object-cover w-full h-48 md:h-56 lg:h-64"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                     <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white text-2xl bg-gray-800 p-2 rounded-full hover:bg-gray-600 transition-all duration-300 cursor-pointer"
+                        className="text-white text-xl md:text-2xl bg-gray-800 p-2 rounded-full hover:bg-gray-600 transition-all duration-300 cursor-pointer"
                     >
                         <FiGithub />
                     </a>
@@ -74,31 +74,31 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white text-2xl bg-gray-800 p-2 rounded-full hover:bg-gray-600 transition-all duration-300 cursor-pointer"
+                        className="text-white text-xl md:text-2xl bg-gray-800 p-2 rounded-full hover:bg-gray-600 transition-all duration-300 cursor-pointer"
                     >
                         <FiEye />
                     </a>
                 </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 md:p-6 lg:p-8">
                 <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-2xl font-bold text-gray-800 hover:underline"
+                    className="text-xl md:text-2xl font-bold text-gray-800 hover:underline"
                 >
                     {project.title}
                 </a>
-                <p className="text-gray-600 mt-4 line-clamp-3">{project.description}</p>
+                <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-2 md:mt-4 line-clamp-3">{project.description}</p>
                 <div>
-                    <h4 className="text-gray-700 font-semibold">Tech Stack:</h4>
+                    <h4 className="text-gray-700 font-semibold mt-4">Tech Stack:</h4>
                     {renderTechStack(project.techStack)}
                 </div>
                 <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center mt-4 bg-blue-600 text-white px-3 py-1 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 text-base md:text-lg lg:text-xl"
+                    className="group inline-flex items-center mt-4 bg-blue-600 text-white px-3 py-1 rounded-full text-base md:text-lg lg:text-xl font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300"
                 >
                     {translations.viewProject}
                     <svg

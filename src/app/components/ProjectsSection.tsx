@@ -23,13 +23,26 @@ const ProjectsSection: FC = () => {
         prevArrow: <PrevArrow />,
         responsive: [
             {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 640,
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
                 },
@@ -38,10 +51,10 @@ const ProjectsSection: FC = () => {
     };
 
     return (
-        <section className="bg-gray-100 py-20 px-10" id="projects">
-            <div className="container mx-auto px-4">
+        <section className="bg-gray-100 py-20 px-4 md:px-8 lg:px-12 xl:px-16" id="projects">
+            <div className="container mx-auto">
                 <motion.h2
-                    className="text-3xl font-bold text-gray-800 text-center mb-6"
+                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-6"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -49,7 +62,7 @@ const ProjectsSection: FC = () => {
                     {translations.projects}
                 </motion.h2>
 
-                <p className="text-lg text-gray-700 mb-12 text-center max-w-2xl mx-auto">
+                <p className="text-base md:text-lg lg:text-xl text-gray-700 mb-12 text-center max-w-2xl mx-auto">
                     {translations.someThingsBuilt}
                 </p>
 
