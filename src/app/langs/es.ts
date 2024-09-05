@@ -22,6 +22,17 @@ export const es = {
   aboutIntro: "¡Hola! Soy Lucas, un Desarrollador Web Full Stack con pasión por crear aplicaciones web dinámicas e interactivas.",
   profile: "Perfil",
   profileDescription: "Me especializo en desarrollar soluciones front-end y back-end, con enfoque en el diseño centrado en el usuario y código eficiente.",
+  spokenLanguages: "Idiomas Hablados",
+  languages: [
+    { name: "portuguese", level: "native" },
+    { name: "english", level: "advanced" },
+    { name: "japanese", level: "intermediate" },
+    { name: "spanish", level: "basic" },
+  ],
+  portuguese: "Portugués",
+  english: "Inglés",
+  japanese: "Japonés",
+  spanish: "Español",
   professionalBackground: "Trayectoria Profesional",
   ExperienceSummary: {
     techXp: { name: "Experiencia en Tecnología", experienceYears: '3' },
@@ -34,7 +45,7 @@ export const es = {
       "company": "Mont Capital Asset",
       "logo": "/img/company_logos/montcapitalasset_logo.jpeg",
       "role": "Desarrollador Full Stack Python",
-      "techStack": [ "Typescript", "React","Nextjs", "TailwindCSS", "Node", "Python", "Django", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Git", "GitHub", "AWS"
+      "techStack": ["Typescript", "React", "Nextjs", "TailwindCSS", "Node", "Python", "Django", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Git", "GitHub", "AWS"
       ],
       "startDate": "Abr 2024",
       "endDate": "Presente",

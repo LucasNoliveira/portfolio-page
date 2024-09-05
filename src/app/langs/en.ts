@@ -24,6 +24,17 @@ export const en = {
   aboutIntro: "Hello! I'm Lucas, a Full Stack Web Developer with a passion for creating dynamic and interactive web applications.",
   profile: "Profile",
   profileDescription: "I specialize in developing front-end and back-end solutions, focusing on user-centered design and efficient code.",
+  spokenLanguages: "Spoken Languages",
+  languages: [
+    { name: "portuguese", level: "native" },
+    { name: "english", level: "advanced" },
+    { name: "japanese", level: "intermediate" },
+    { name: "spanish", level: "basic" },
+  ],
+  portuguese: "Portuguese",
+  english: "English",
+  japanese: "Japanese",
+  spanish: "Spanish",
   professionalBackground: "Professional Background",
   // furtherDetails: "For more information about my projects and achievements, feel free to explore my portfolio.",
   ExperienceSummary: {

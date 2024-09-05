@@ -24,6 +24,17 @@ export const jp = {
     aboutIntro: "こんにちは！私はダイナミックでインタラクティブなウェブアプリケーションの作成に情熱を持つフルスタックウェブ開発者です。",
     profile: "プロフィール",
     profileDescription: "ユーザー中心のデザインと効率的なコードに焦点を当てたフロントエンドおよびバックエンドソリューションの開発を専門としています。",
+    spokenLanguages: "話されている言語",
+    languages: [
+        { name: "portuguese", level: "native" },
+        { name: "english", level: "advanced" },
+        { name: "japanese", level: "intermediate" },
+        { name: "spanish", level: "basic" },
+    ],
+    portuguese: "ポルトガル語",
+    english: "英語",
+    japanese: "日本語",
+    spanish: "スペイン語",
     professionalBackground: "職歴",
     // furtherDetails: "プロジェクトや実績についての詳細は、ぜひ私のポートフォリオをご覧ください。",
     ExperienceSummary: {
