@@ -94,10 +94,16 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                 className={`w-full p-6 bg-gray-100 rounded-lg shadow-lg transform ${index % 2 === 0 ? 'md:-translate-x-1' : 'md:translate-x-1'
                     } md:w-5/12`}
             >
-                <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-                    {exp.company}
-                </h3>
-                <p className="text-xl text-gray-700">{exp.role}</p>
+                <div className='flex items-center gap-3 md:gap-4'>
+                    <img
+                        src={exp.logo}
+                        className='rounded-full h-10 w-10 block md:hidden'
+                    />
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-1 md:mb-2">
+                        {exp.company}
+                    </h3>
+                </div>
+                <p className="text-lg md:text-xl lg:text-2xl text-blue-600">{exp.role}</p>
 
                 {/* Duration for mobile and smaller screens */}
                 <div
@@ -118,8 +124,8 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                             className="text-blue-600 cursor-pointer hover:underline"
                             onClick={() => setShowMore(!showMore)}
                         >
-                            {showMore ? translations.readLess  : translations.readMore}
-                            </span>
+                            {showMore ? translations.readLess : translations.readMore}
+                        </span>
                     )}
                 </div>
 
