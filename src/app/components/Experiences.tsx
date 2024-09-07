@@ -1,7 +1,7 @@
 'use client';
-import { FC, useState, useRef, useEffect } from 'react';
+import { FC, useState, useRef, useEffect, useCallback } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { techColors } from './techTags'; // Ensure techColors is imported
 
 const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
@@ -10,7 +10,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
     const [isTruncated, setIsTruncated] = useState(false);
     const descriptionRef = useRef<HTMLParagraphElement>(null);
     const { translations } = useLanguage();
-
+    const controls = useAnimation();
 
     const toggleTechStack = () => {
         setShowAllTechs(!showAllTechs);
@@ -23,6 +23,28 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
             setIsTruncated(isOverflowing);
         }
     }, []);
+
+    const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                controls.start({ opacity: 1, y: 0 }); // Ajustado para usar y em vez de x
+            } else {
+                controls.start({ opacity: 0, y: index % 2 === 0 ? 50 : -50 }); // Ajustado para usar y em vez de x
+            }
+        });
+    }, [controls, index]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.1 });
+        if (descriptionRef.current) {
+            observer.observe(descriptionRef.current);
+        }
+        return () => {
+            if (descriptionRef.current) {
+                observer.unobserve(descriptionRef.current);
+            }
+        };
+    }, [handleIntersection]);
 
     const renderTechStack = (techStack: string[], showAll: boolean) => {
         const maxVisibleItems = 4;
@@ -73,9 +95,9 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
     return (
         <motion.li
             key={index}
-            className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} relative`}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-            animate={{ opacity: 1, x: 0 }}
+            className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} relative w-full`} // Ensure width is full
+            initial={{ opacity: 0, y: index % 2 === 0 ? 50 : -50 }} // Use y for vertical transitions
+            animate={controls}
             transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.3 }}
         >
             {/* Timeline Circle with Logo */}
@@ -91,8 +113,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
 
             {/* Experience Card */}
             <div
-                className={`w-full p-6 bg-gray-100 rounded-lg shadow-lg transform ${index % 2 === 0 ? 'md:-translate-x-1' : 'md:translate-x-1'
-                    } md:w-5/12`}
+                className={`w-full p-6 bg-gray-100 rounded-lg shadow-lg ${index % 2 === 0 ? 'md:-translate-x-1' : 'md:translate-x-1'} md:w-5/12`}
             >
                 <div className='flex items-center gap-3 md:gap-4'>
                     <img
@@ -139,8 +160,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
 
             {/* Duration for desktop */}
             <div
-                className={`absolute hidden md:block ${index % 2 === 0 ? 'left-1/2 translate-x-8' : 'right-1/2 -translate-x-8 mr-3'
-                    } bg-gray-100 text-gray-800 text-sm font-semibold px-4 py-2 rounded-full ml-3`}
+                className={`absolute hidden md:block ${index % 2 === 0 ? 'left-1/2 translate-x-8' : 'right-1/2 -translate-x-8 mr-3'} bg-gray-100 text-gray-800 text-sm font-semibold px-4 py-2 rounded-full ml-3`}
             >
                 {exp.startDate} - {exp.endDate}
             </div>
