@@ -7,9 +7,14 @@ import { NextArrow, PrevArrow } from './CustomArrows';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ProjectCard from './ProjectCard';
+import { useInView } from 'react-intersection-observer';
 
 const ProjectsSection: FC = () => {
     const { translations } = useLanguage();
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.3, // 30% do viewport
+    });
 
     const settings = {
         dots: true,
@@ -18,7 +23,6 @@ const ProjectsSection: FC = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        // lazyLoad: true,
         arrows: false,
         autoplaySpeed: 3000,
         nextArrow: <NextArrow className="hidden lg:block" />,
@@ -53,12 +57,16 @@ const ProjectsSection: FC = () => {
     };
 
     return (
-        <section className="bg-gray-100 py-20 px-4 md:px-8 lg:px-12 xl:px-16" id="projects">
+        <section
+            className="bg-gray-100 py-20 px-4 md:px-8 lg:px-12 xl:px-16"
+            id="projects"
+            ref={ref} // Referência para o elemento
+        >
             <div className="container mx-auto">
                 <motion.h2
                     className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-6"
                     initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
                 >
                     {translations.projects}
@@ -70,7 +78,7 @@ const ProjectsSection: FC = () => {
 
                 <motion.div
                     initial="hidden"
-                    animate="visible"
+                    animate={inView ? "visible" : "hidden"}
                     variants={{
                         hidden: {},
                         visible: {
