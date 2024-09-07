@@ -8,10 +8,9 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
     const [showAllTechs, setShowAllTechs] = useState(false);
     const [showMore, setShowMore] = useState(false);
     const [isTruncated, setIsTruncated] = useState(false);
-    const [isVisible, setIsVisible] = useState(false); // State to track visibility
     const descriptionRef = useRef<HTMLParagraphElement>(null);
-    const cardRef = useRef<HTMLLIElement>(null); // Ref for the card
     const { translations } = useLanguage();
+
 
     const toggleTechStack = () => {
         setShowAllTechs(!showAllTechs);
@@ -23,25 +22,6 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
             const isOverflowing = descriptionRef.current.scrollHeight > descriptionRef.current.clientHeight;
             setIsTruncated(isOverflowing);
         }
-    }, []);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsVisible(entry.isIntersecting); // Update visibility based on intersection
-            },
-            { threshold: 0.1 } // Trigger when at least 10% of the element is in view
-        );
-
-        if (cardRef.current) {
-            observer.observe(cardRef.current);
-        }
-
-        return () => {
-            if (cardRef.current) {
-                observer.unobserve(cardRef.current);
-            }
-        };
     }, []);
 
     const renderTechStack = (techStack: string[], showAll: boolean) => {
@@ -92,11 +72,10 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
 
     return (
         <motion.li
-            ref={cardRef} // Attach ref for intersection observation
             key={index}
             className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} relative`}
             initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : (index % 2 === 0 ? -100 : 100) }} // Animate based on visibility
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.3 }}
         >
             {/* Timeline Circle with Logo */}
