@@ -1,13 +1,34 @@
 'use client';
-import { FC, useRef } from 'react';
+import { FC, useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { FaCode, FaMobileAlt, FaPalette, FaDatabase } from 'react-icons/fa';
 import { motion, useInView } from 'framer-motion';
 
 const ServicesSection: FC = () => {
     const { translations } = useLanguage();
+    const [threshold, setThreshold] = useState(0.4); // Define o threshold padrão
+
     const ref = useRef(null);
-    const isInView = useInView(ref, { amount: 0.4, once: true });
+
+    // Atualize o threshold baseado no tamanho da tela no lado do cliente
+    useEffect(() => {
+        const handleResize = () => {
+            setThreshold(window.innerWidth <= 640 ? 0.2 : 0.4);
+        };
+
+        // Defina o threshold inicial
+        handleResize();
+
+        // Adicione o listener para redimensionamento da janela
+        window.addEventListener('resize', handleResize);
+
+        // Limpeza do listener ao desmontar o componente
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const isInView = useInView(ref, { amount: threshold, once: true });
 
     return (
         <section ref={ref} className="bg-gray-100 py-16 sm:py-20 lg:py-24 border-b-4 border-gray-300" id="services">
