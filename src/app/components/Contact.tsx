@@ -1,11 +1,44 @@
 'use client';
-import { FC } from 'react';
+import { FC, useEffect, useState, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
 
 const ContactSection: FC = () => {
     const { translations } = useLanguage();
+    const [threshold, setThreshold] = useState(0.8);
+    const { ref, inView } = useInView({
+        threshold: threshold,
+    });
+
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const hasAnimatedRef = useRef(false);
+
+    useEffect(() => {
+        // Atualize o threshold baseado no tamanho da tela no lado do cliente
+        const handleResize = () => {
+            setThreshold(window.innerWidth <= 640 ? 0.3 : 0.8);
+        };
+
+        // Defina o threshold inicial
+        handleResize();
+
+        // Adicione o listener para redimensionamento da janela
+        window.addEventListener('resize', handleResize);
+
+        // Limpeza do listener ao desmontar o componente
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (inView && !hasAnimatedRef.current) {
+            setHasAnimated(true);
+            hasAnimatedRef.current = true;
+        }
+    }, [inView]);
 
     return (
         <section className="bg-gradient-to-r from-gray-900 to-gray-700 py-12 md:py-16 lg:py-20 px-6 lg:px-16" id="contact">
@@ -13,7 +46,7 @@ const ContactSection: FC = () => {
                 <motion.h2
                     className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white text-center mb-6 md:mb-8 lg:mb-12"
                     initial={{ opacity: 0, y: -30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, ease: 'easeOut' }}
                 >
                     {translations.contact}
@@ -23,11 +56,11 @@ const ContactSection: FC = () => {
                     {translations.contactIntro}
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <motion.div
                         className="flex items-start p-4 bg-gray-800 rounded-lg shadow-md"
                         initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
+                        animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                     >
                         <FaPhoneAlt className="text-teal-400 text-3xl md:text-4xl mr-4" />
@@ -40,7 +73,7 @@ const ContactSection: FC = () => {
                     <motion.div
                         className="flex items-start p-4 bg-gray-800 rounded-lg shadow-md"
                         initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
+                        animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                     >
                         <FaEnvelope className="text-teal-400 text-3xl md:text-4xl mr-4" />
@@ -53,7 +86,7 @@ const ContactSection: FC = () => {
                     <motion.div
                         className="flex items-start p-4 bg-gray-800 rounded-lg shadow-md"
                         initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
+                        animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                     >
                         <FaMapMarkerAlt className="text-teal-400 text-3xl md:text-4xl mr-4" />
