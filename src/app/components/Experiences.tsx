@@ -161,7 +161,7 @@ const ExperienceSection: FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
                 >
-                    {translations.experience}
+                    {translations.professionalBackground}
                 </motion.h2>
 
                 <div className="relative">
