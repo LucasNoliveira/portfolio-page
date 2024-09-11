@@ -115,7 +115,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                 <div className="relative">
                     <p
                         ref={descriptionRef}
-                        className={`text-base text-gray-600 whitespace-pre-line ${!showMore ? 'line-clamp-5' : ''}`}
+                        className={`text-sm md:text-base text-gray-600 whitespace-pre-line ${!showMore ? 'line-clamp-5' : ''}`}
                     >
                         {exp.description}
                     </p>
