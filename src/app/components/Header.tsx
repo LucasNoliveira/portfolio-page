@@ -116,7 +116,7 @@ const Header: React.FC = () => {
                         {isOpen ? (
                             <XMarkIcon className="h-6 w-6 z-50 absolute top-0 right-0" />
                         ) : (
-                            <Bars3Icon className="h-6 w-6" />
+                            <Bars3Icon className="h-6 w-6 text-gray-800" />
                         )}
                     </button>
                 </div>
