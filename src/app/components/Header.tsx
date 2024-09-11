@@ -80,7 +80,7 @@ const Header: React.FC = () => {
 
                 {/* Language Toggle for Desktop */}
                 <div className="hidden md:block absolute right-5 top-5 md:static md:right-0" ref={languageRef}>
-                    <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300">
+                    <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300 text-gray-800">
                         <GlobeAltIcon className="h-5 w-5" />
                         <span>{language}</span>
                         <ChevronDownIcon className="h-4 w-4" />
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
                 <div className="md:hidden absolute right-5 top-5 flex gap-3">
                     {/* Language Toggle for Mobile */}
                     <div className="relative">
-                        <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300">
+                        <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300 text-gray-800">
                             <GlobeAltIcon className="h-5 w-5" />
                             <span>{language}</span>
                             <ChevronDownIcon className="h-4 w-4" />
@@ -125,12 +125,12 @@ const Header: React.FC = () => {
             {/* Mobile Menu */}
             <div className={`md:hidden fixed inset-0 bg-white overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
                 <nav className="space-y-2 p-5 flex flex-col h-full items-center justify-center">
-                    <Link href="/" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.home}</Link>
-                    <Link href="/about" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.about}</Link>
-                    <Link href="/experience" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.experience}</Link>
-                    <Link href="#services" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.services}</Link>
-                    <Link href="/projects" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.projects}</Link>
-                    <Link href="/contact" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.contact}</Link>
+                    <Link href="/" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300 text-[#555]">{translations.home}</Link>
+                    <Link href="/about" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300 text-[#555]">{translations.about}</Link>
+                    <Link href="/experience" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300 text-[#555]">{translations.experience}</Link>
+                    <Link href="#services" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300 text-[#555]">{translations.services}</Link>
+                    <Link href="/projects" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300 text-[#555]">{translations.projects}</Link>
+                    <Link href="/contact" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300 text-[#555]">{translations.contact}</Link>
                     <div className="w-full flex justify-center space-x-2 mt-4">
                         <Link href="/curriculo.pdf" download onClick={toggleMenu} className="bg-blue-600 text-white px-4 py-2 rounded flex items-center hover:bg-blue-700 transition duration-300 justify-center">
                             {translations.downloadCV}
@@ -140,7 +140,7 @@ const Header: React.FC = () => {
                         </Link>
                     </div>
                     <div className="relative mt-4">
-                        <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300">
+                        <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300 text-gray-800">
                             <GlobeAltIcon className="h-5 w-5" />
                             <span>{language}</span>
                             <ChevronDownIcon className="h-4 w-4" />
