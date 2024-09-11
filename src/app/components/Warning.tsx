@@ -3,7 +3,7 @@
 import { FC, useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaCode } from 'react-icons/fa';
 
 const Warning: FC = () => {
     const { translations } = useLanguage();
@@ -44,6 +44,9 @@ const Warning: FC = () => {
                 </button>
                 <div className="text-center">
                     <strong className="text-lg md:text-xl">{translations.warningTitle}</strong>
+                    <div className="flex justify-center mt-2">
+                        <FaCode className="text-yellow-700 text-xl" />
+                    </div>
                     <p className="mt-2 text-sm md:text-base">
                         {translations.warningMessage}
                     </p>
