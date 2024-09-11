@@ -130,7 +130,7 @@ const AboutSection: FC = () => {
                                             transition={{ duration: 0.6, ease: 'easeOut' }}
                                         ></motion.div>
                                     </div>
-                                    <span className="ml-2 text-sm font-medium">{language.level}</span>
+                                    <span className="ml-2 text-sm font-medium text-gray-800">{language.level}</span>
                                 </li>
                             ))}
                         </ul>
