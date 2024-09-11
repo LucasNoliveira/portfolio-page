@@ -4,6 +4,8 @@ export const pt = {
   projects: "Projetos",
   services: "Serviços",
   contact: "Contato",
+  warningTitle: "Em Desenvolvimento",
+  warningMessage: "Este portfólio está em rápido desenvolvimento. Em breve estará completo, mas você já pode ter uma boa ideia da minha experiência.",
   downloadCV: "Baixar Currículo",
   readOnline: "Ler Online",
   heroDescription: "Sou um desenvolvedor web apaixonado por criar interfaces modernas, elegantes e funcionais. Com 3 anos de experiência, domino diversas tecnologias e estou sempre em busca de novos desafios para aprimorar minhas habilidades.",

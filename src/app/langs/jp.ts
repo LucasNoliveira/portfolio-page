@@ -6,6 +6,8 @@ export const jp = {
     projects: "プロジェクト",
     services: "サービス",
     contact: "連絡先",
+    warningTitle: "開発中",
+    warningMessage: "このポートフォリオは急速に開発中です。まもなく完成しますが、すでに私の経験について良いアイデアを得ることができます。",
     downloadCV: "履歴書をダウンロード",
     readOnline: "オンラインで読む",
     heroDescription: "私はモダンでエレガントかつ機能的なインターフェースを作成する情熱的なウェブ開発者です。3年間の経験を持ち、さまざまな技術を駆使し、新しい挑戦に常に取り組んでいます。",

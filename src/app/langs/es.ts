@@ -4,6 +4,8 @@ export const es = {
   projects: "Proyectos",
   services: "Servicios",
   contact: "Contacto",
+  warningTitle: "En Desarrollo",
+  warningMessage: "Este portafolio está en desarrollo acelerado. Pronto estará completo, pero ya puedes tener una buena idea de mi experiencia.",
   downloadCV: "Descargar Resumen",
   readOnline: "Leer en línea",
   heroDescription: "Soy un desarrollador web apasionado por crear interfaces modernas, elegantes y funcionales. Con 3 años de experiencia, domino diversas tecnologías y siempre estoy buscando nuevos desafíos para mejorar mis habilidades.",
