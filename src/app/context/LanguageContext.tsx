@@ -1,5 +1,5 @@
 'use client';
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { en } from '../langs/en';
 import { pt } from '../langs/pt';
 import { es } from '../langs/es';
@@ -15,9 +15,28 @@ interface LanguageContextProps {
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
+const getBrowserLanguage = (): Language => {
+  const browserLang = navigator.language || navigator.languages[0];
+
+  if (browserLang.startsWith('pt')) {
+    return 'PT';
+  } else if (browserLang.startsWith('es')) {
+    return 'ES';
+  } else if (browserLang.startsWith('ja') || browserLang.startsWith('jp')) {
+    return 'JP';
+  } else {
+    return 'EN';
+  }
+};
+
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('EN');
-  
+
+  useEffect(() => {
+    const detectedLanguage = getBrowserLanguage();
+    setLanguage(detectedLanguage);
+  }, []);
+
   const translations = (() => {
     switch (language) {
       case 'PT':
