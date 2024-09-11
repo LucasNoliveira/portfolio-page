@@ -9,7 +9,6 @@ const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState('EN');
     const { language, translations, setLanguage } = useLanguage();
 
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -46,7 +45,7 @@ const Header: React.FC = () => {
 
     const handleLanguageChange = (lang: Language) => {
         setLanguage(lang);
-        setIsLanguageOpen(!isLanguageOpen)
+        setIsLanguageOpen(false);
     };
 
     return (
@@ -57,7 +56,7 @@ const Header: React.FC = () => {
                     <img src="/logo.png" alt="Logo" className="h-8" />
                 </Link>
 
-                {/* Adicionando borda com cantos arredondados */}
+                {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-6 items-center mx-auto border border-gray-300 rounded-full p-1 px-8">
                     <Link href="/" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.home}</Link>
                     <Link href="/about" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.about}</Link>
@@ -79,7 +78,7 @@ const Header: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Language Toggle */}
+                {/* Language Toggle for Desktop */}
                 <div className="hidden md:block absolute right-5 top-5 md:static md:right-0" ref={languageRef}>
                     <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300">
                         <GlobeAltIcon className="h-5 w-5" />
@@ -87,7 +86,7 @@ const Header: React.FC = () => {
                         <ChevronDownIcon className="h-4 w-4" />
                     </button>
                     <div
-                        className={`absolute right-0 mt-2 w-32 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out transform ${isLanguageOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
+                        className={`absolute right-0 mt-2 w-32 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out transform ${isLanguageOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 z-50'}`}
                     >
                         <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('EN')}>English</button>
                         <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('PT')}>Português</button>
@@ -97,11 +96,22 @@ const Header: React.FC = () => {
                 </div>
 
                 <div className="md:hidden absolute right-5 top-5 flex gap-3">
-                    <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300">
-                        <GlobeAltIcon className="h-5 w-5" />
-                        <span>{language}</span>
-                        <ChevronDownIcon className="h-4 w-4" />
-                    </button>
+                    {/* Language Toggle for Mobile */}
+                    <div className="relative">
+                        <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300">
+                            <GlobeAltIcon className="h-5 w-5" />
+                            <span>{language}</span>
+                            <ChevronDownIcon className="h-4 w-4" />
+                        </button>
+                        <div
+                            className={`absolute right-0 mt-2 w-32 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out transform ${isLanguageOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 z-50'}`}
+                        >
+                            <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('EN')}>English</button>
+                            <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('PT')}>Português</button>
+                            <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('ES')}>Español</button>
+                            <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('JP')}>日本語</button>
+                        </div>
+                    </div>
                     <button onClick={toggleMenu} className="focus:outline-none">
                         {isOpen ? (
                             <XMarkIcon className="h-6 w-6 z-50 absolute top-0 right-0" />
@@ -110,7 +120,6 @@ const Header: React.FC = () => {
                         )}
                     </button>
                 </div>
-
             </div>
 
             {/* Mobile Menu */}
@@ -122,7 +131,7 @@ const Header: React.FC = () => {
                     <Link href="#services" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.services}</Link>
                     <Link href="/projects" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.projects}</Link>
                     <Link href="/contact" onClick={toggleMenu} className="block hover:text-blue-300 transition duration-300">{translations.contact}</Link>
-                    <div className="w-full flex justify-center space-x-2">
+                    <div className="w-full flex justify-center space-x-2 mt-4">
                         <Link href="/curriculo.pdf" download onClick={toggleMenu} className="bg-blue-600 text-white px-4 py-2 rounded flex items-center hover:bg-blue-700 transition duration-300 justify-center">
                             {translations.downloadCV}
                         </Link>
@@ -130,18 +139,24 @@ const Header: React.FC = () => {
                             {translations.readOnline}
                         </Link>
                     </div>
-                    {/* Language Toggle in Mobile Menu */}
-                    <div
-                        className={`mt-2 w-32 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out transform ${isLanguageOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
-                    >
-                        <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('EN')}>English</button>
-                        <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('PT')}>Português</button>
-                        <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('ES')}>Español</button>
-                        <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('JP')}>日本語</button>
+                    <div className="relative mt-4">
+                        <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300">
+                            <GlobeAltIcon className="h-5 w-5" />
+                            <span>{language}</span>
+                            <ChevronDownIcon className="h-4 w-4" />
+                        </button>
+                        <div
+                            className={`absolute right-0 mt-2 w-32 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out transform ${isLanguageOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 z-50'}`}
+                        >
+                            <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('EN')}>English</button>
+                            <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('PT')}>Português</button>
+                            <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('ES')}>Español</button>
+                            <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('JP')}>日本語</button>
+                        </div>
                     </div>
                 </nav>
             </div>
-        </header >
+        </header>
     );
 };
 
