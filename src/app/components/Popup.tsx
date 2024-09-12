@@ -34,7 +34,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
         aria-labelledby="popup-title"
         aria-modal="true"
       >
-        <h2 id="popup-title" className="text-2xl md:text-3xl font-semibold mb-4">
+        <h2 id="popup-title" className="text-2xl md:text-3xl font-semibold mb-4 text-gray-700">
           {translations.getInTouch}
         </h2>
         <div className="space-y-4">
