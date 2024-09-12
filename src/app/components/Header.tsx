@@ -148,7 +148,7 @@ const Header: React.FC = () => {
                             {translations.readOnline}
                         </Link>
                     </div>
-                    <div className="relative mt-4">
+                    <div className="relative mt-4 hidden">
                         <button onClick={toggleLanguageDropdown} className="flex items-center space-x-2 text-gray-800 hover:text-blue-300 transition duration-300">
                             <GlobeAltIcon className="h-6 w-6" />
                             <span>{language}</span>
