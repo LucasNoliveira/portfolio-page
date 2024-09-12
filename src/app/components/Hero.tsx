@@ -31,7 +31,7 @@ const allSkills = [
 ];
 
 const HeroSection: FC = () => {
-    const { translations } = useLanguage();
+    const { translations, language } = useLanguage();
     const [showAll, setShowAll] = useState(false);
     const [isPopupVisible, setIsPopupVisible] = useState(false);
 
@@ -43,6 +43,12 @@ const HeroSection: FC = () => {
 
     const closeGetInTouchPopup = () => {
         setIsPopupVisible(false);
+    };
+
+    const getCVLink = () => {
+        return language === 'PT'
+            ? '/cv/cv-update.pdf'
+            : '/cv/Lucas Neves Oliveira - english cv.pdf';
     };
 
     return (
@@ -83,7 +89,7 @@ const HeroSection: FC = () => {
 
                         {isPopupVisible && <Popup onClose={closeGetInTouchPopup} />}
                         <a
-                            href="/path-to-your-resume.pdf"
+                            href={getCVLink()}
                             download
                             className="inline-flex justify-center items-center bg-gray-800 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-md lg:text-lg font-semibold shadow-lg hover:bg-gray-700 transition duration-300"
                         >
@@ -109,7 +115,7 @@ const HeroSection: FC = () => {
 
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-0 mt-10">
                         {displayedSkills.map((skill) => (
-                            <div key={skill} className="flex items-center border p-3 lg:p-4  rounded-md hover:bg-gray-100 transition duration-300">
+                            <div key={skill} className="flex items-center border p-3 lg:p-4 rounded-md hover:bg-gray-100 transition duration-300">
                                 <div className="mr-3">
                                     {skillIcons[skill as SkillIconKeys]}
                                 </div>
