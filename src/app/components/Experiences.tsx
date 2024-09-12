@@ -99,11 +99,11 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                         src={exp.logo}
                         className='rounded-full h-10 w-10 block md:hidden'
                     />
-                    <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-1 md:mb-2">
+                    <h3 className="text-md md:text-lg lg:text-xl font-semibold text-gray-800 mb-1 md:mb-2">
                         {exp.company}
                     </h3>
                 </div>
-                <p className="text-md md:text-lg lg:text-xl text-blue-600">{exp.role}</p>
+                <p className="text-sm md:text-md lg:text-lg text-blue-600">{exp.role}</p>
 
                 {/* Duration for mobile and smaller screens */}
                 <div
@@ -121,7 +121,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                     </p>
                     {isTruncated && (
                         <span
-                            className="text-blue-600 cursor-pointer hover:underline"
+                            className="sm:text-sm md:text-md lg:text-lg text-blue-600 cursor-pointer hover:underline"
                             onClick={() => setShowMore(!showMore)}
                         >
                             {showMore ? translations.readLess : translations.readMore}
