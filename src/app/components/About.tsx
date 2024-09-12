@@ -30,11 +30,12 @@ const AboutSection: FC = () => {
                 return '75%';
             case 'intermediate':
             case 'intermediário':
+            case '中級':
             case 'intermedio':
                 return '50%';
             case 'basic':
             case 'básico':
-            case '初心者':
+            case '初級':
                 return '20%';
             default:
                 return '0%';
@@ -115,14 +116,14 @@ const AboutSection: FC = () => {
                                     <div className="ml-auto bg-gray-300 rounded-full h-2 w-3/4 overflow-hidden">
                                         <motion.div
                                             className={`h-2 ${['native', 'nativo', 'ネイティブ'].includes(language.level)
-                                                    ? 'bg-green-500'
-                                                    : ['advanced', 'avançado', 'avanzado', '上級'].includes(language.level)
-                                                        ? 'bg-blue-500'
-                                                        : ['intermediate', 'intermediário', 'intermedio'].includes(language.level)
-                                                            ? 'bg-yellow-500'
-                                                            : ['basic', 'básico', '初心者'].includes(language.level)
-                                                                ? 'bg-red-500'
-                                                                : 'bg-gray-500'
+                                                ? 'bg-green-500'
+                                                : ['advanced', 'avançado', 'avanzado', '上級'].includes(language.level)
+                                                    ? 'bg-blue-500'
+                                                    : ['intermediate', 'intermediário', 'intermedio', '中級'].includes(language.level)
+                                                        ? 'bg-yellow-500'
+                                                        : ['basic', 'básico', '初級'].includes(language.level)
+                                                            ? 'bg-red-500'
+                                                            : 'bg-gray-500'
                                                 }`}
                                             style={{ width: getProgressWidth(language.level) }}
                                             initial={{ width: 0 }}
