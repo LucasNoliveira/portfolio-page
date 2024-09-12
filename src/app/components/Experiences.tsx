@@ -131,7 +131,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
 
                 {exp.techStack && (
                     <div className="mt-4">
-                        <h4 className="text-gray-700 font-semibold">Tech Stack:</h4>
+                        <h4 className="text-gray-700 font-semibold sm:text-sm md:text-md lg:text-lg">Tech Stack:</h4>
                         {renderTechStack(exp.techStack, showAllTechs)}
                     </div>
                 )}
