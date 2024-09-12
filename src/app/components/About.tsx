@@ -151,9 +151,10 @@ const AboutSection: FC = () => {
                             alt="About Me"
                             width={500}
                             height={500}
-                            className="rounded-lg shadow-lg"
+                            className="rounded-full shadow-lg"
                         />
                     </motion.div>
+
                 </div>
             </div>
         </section>
