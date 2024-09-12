@@ -58,12 +58,12 @@ const Header: React.FC = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-6 items-center mx-auto border border-gray-300 rounded-full p-1 px-8">
-                    <Link href="/" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.home}</Link>
-                    <Link href="/about" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.about}</Link>
-                    <Link href="#experiences" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.experience}</Link>
-                    <Link href="#services" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.services}</Link>
-                    <Link href="/projects" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.projects}</Link>
-                    <Link href="/contact" className="font-bold text-[#555] hover:text-blue-300 transition duration-300">{translations.contact}</Link>
+                    <Link href="/" className="font-bold text-[#555] hover:text-blue-600 transition duration-300">{translations.home}</Link>
+                    <Link href="/about" className="font-bold text-[#555] hover:text-blue-600 transition duration-300">{translations.about}</Link>
+                    <Link href="#experiences" className="font-bold text-[#555] hover:text-blue-600 transition duration-300">{translations.experience}</Link>
+                    <Link href="#services" className="font-bold text-[#555] hover:text-blue-600 transition duration-300">{translations.services}</Link>
+                    <Link href="/projects" className="font-bold text-[#555] hover:text-blue-600 transition duration-300">{translations.projects}</Link>
+                    <Link href="/contact" className="font-bold text-[#555] hover:text-blue-600 transition duration-300">{translations.contact}</Link>
                     <div className="relative" ref={dropdownRef}>
                         <button onClick={toggleDropdown} className="bg-blue-600 text-white px-4 py-2 rounded flex items-center hover:bg-blue-700 transition duration-300">
                             {translations.downloadCV}
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
 
                 {/* Language Toggle for Desktop */}
                 <div className="hidden md:block absolute right-5 top-5 md:static md:right-0" ref={languageRef}>
-                    <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300 text-gray-800">
+                    <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-600 transition duration-300 text-gray-800">
                         <GlobeAltIcon className="h-5 w-5" />
                         <span>{language}</span>
                         <ChevronDownIcon className="h-4 w-4" />
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
                 <div className="md:hidden absolute right-5 top-5 flex gap-3">
                     {/* Language Toggle for Mobile */}
                     <div className="relative">
-                        <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-300 transition duration-300 text-gray-800">
+                        <button onClick={toggleLanguageDropdown} className="flex items-center space-x-1 hover:text-blue-600 transition duration-300 text-gray-800">
                             <GlobeAltIcon className="h-5 w-5" />
                             <span>{language}</span>
                             <ChevronDownIcon className="h-4 w-4" />
@@ -134,12 +134,12 @@ const Header: React.FC = () => {
 
             <div className={`fixed inset-0 bg-white bg-opacity-80 backdrop-blur-sm overflow-hidden transition-transform ${isOpen ? 'translate-x-0 duration-200 ease-in' : 'translate-x-full duration-500 ease-out'}`}>
                 <nav className={`flex flex-col h-full items-center justify-center space-y-4 p-6 transition-opacity ${isOpen ? 'opacity-100 duration-300 ease-in' : 'opacity-0 duration-500 ease-out'}`}>
-                    <Link href="/" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-300 transition duration-300">{translations.home}</Link>
-                    <Link href="/about" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-300 transition duration-300">{translations.about}</Link>
-                    <Link href="/experience" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-300 transition duration-300">{translations.experience}</Link>
-                    <Link href="#services" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-300 transition duration-300">{translations.services}</Link>
-                    <Link href="/projects" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-300 transition duration-300">{translations.projects}</Link>
-                    <Link href="/contact" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-300 transition duration-300">{translations.contact}</Link>
+                    <Link href="/" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-600 transition duration-300">{translations.home}</Link>
+                    <Link href="/about" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-600 transition duration-300">{translations.about}</Link>
+                    <Link href="/experience" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-600 transition duration-300">{translations.experience}</Link>
+                    <Link href="#services" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-600 transition duration-300">{translations.services}</Link>
+                    <Link href="/projects" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-600 transition duration-300">{translations.projects}</Link>
+                    <Link href="/contact" onClick={toggleMenu} className="text-gray-700 text-lg font-semibold hover:text-blue-600 transition duration-300">{translations.contact}</Link>
                     <div className="w-full flex justify-center space-x-2 mt-4">
                         <Link href="/curriculo.pdf" download onClick={toggleMenu} className="bg-blue-600 text-white px-5 py-3 rounded-lg shadow-md flex items-center hover:bg-blue-700 transition duration-300">
                             {translations.downloadCV}
@@ -149,7 +149,7 @@ const Header: React.FC = () => {
                         </Link>
                     </div>
                     <div className="relative mt-4 hidden">
-                        <button onClick={toggleLanguageDropdown} className="flex items-center space-x-2 text-gray-800 hover:text-blue-300 transition duration-300">
+                        <button onClick={toggleLanguageDropdown} className="flex items-center space-x-2 text-gray-800 hover:text-blue-600 transition duration-300">
                             <GlobeAltIcon className="h-6 w-6" />
                             <span>{language}</span>
                             <ChevronDownIcon className="h-5 w-5" />
