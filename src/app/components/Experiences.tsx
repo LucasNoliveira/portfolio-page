@@ -103,7 +103,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                         {exp.company}
                     </h3>
                 </div>
-                <p className="text-lg md:text-xl lg:text-2xl text-blue-600">{exp.role}</p>
+                <p className="text-md md:text-lg lg:text-xl text-blue-600">{exp.role}</p>
 
                 {/* Duration for mobile and smaller screens */}
                 <div
