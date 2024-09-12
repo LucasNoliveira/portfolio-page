@@ -1,5 +1,5 @@
 'use client';
-import { FC, useEffect, useState, useRef, useMemo } from 'react';
+import { FC, useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Flag from 'react-world-flags';
@@ -17,7 +17,6 @@ const AboutSection: FC = () => {
     const [hasAnimated, setHasAnimated] = useState(false);
     const hasAnimatedRef = useRef(false);
 
-    // Função para calcular a largura da barra de progresso
     const getProgressWidth = (level: string) => {
         switch (level) {
             case 'native':
@@ -42,21 +41,20 @@ const AboutSection: FC = () => {
         }
     };
 
-    // Mapeamento das bandeiras dos idiomas
-    const languageFlags: Record<string, string> = useMemo(() => ({
+    const languageFlags: Record<string, string> = {
         portuguese: 'BR',
         english: 'US',
         japanese: 'JP',
         spanish: 'ES',
-    }), []);
+    };
 
     useEffect(() => {
-        // Ajusta o threshold do useInView de acordo com o tamanho da tela
         const handleResize = () => {
             setThreshold(window.innerWidth <= 640 ? 0.3 : 0.8);
         };
 
         handleResize();
+
         window.addEventListener('resize', handleResize);
 
         return () => {
@@ -65,7 +63,6 @@ const AboutSection: FC = () => {
     }, []);
 
     useEffect(() => {
-        // Define a animação como ativada quando a seção está em "inView"
         if (inView && !hasAnimatedRef.current) {
             setHasAnimated(true);
             hasAnimatedRef.current = true;
@@ -75,7 +72,7 @@ const AboutSection: FC = () => {
     return (
         <section className="bg-gray-100 py-12 md:py-16 lg:py-20" id="about">
             <div ref={ref} className="container mx-auto flex flex-col-reverse lg:flex-row items-center px-4 sm:px-8 md:px-12 lg:px-16">
-                {/* Seção de Texto */}
+                {/* Text Section */}
                 <div className="w-full lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
                     <motion.h2
                         className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 sm:mb-6 lg:mb-8"
@@ -102,23 +99,22 @@ const AboutSection: FC = () => {
                         {translations.profileDescription}
                     </motion.p>
 
-                    {/* Renderiza seção de "Spoken Languages" apenas se estiver em view */}
-                    {inView && (
-                        <motion.div
-                            className="mt-8 space-y-4"
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, ease: 'easeOut' }}
-                        >
-                            <h3 className="text-2xl font-bold text-gray-800 mb-4">{translations.spokenLanguages}</h3>
-                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {translations.languages.map((language: { name: string; level: string }) => (
-                                    <li key={language.name} className="flex items-center">
-                                        <Flag code={languageFlags[language.name]} className="w-6 h-6 mr-2" />
-                                        <span className="text-lg font-semibold text-gray-800 mr-1">{language.name}</span>
-                                        <div className="ml-auto bg-gray-300 rounded-full h-2 w-3/4 overflow-hidden">
-                                            <motion.div
-                                                className={`h-2 ${['native', 'nativo', 'ネイティブ'].includes(language.level)
+                    {/* Spoken Languages Section */}
+                    <motion.div
+                        className="mt-8 space-y-4"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.6, ease: 'easeOut' }}
+                    >
+                        <h3 className="text-2xl font-bold text-gray-800 mb-4">{translations.spokenLanguages}</h3>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {translations.languages.map((language: { name: string; level: string }) => (
+                                <li key={language.name} className="flex items-center">
+                                    <Flag code={languageFlags[language.name]} className="w-6 h-6 mr-2" />
+                                    <span className="text-lg font-semibold text-gray-800 mr-1">{language.name}</span>
+                                    <div className="ml-auto bg-gray-300 rounded-full h-2 w-3/4 overflow-hidden">
+                                        <motion.div
+                                            className={`h-2 ${['native', 'nativo', 'ネイティブ'].includes(language.level)
                                                     ? 'bg-green-500'
                                                     : ['advanced', 'avançado', 'avanzado', '上級'].includes(language.level)
                                                         ? 'bg-blue-500'
@@ -128,21 +124,20 @@ const AboutSection: FC = () => {
                                                                 ? 'bg-red-500'
                                                                 : 'bg-gray-500'
                                                 }`}
-                                                style={{ width: getProgressWidth(language.level) }}
-                                                initial={{ width: 0 }}
-                                                animate={hasAnimated ? { width: getProgressWidth(language.level) } : {}}
-                                                transition={{ duration: 0.6, ease: 'easeOut' }}
-                                            ></motion.div>
-                                        </div>
-                                        <span className="ml-2 text-sm font-medium text-gray-800">{language.level}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </motion.div>
-                    )}
+                                            style={{ width: getProgressWidth(language.level) }}
+                                            initial={{ width: 0 }}
+                                            animate={hasAnimated ? { width: getProgressWidth(language.level) } : {}}
+                                            transition={{ duration: 0.6, ease: 'easeOut' }}
+                                        ></motion.div>
+                                    </div>
+                                    <span className="ml-2 text-sm font-medium text-gray-800">{language.level}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
                 </div>
 
-                {/* Seção de Imagem */}
+                {/* Image Section */}
                 <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-8 lg:mb-0">
                     <motion.div
                         className="relative w-64 sm:w-72 md:w-80 lg:w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
