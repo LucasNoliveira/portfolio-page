@@ -27,14 +27,32 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
       aria-hidden={!isVisible}
     >
       <div
-        className={`bg-white p-6 md:p-8 rounded-lg shadow-lg transform transition-transform duration-300 w-full max-w-md mx-4 ${
+        className={`bg-white p-6 md:p-8 rounded-lg shadow-lg transform transition-transform duration-300 w-full max-w-md mx-4 relative ${
           isVisible ? "scale-100" : "scale-95"
         }`}
         role="dialog"
         aria-labelledby="popup-title"
         aria-modal="true"
       >
-        <h2 id="popup-title" className="text-2xl md:text-3xl font-semibold mb-4 text-gray-700">
+        <div className="absolute top-4 left-4 flex space-x-2">
+          <button
+            onClick={handleClose}
+            className="w-3.5 h-3.5 rounded-full bg-red-500 hover:bg-red-600 focus:outline-none"
+            aria-label="Close"
+          />
+          <button
+            className="w-3.5 h-3.5 rounded-full bg-yellow-400 hover:bg-yellow-500 focus:outline-none"
+            aria-label="Minimize"
+            disabled
+          />
+          <button
+            className="w-3.5 h-3.5 rounded-full bg-green-500 hover:bg-green-600 focus:outline-none"
+            aria-label="Maximize"
+            disabled
+          />
+        </div>
+
+        <h2 id="popup-title" className="text-lg md:text-xl lg:text-2xl font-semibold mb-4 text-gray-700 mt-5">
           {translations.getInTouch}
         </h2>
         <div className="space-y-4">
@@ -73,12 +91,6 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
             {translations.sendMeADiscord}
           </a>
         </div>
-        <button
-          onClick={handleClose}
-          className="mt-6 bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition duration-300 w-full"
-        >
-          {translations.close}
-        </button>
       </div>
     </div>
   );
