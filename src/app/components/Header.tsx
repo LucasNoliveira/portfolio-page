@@ -112,12 +112,22 @@ const Header: React.FC = () => {
                             <button className="block px-4 py-2 text-black hover:bg-gray-100 w-full text-left" onClick={() => handleLanguageChange('JP')}>日本語</button>
                         </div>
                     </div>
-                    <button onClick={toggleMenu} className="focus:outline-none">
-                        {isOpen ? (
-                            <XMarkIcon className="h-6 w-6 z-50 absolute top-0 right-0" />
-                        ) : (
-                            <Bars3Icon className="h-6 w-6 text-gray-800" />
-                        )}
+                    <button
+                        onClick={toggleMenu}
+                        className="relative focus:outline-none h-6 w-6 z-50"
+                    >
+                        <div className="relative w-6 h-6 flex flex-col gap-1.5 justify-center">
+                            <div
+                                className={`w-full h-[1.5px] bg-gray-700 rounded transform transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-45 translate-y-1' : ''}`}
+                            ></div>
+                            <div
+                                className={`w-4 h-[1.5px] bg-gray-700 rounded transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`}
+                            ></div>
+                            <div
+                                className={`w-full h-[1.5px] bg-gray-700 rounded transform transition-transform duration-300 ease-in-out ${isOpen ? '-rotate-45 translate-y-[-11px]' : ''}`}
+                            ></div>
+
+                        </div>
                     </button>
                 </div>
             </div>
