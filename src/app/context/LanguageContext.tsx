@@ -98,12 +98,17 @@ const getBrowserLanguage = (): Language => {
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>(() => {
-    const storedLanguage = localStorage.getItem('language') as Language | null;
-    return storedLanguage || getBrowserLanguage();
+    if (typeof window !== 'undefined') {
+      const storedLanguage = localStorage.getItem('language') as Language | null;
+      return storedLanguage || getBrowserLanguage();
+    }
+    return 'EN'; // Valor padrão se for SSR
   });
 
   useEffect(() => {
-    localStorage.setItem('language', language);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('language', language);
+    }
   }, [language]);
 
   const translations = (() => {
