@@ -109,11 +109,11 @@ const HeroSection: FC = () => {
 
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-0 mt-10">
                         {displayedSkills.map((skill) => (
-                            <div key={skill} className="flex items-center border p-4 rounded-md hover:bg-gray-100 transition duration-300">
+                            <div key={skill} className="flex items-center border p-3 lg:p-4  rounded-md hover:bg-gray-100 transition duration-300">
                                 <div className="mr-3">
                                     {skillIcons[skill as SkillIconKeys]}
                                 </div>
-                                <p className="text-lg font-semibold text-gray-700">{skill}</p>
+                                <p className="text-sm md:text-md lg:text-lg font-semibold text-gray-700">{skill}</p>
                             </div>
                         ))}
                     </div>
