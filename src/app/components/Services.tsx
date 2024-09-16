@@ -59,6 +59,7 @@ interface ServiceCardProps {
     service: {
         title: string;
         description: string;
+        details: [];
         icon: string;
     };
     isInView: boolean;
