@@ -160,7 +160,7 @@ const Modal: FC<ModalProps> = ({ title, description, details, icon, closeModal }
             exit={{ opacity: 0 }}
         >
             <motion.div
-                className="bg-white rounded-lg shadow-lg max-w-lg mx-auto p-6 relative max-h-[80vh] max-w-[95vw] overflow-y-auto"
+                className="bg-white rounded-lg shadow-lg max-w-[95vw] max-h-[80vh] mx-auto p-6 relative overflow-y-auto"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.3 }}
