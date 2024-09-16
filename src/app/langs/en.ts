@@ -37,6 +37,16 @@ export const en = {
   english: "English",
   japanese: "Japanese",
   spanish: "Spanish",
+  hobbies: "Hobbies",
+  nowPlaying: "Now Playing",
+  hobbiesList: [
+    { title: "Reading Books and Comics", image: "/icons/comics.jpg" },
+    { title: "Watching Movies, TV Shows & Anime", image: "/icons/anime.webp" },
+    { title: "Playing Instruments", image: "/icons/guitar.jpg" },
+    { title: "Learning New Languages", image: "/icons/languages.webp" },
+    { title: "Listen to Music", image: "/icons/music.webp" },
+    { title: "Working Out", image: "/icons/gym.jpg" },
+  ],
   professionalBackground: "Professional Background",
   // furtherDetails: "For more information about my projects and achievements, feel free to explore my portfolio.",
   ExperienceSummary: {
