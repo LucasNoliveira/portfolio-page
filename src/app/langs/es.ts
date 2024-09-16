@@ -30,7 +30,7 @@ export const es = {
     { name: "inglés", level: "avanzado" },
     { name: "japonés", level: "intermedio" },
     { name: "español", level: "básico" },
-  ],  
+  ],
   portuguese: "Portugués",
   english: "Inglés",
   japanese: "Japonés",
@@ -86,17 +86,41 @@ export const es = {
       title: "Desarrollo Web",
       description: "Construcción de sitios web modernos y responsivos utilizando las últimas tecnologías web.",
       icon: "development",
+      details: [
+        'Diseño y desarrollo personalizado de sitios web usando <span class="text-[tomato] font-bold">HTML</span>, <span class="text-[tomato] font-bold">CSS</span>, <span class="text-[tomato] font-bold">JavaScript</span> y <span class="text-[tomato] font-bold">React</span>',
+        'Integración con sistemas de gestión de contenidos (CMS) como <span class="text-[tomato] font-bold">WordPress</span> o CMS sin cabeza',
+        'Garantizando <span class="text-[tomato] font-bold">responsividad</span> del sitio para todos los tamaños de pantalla y dispositivos',
+        'Optimización del rendimiento para tiempos de carga rápidos y mejores prácticas de <span class="text-[tomato] font-bold">SEO</span>',
+        'Creación de plataformas <span class="text-[tomato] font-bold">e-commerce</span> con integraciones de pasarelas de pago',
+        'Desarrollo de <span class="text-[tomato] font-bold">aplicaciones de una sola página (SPA)</span> usando <span class="text-[tomato] font-bold">React</span> y <span class="text-[tomato] font-bold">Next.js</span>'
+      ]
     },
     {
       title: "Desarrollo Backend",
       description: "Desarrollo de sistemas backend robustos y escalables con Node.js, Python y más.",
       icon: "database",
+      details: [
+        'Desarrollo e integración de APIs (<span class="text-[tomato] font-bold">RESTful</span> y <span class="text-[tomato] font-bold">GraphQL</span>)',
+        'Diseño, gestión y optimización de bases de datos (<span class="text-[tomato] font-bold">SQL</span>, <span class="text-[tomato] font-bold">NoSQL</span>)',
+        'Implementación de sistemas de autenticación y autorización (<span class="text-[tomato] font-bold">OAuth</span>, <span class="text-[tomato] font-bold">JWT</span>)',
+        'Construcción de arquitecturas de <span class="text-[tomato] font-bold">microservicios</span> para aplicaciones a gran escala',
+        'Configuración de infraestructura en la nube y gestión de servidores con <span class="text-[tomato] font-bold">AWS</span>, <span class="text-[tomato] font-bold">GCP</span> o <span class="text-[tomato] font-bold">Azure</span>',
+        'Gestión de integraciones con terceros, como <span class="text-[tomato] font-bold">procesadores de pagos</span>, <span class="text-[tomato] font-bold">servicios de correo electrónico</span> y más'
+      ]
     },
     {
-      title: "Desarrollo Móvil",
+      title: "Desarrollo Mobile",
       description: "Creación de aplicaciones móviles multiplataforma con React Native.",
       icon: "mobile",
-    },
+      details: [
+        'Desarrollo de aplicaciones para <span class="text-[tomato] font-bold">iOS</span> y <span class="text-[tomato] font-bold">Android</span> usando <span class="text-[tomato] font-bold">React Native</span>',
+        'Optimización del rendimiento y la usabilidad para <span class="text-[tomato] font-bold">dispositivos móviles</span>',
+        'Implementación de características como <span class="text-[tomato] font-bold">notificaciones push</span>, <span class="text-[tomato] font-bold">modo offline</span> y <span class="text-[tomato] font-bold">actualizaciones en tiempo real</span>',
+        'Integración con APIs backend para <span class="text-[tomato] font-bold">sincronización de datos</span>',
+        'Publicación de aplicaciones en la <span class="text-[tomato] font-bold">App Store</span> y <span class="text-[tomato] font-bold">Google Play Store</span>',
+        'Mantenimiento y actualización de aplicaciones móviles existentes'
+      ]
+    }
   ],
   servicesTitle: "Servicios",
   servicesSubtitle: "Qué Puedo Hacer Por Ti",

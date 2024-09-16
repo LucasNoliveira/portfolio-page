@@ -87,19 +87,43 @@ export const en = {
       title: "Web Development",
       description: "Building modern, responsive websites using the latest web technologies.",
       icon: "development",
+      details: [
+        'Custom website design and development using <span class="text-[tomato] font-bold">HTML</span>, <span class="text-[tomato] font-bold">CSS</span>, <span class="text-[tomato] font-bold">JavaScript</span>, and <span class="text-[tomato] font-bold">React</span>',
+        'Integration with content management systems (CMS) like <span class="text-[tomato] font-bold">WordPress</span> or headless CMS',
+        'Ensuring website <span class="text-[tomato] font-bold">responsiveness</span> for all screen sizes and devices',
+        'Optimizing performance for fast load times and <span class="text-[tomato] font-bold">SEO</span> best practices',
+        'Creating <span class="text-[tomato] font-bold">e-commerce</span> platforms with payment gateway integrations',
+        'Developing <span class="text-[tomato] font-bold">single-page applications (SPA)</span> using <span class="text-[tomato] font-bold">React</span> and <span class="text-[tomato] font-bold">Next.js</span>'
+      ]
     },
     {
       title: "Backend Development",
       description: "Developing robust and scalable backend systems with Node.js, Python, and more.",
       icon: "database",
+      details: [
+        'API development and integration (<span class="text-[tomato] font-bold">RESTful</span> and <span class="text-[tomato] font-bold">GraphQL</span>)',
+        'Database design, management, and optimization (<span class="text-[tomato] font-bold">SQL</span>, <span class="text-[tomato] font-bold">NoSQL</span>)',
+        'Authentication and authorization systems implementation (<span class="text-[tomato] font-bold">OAuth</span>, <span class="text-[tomato] font-bold">JWT</span>)',
+        'Building <span class="text-[tomato] font-bold">microservices</span> architectures for large-scale applications',
+        'Cloud infrastructure setup and server management with <span class="text-[tomato] font-bold">AWS</span>, <span class="text-[tomato] font-bold">GCP</span>, or <span class="text-[tomato] font-bold">Azure</span>',
+        'Handling third-party integrations, such as <span class="text-[tomato] font-bold">payment processors</span>, <span class="text-[tomato] font-bold">email services</span>, and more'
+      ]
     },
     {
       title: "Mobile Development",
       description: "Creating cross-platform mobile applications with React Native.",
       icon: "mobile",
-    },
+      details: [
+        'Building <span class="text-[tomato] font-bold">iOS</span> and <span class="text-[tomato] font-bold">Android</span> apps using <span class="text-[tomato] font-bold">React Native</span>',
+        'Optimizing performance and usability for <span class="text-[tomato] font-bold">mobile devices</span>',
+        'Implementing features like <span class="text-[tomato] font-bold">push notifications</span>, <span class="text-[tomato] font-bold">offline mode</span>, and <span class="text-[tomato] font-bold">real-time updates</span>',
+        'Integration with backend APIs for <span class="text-[tomato] font-bold">data synchronization</span>',
+        'Deploying apps to the <span class="text-[tomato] font-bold">App Store</span> and <span class="text-[tomato] font-bold">Google Play Store</span>',
+        'Maintaining and updating existing mobile applications'
+      ]
+    }
   ],
-  servicesTitle: "Services",
+      servicesTitle: "Services",
   servicesSubtitle: "What I Can Do For You",
   learnMore: "Learn More",
   someThingsBuilt: 'Some things I’ve built',

@@ -86,18 +86,42 @@ export const jp = {
         {
             title: "ウェブ開発",
             description: "最新のウェブ技術を使用してモダンでレスポンシブなウェブサイトを構築します。",
-            icon: "開発",
+            icon: "development",
+            details: [
+                '<span class="text-[tomato] font-bold">HTML</span>、<span class="text-[tomato] font-bold">CSS</span>、<span class="text-[tomato] font-bold">JavaScript</span>、および <span class="text-[tomato] font-bold">React</span> を使用したカスタムウェブサイトのデザインと開発',
+                '<span class="text-[tomato] font-bold">WordPress</span> やヘッドレスCMSなどのコンテンツ管理システム (CMS) との統合',
+                'すべての画面サイズとデバイスに対するサイトの <span class="text-[tomato] font-bold">レスポンシブ性</span> の保証',
+                '高速な読み込み時間と <span class="text-[tomato] font-bold">SEO</span> のベストプラクティスのためのパフォーマンスの最適化',
+                '<span class="text-[tomato] font-bold">e-commerce</span> プラットフォームの作成と支払いゲートウェイの統合',
+                '<span class="text-[tomato] font-bold">React</span> と <span class="text-[tomato] font-bold">Next.js</span> を使用した <span class="text-[tomato] font-bold">シングルページアプリケーション (SPA)</span> の開発'
+            ]
         },
         {
             title: "バックエンド開発",
             description: "Node.js、Pythonなどを使用して堅牢でスケーラブルなバックエンドシステムを開発します。",
-            icon: "データベース",
+            icon: "database",
+            details: [
+                '<span class="text-[tomato] font-bold">RESTful</span> および <span class="text-[tomato] font-bold">GraphQL</span> のAPIの開発と統合',
+                '<span class="text-[tomato] font-bold">SQL</span> および <span class="text-[tomato] font-bold">NoSQL</span> のデータベース設計、管理、最適化',
+                '<span class="text-[tomato] font-bold">OAuth</span> や <span class="text-[tomato] font-bold">JWT</span> による認証と認可システムの実装',
+                '<span class="text-[tomato] font-bold">マイクロサービス</span> アーキテクチャの構築',
+                '<span class="text-[tomato] font-bold">AWS</span>、<span class="text-[tomato] font-bold">GCP</span>、または <span class="text-[tomato] font-bold">Azure</span> でのクラウドインフラのセットアップとサーバー管理',
+                '<span class="text-[tomato] font-bold">決済処理</span>、<span class="text-[tomato] font-bold">メールサービス</span> などのサードパーティとの統合の処理'
+            ]
         },
         {
             title: "モバイル開発",
             description: "React Nativeを使用してクロスプラットフォームのモバイルアプリケーションを作成します。",
-            icon: "モバイル",
-        },
+            icon: "mobile",
+            details: [
+                '<span class="text-[tomato] font-bold">iOS</span> および <span class="text-[tomato] font-bold">Android</span> 用のアプリを <span class="text-[tomato] font-bold">React Native</span> を使用して開発',
+                '<span class="text-[tomato] font-bold">モバイルデバイス</span> のパフォーマンスと使いやすさの最適化',
+                '<span class="text-[tomato] font-bold">プッシュ通知</span>、<span class="text-[tomato] font-bold">オフラインモード</span>、および <span class="text-[tomato] font-bold">リアルタイム更新</span> などの機能の実装',
+                'データ同期のためのバックエンドAPIとの統合',
+                '<span class="text-[tomato] font-bold">App Store</span> と <span class="text-[tomato] font-bold">Google Play Store</span> へのアプリの公開',
+                '既存のモバイルアプリケーションの維持と更新'
+            ]
+        }
     ],
     servicesTitle: "サービス",
     servicesSubtitle: "私ができること",

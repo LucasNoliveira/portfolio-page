@@ -30,7 +30,7 @@ export const pt = {
     { name: "inglês", level: "avançado" },
     { name: "japonês", level: "intermediário" },
     { name: "espanhol", level: "básico" },
-  ],  
+  ],
   portuguese: "Português",
   english: "Inglês",
   japanese: "Japonês",
@@ -79,19 +79,43 @@ export const pt = {
   servicesList: [
     {
       title: "Desenvolvimento Web",
-      description: "Construção de sites modernos e responsivos usando as tecnologias web mais recentes.",
+      description: "Construindo sites modernos e responsivos usando as mais recentes tecnologias web.",
       icon: "development",
+      details: [
+        'Design e desenvolvimento personalizados de sites usando <span class="text-[tomato] font-bold">HTML</span>, <span class="text-[tomato] font-bold">CSS</span>, <span class="text-[tomato] font-bold">JavaScript</span> e <span class="text-[tomato] font-bold">React</span>',
+        'Integração com sistemas de gerenciamento de conteúdo (CMS) como <span class="text-[tomato] font-bold">WordPress</span> ou CMS headless',
+        'Garantindo <span class="text-[tomato] font-bold">responsividade</span> do site para todos os tamanhos de tela e dispositivos',
+        'Otimização de desempenho para tempos de carregamento rápidos e melhores práticas de <span class="text-[tomato] font-bold">SEO</span>',
+        'Criação de plataformas <span class="text-[tomato] font-bold">e-commerce</span> com integrações de gateways de pagamento',
+        'Desenvolvimento de <span class="text-[tomato] font-bold">aplicações de página única (SPA)</span> usando <span class="text-[tomato] font-bold">React</span> e <span class="text-[tomato] font-bold">Next.js</span>'
+      ]
     },
     {
       title: "Desenvolvimento Backend",
-      description: "Desenvolvimento de sistemas backend robustos e escaláveis com Node.js, Python, e mais.",
+      description: "Desenvolvendo sistemas backend robustos e escaláveis com Node.js, Python e mais.",
       icon: "database",
+      details: [
+        'Desenvolvimento e integração de APIs (<span class="text-[tomato] font-bold">RESTful</span> e <span class="text-[tomato] font-bold">GraphQL</span>)',
+        'Design, gerenciamento e otimização de banco de dados (<span class="text-[tomato] font-bold">SQL</span>, <span class="text-[tomato] font-bold">NoSQL</span>)',
+        'Implementação de sistemas de autenticação e autorização (<span class="text-[tomato] font-bold">OAuth</span>, <span class="text-[tomato] font-bold">JWT</span>)',
+        'Construção de arquiteturas de <span class="text-[tomato] font-bold">microservices</span> para aplicações de grande escala',
+        'Configuração de infraestrutura em nuvem e gerenciamento de servidores com <span class="text-[tomato] font-bold">AWS</span>, <span class="text-[tomato] font-bold">GCP</span> ou <span class="text-[tomato] font-bold">Azure</span>',
+        'Gerenciamento de integrações com terceiros, como <span class="text-[tomato] font-bold">processadores de pagamento</span>, <span class="text-[tomato] font-bold">serviços de email</span> e mais'
+      ]
     },
     {
       title: "Desenvolvimento Mobile",
-      description: "Criação de aplicativos móveis multiplataforma com React Native.",
+      description: "Criando aplicativos móveis multiplataforma com React Native.",
       icon: "mobile",
-    },
+      details: [
+        'Desenvolvimento de aplicativos para <span class="text-[tomato] font-bold">iOS</span> e <span class="text-[tomato] font-bold">Android</span> usando <span class="text-[tomato] font-bold">React Native</span>',
+        'Otimização de desempenho e usabilidade para <span class="text-[tomato] font-bold">dispositivos móveis</span>',
+        'Implementação de recursos como <span class="text-[tomato] font-bold">notificações push</span>, <span class="text-[tomato] font-bold">modo offline</span> e <span class="text-[tomato] font-bold">atualizações em tempo real</span>',
+        'Integração com APIs backend para <span class="text-[tomato] font-bold">sincronização de dados</span>',
+        'Publicação de aplicativos na <span class="text-[tomato] font-bold">App Store</span> e <span class="text-[tomato] font-bold">Google Play Store</span>',
+        'Manutenção e atualização de aplicativos móveis existentes'
+      ]
+    }
   ],
   servicesTitle: "Serviços",
   servicesSubtitle: "O Que Posso Fazer Por Você",
