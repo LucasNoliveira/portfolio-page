@@ -35,6 +35,16 @@ export const es = {
   english: "Inglés",
   japanese: "Japonés",
   spanish: "Español",
+  hobbies: "Pasatiempos",
+  nowPlaying: "Reproduciendo Ahora",
+  hobbiesList: [
+    { title: "Leer Libros y Cómics", image: "/icons/comics.jpg" },
+    { title: "Ver Películas, Series de TV y Anime", image: "/icons/anime.webp" },
+    { title: "Tocar Instrumentos", image: "/icons/guitar.jpg" },
+    { title: "Aprender Nuevos Idiomas", image: "/icons/languages.webp" },
+    { title: "Escuchar Música", image: "/icons/music.webp" },
+    { title: "Hacer Ejercicio", image: "/icons/gym.jpg" },
+  ],
   professionalBackground: "Trayectoria Profesional",
   ExperienceSummary: {
     techXp: { name: "Experiencia en Tecnología", experienceYears: '3' },

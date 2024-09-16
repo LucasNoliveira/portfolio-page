@@ -37,6 +37,16 @@ export const jp = {
     english: "英語",
     japanese: "日本語",
     spanish: "スペイン語",
+    hobbies: "趣味",
+    nowPlaying: "再生中",
+    hobbiesList: [
+        { title: "本とコミックを読む", image: "/icons/comics.jpg" },
+        { title: "映画、テレビ番組、アニメを見る", image: "/icons/anime.webp" },
+        { title: "楽器を演奏する", image: "/icons/guitar.jpg" },
+        { title: "新しい言語を学ぶ", image: "/icons/languages.webp" },
+        { title: "音楽を聴く", image: "/icons/music.webp" },
+        { title: "運動する", image: "/icons/gym.jpg" },
+    ],
     professionalBackground: "職歴",
     // furtherDetails: "プロジェクトや実績についての詳細は、ぜひ私のポートフォリオをご覧ください。",
     ExperienceSummary: {
