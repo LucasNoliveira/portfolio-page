@@ -136,6 +136,14 @@ const Modal: FC<ModalProps> = ({ title, description, details, icon, closeModal }
     const [isPopupVisible, setIsPopupVisible] = useState(false);
     const { translations } = useLanguage();
 
+    useEffect(() => {
+        // Disable scrolling on body when modal is open
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, []);
+
     const handleGetInTouchButtonClick = () => {
         setIsPopupVisible(true);
     };
@@ -152,12 +160,12 @@ const Modal: FC<ModalProps> = ({ title, description, details, icon, closeModal }
             exit={{ opacity: 0 }}
         >
             <motion.div
-                className="bg-white rounded-lg shadow-lg max-w-lg mx-auto p-8 relative"
+                className="bg-white rounded-lg shadow-lg max-w-lg mx-auto p-6 relative max-h-screen overflow-y-auto"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.3 }}
             >
-                <div className="absolute top-4 left-4 flex space-x-2">
+                <div className="absolute top-4 right-4 flex space-x-2">
                     <button
                         onClick={closeModal}
                         className="w-3.5 h-3.5 rounded-full bg-red-500 hover:bg-red-600 focus:outline-none"
