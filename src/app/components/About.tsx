@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Flag from 'react-world-flags';
 import { useLanguage } from '../context/LanguageContext';
 import { useInView } from 'react-intersection-observer';
+import HobbiesSection from './Hobbies.tsx';
 
 const AboutSection: FC = () => {
     const { translations } = useLanguage();
@@ -157,6 +158,7 @@ const AboutSection: FC = () => {
 
                 </div>
             </div>
+            <HobbiesSection />
         </section>
     );
 };
