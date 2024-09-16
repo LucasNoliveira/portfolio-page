@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Flag from 'react-world-flags';
 import { useLanguage } from '../context/LanguageContext';
 import { useInView } from 'react-intersection-observer';
-import HobbiesSection from './Hobbies.tsx';
+import HobbiesSection from './Hobbies';
 
 const AboutSection: FC = () => {
     const { translations } = useLanguage();
