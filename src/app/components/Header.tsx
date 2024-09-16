@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faBriefcase, faCog, faFolder, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { HiOutlineGlobeAlt } from "react-icons/hi2";
+import { IoChatboxEllipsesSharp } from "react-icons/io5";
 import { useLanguage } from '../context/LanguageContext';
 
 const Header: React.FC = () => {
@@ -82,7 +83,7 @@ const Header: React.FC = () => {
                         <FontAwesomeIcon icon={faFolder} className="h-5 w-5 mr-1" /> {translations.projects}
                     </Link>
                     <Link href="/contact" className="font-bold text-[#555] hover:text-blue-600 transition duration-300 flex items-center">
-                        {/* Adicionar ícone para contato se necessário */}
+                    <IoChatboxEllipsesSharp className="h-5 w-5 mr-1" /> {translations.contact}
                     </Link>
                     <div className="relative" ref={dropdownRef}>
                         <button onClick={toggleDropdown} className="bg-blue-600 text-white px-4 py-2 rounded flex items-center hover:bg-blue-700 transition duration-300">
@@ -169,7 +170,7 @@ const Header: React.FC = () => {
                         <FontAwesomeIcon icon={faFolder} className="h-5 w-5 mr-2" /> {translations.projects}
                     </Link>
                     <Link href="/contact" onClick={toggleMenu} className="font-bold text-xl text-[#333] hover:text-blue-600 transition duration-300 flex items-center">
-                        {/* <MailIcon className="h-5 w-5 mr-2" /> {translations.contact} */}
+                        <IoChatboxEllipsesSharp className="h-5 w-5 mr-2" /> {translations.contact}
                     </Link>
                     <div className="relative" ref={dropdownRef}>
                         <button onClick={toggleDropdown} className="bg-blue-600 text-white px-4 py-2 rounded flex items-center hover:bg-blue-700 transition duration-300">
