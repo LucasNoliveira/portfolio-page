@@ -44,6 +44,7 @@ export const es = {
     { title: "Aprender Nuevos Idiomas", image: "/icons/languages.webp" },
     { title: "Escuchar Música", image: "/icons/music.webp" },
     { title: "Hacer Ejercicio", image: "/icons/gym.jpg" },
+    { title: "Jugar Videojuegos", image: "/icons/videogame.webp" },
   ],
   professionalBackground: "Trayectoria Profesional",
   ExperienceSummary: {
@@ -193,6 +194,7 @@ export const es = {
   phoneLabel: "Teléfono",
   locationLabel: "Ubicación",
   emailLabel: "Correo Electrónico",
+  scheduleMeeting: "Programar Reunión",
   elevatingYourWebXp: "Elevando tu experiencia web con tecnología de vanguardia y diseño elegante.",
   quickLinks: "Enlaces Rápidos",
   contactUs: "Contáctanos",
