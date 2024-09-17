@@ -2,7 +2,7 @@
 import { FC, useEffect, useState, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 
 const ContactSection: FC = () => {
@@ -95,6 +95,21 @@ const ContactSection: FC = () => {
                             <p className="text-gray-800 dark:text-gray-200 text-sm md:text-base">São Paulo, SP</p>
                         </div>
                     </motion.div>
+                </div>
+
+                <div className="flex justify-center mt-12">
+                    <motion.a
+                        href="https://calendly.com/your-scheduling-link" // Altere para o seu link de agendamento
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-6 py-3 bg-blue-700 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-800 transition duration-300 ease-in-out"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ duration: 0.6, ease: 'easeOut' }}
+                    >
+                        <FaCalendarAlt className="mr-2 text-xl" />
+                        {translations.scheduleMeeting}
+                    </motion.a>
                 </div>
             </div>
         </section>
