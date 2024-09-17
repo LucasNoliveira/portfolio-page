@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { FC } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
@@ -58,13 +59,13 @@ const ProjectsSection: FC = () => {
 
     return (
         <section
-            className="bg-gray-100 py-20 px-4 md:px-8 lg:px-12 xl:px-16"
+            className="bg-gray-100 dark:bg-gray-900 py-20 px-4 md:px-8 lg:px-12 xl:px-16"
             id="projects"
             ref={ref} // Referência para o elemento
         >
             <div className="container mx-auto">
                 <motion.h2
-                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-6"
+                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 text-center mb-6"
                     initial={{ opacity: 0, y: 50 }}
                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -72,7 +73,7 @@ const ProjectsSection: FC = () => {
                     {translations.projects}
                 </motion.h2>
 
-                <p className="text-base md:text-lg lg:text-xl text-gray-700 mb-12 text-center max-w-2xl mx-auto">
+                <p className="text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 mb-12 text-center max-w-2xl mx-auto">
                     {translations.someThingsBuilt}
                 </p>
 
@@ -96,9 +97,9 @@ const ProjectsSection: FC = () => {
                 </motion.div>
 
                 <div className="text-center mt-12">
-                    <a
-                        href="#more-projects"
-                        className="group inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300"
+                    <Link
+                        href="/all-projects"
+                        className="group inline-flex items-center bg-blue-600 dark:bg-blue-700 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 dark:hover:bg-blue-800 hover:shadow-xl transition-all duration-300"
                     >
                         {translations.viewMoreProjects}
                         <svg
@@ -111,8 +112,9 @@ const ProjectsSection: FC = () => {
                         >
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7l7 7-7 7" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
+
             </div>
         </section>
     );

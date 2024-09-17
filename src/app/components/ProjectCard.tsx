@@ -36,7 +36,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                     </span>
                 ))}
                 {hiddenCount > 0 && (
-                    <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-800 text-white">
+                    <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-800 dark:bg-gray-700 text-white">
                         +{hiddenCount}
                     </span>
                 )}
@@ -46,7 +46,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
 
     return (
         <motion.div
-            className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mx-2"
+            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mx-2"
             variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -66,7 +66,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white text-xl md:text-2xl bg-gray-800 p-2 rounded-full hover:bg-gray-600 transition-all duration-300 cursor-pointer"
+                        className="text-white text-xl md:text-2xl bg-gray-800 dark:bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition-all duration-300 cursor-pointer"
                     >
                         <FiGithub />
                     </a>
@@ -74,7 +74,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white text-xl md:text-2xl bg-gray-800 p-2 rounded-full hover:bg-gray-600 transition-all duration-300 cursor-pointer"
+                        className="text-white text-xl md:text-2xl bg-gray-800 dark:bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition-all duration-300 cursor-pointer"
                     >
                         <FiEye />
                     </a>
@@ -85,20 +85,20 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xl md:text-2xl font-bold text-gray-800 hover:underline"
+                    className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-200 hover:underline"
                 >
                     {project.title}
                 </a>
-                <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-2 md:mt-4 line-clamp-3">{project.description}</p>
+                <p className="text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-300 mt-2 md:mt-4 line-clamp-3">{project.description}</p>
                 <div>
-                    <h4 className="text-gray-700 font-semibold mt-4">Tech Stack:</h4>
+                    <h4 className="text-gray-700 dark:text-gray-300 font-semibold mt-4">Tech Stack:</h4>
                     {renderTechStack(project.techStack)}
                 </div>
                 <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center mt-4 bg-blue-600 text-white px-3 py-1 rounded-full text-base md:text-lg lg:text-xl font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300"
+                    className="group inline-flex items-center mt-4 bg-blue-600 dark:bg-blue-700 text-white px-3 py-1 rounded-full text-base md:text-lg lg:text-xl font-semibold shadow-lg hover:bg-blue-700 dark:hover:bg-blue-800 hover:shadow-xl transition-all duration-300"
                 >
                     {translations.viewProject}
                     <svg

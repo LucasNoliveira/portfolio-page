@@ -52,28 +52,28 @@ const HeroSection: FC = () => {
     };
 
     return (
-        <section className="bg-gray-100 py-20 mt-3">
+        <section className="bg-gray-50 dark:bg-gray-800 py-20 mt-3">
             <div className="container mx-auto flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center">
                     <div className="relative inline-block">
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full border-2 border-transparent -z-10"></div>
                         <Image
-                            src="/img/undraw.svg"
+                            src="/img/me.jpeg"
                             alt="Lucas Oliveira"
                             width={400}
                             height={400}
-                            className="mb-2 md:w-96 md:h-96 w-64 h-64"
+                            className="mb-2 md:w-96 md:h-96 w-64 h-64 rounded-full"
                             priority
                         />
                     </div>
                     <div className="flex space-x-4 mt-6">
-                        <a href="https://www.linkedin.com/in/lucasnevesoliveira" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-700 transition duration-300">
+                        <a href="https://www.linkedin.com/in/lucasnevesoliveira" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 transition duration-300">
                             <FaLinkedin className="h-8 w-8" />
                         </a>
-                        <a href="https://github.com/lucasnoliveira" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900 transition duration-300">
+                        <a href="https://github.com/lucasnoliveira" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-gray-900 transition duration-300">
                             <FaGithub className="h-8 w-8" />
                         </a>
-                        <a href="mailto:lucanoliveira@gmail.com" className="text-gray-700 hover:text-red-600 transition duration-300">
+                        <a href="mailto:lucanoliveira@gmail.com" className="text-gray-700 dark:text-gray-300 hover:text-red-600 transition duration-300">
                             <FaEnvelope className="h-8 w-8" />
                         </a>
                     </div>
@@ -86,48 +86,48 @@ const HeroSection: FC = () => {
                             <FaComments className="mr-2" />
                             {translations.getInTouch}
                         </a>
-
+    
                         {isPopupVisible && <Popup onClose={closeGetInTouchPopup} />}
                         <a
                             href={getCVLink()}
                             download
-                            className="inline-flex justify-center items-center bg-gray-800 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-md lg:text-lg font-semibold shadow-lg hover:bg-gray-700 transition duration-300"
+                            className="inline-flex justify-center items-center bg-gray-800 dark:bg-gray-700 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-md lg:text-lg font-semibold shadow-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition duration-300"
                         >
                             <FaDownload className="mr-2" />
                             {translations.downloadCV}
                         </a>
                     </div>
                 </div>
-
+    
                 <div className="w-full md:w-1/2 text-center md:text-left">
-                    <h1 className="text-4xl md:text-6xl font-bold text-gray-800">
+                    <h1 className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-gray-200">
                         <span className="text-blue-600">Lucas</span> Oliveira
                     </h1>
                     <hr className="my-4 border-t-4 border-blue-600 mx-auto md:mx-0 w-24" />
-
-                    <p className="text-xl md:text-2xl text-gray-600 mt-4">
+    
+                    <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mt-4">
                         Full Stack Web Developer
                     </p>
-
-                    <p className="max-w-lg text-gray-500 mt-6 text-sm md:text-md lg:text-lg">
+    
+                    <p className="max-w-lg text-gray-500 dark:text-gray-400 mt-6 text-sm md:text-md lg:text-lg">
                         {translations.heroDescription}
                     </p>
-
+    
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-0 mt-10">
                         {displayedSkills.map((skill) => (
-                            <div key={skill} className="flex items-center border p-3 lg:p-4 rounded-md hover:bg-gray-100 transition duration-300">
+                            <div key={skill} className="flex items-center border p-3 lg:p-4 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300">
                                 <div className="mr-3">
                                     {skillIcons[skill as SkillIconKeys]}
                                 </div>
-                                <p className="text-sm md:text-md lg:text-lg font-semibold text-gray-700">{skill}</p>
+                                <p className="text-sm md:text-md lg:text-lg font-semibold text-gray-700 dark:text-gray-300">{skill}</p>
                             </div>
                         ))}
                     </div>
-
+    
                     <div className="mt-6 text-center">
                         <button
                             onClick={() => setShowAll(!showAll)}
-                            className="bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition duration-300 px-4 py-2 rounded-full text-lg font-semibold"
+                            className="bg-transparent border border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 hover:bg-blue-600 hover:text-white transition duration-300 px-4 py-2 rounded-full text-lg font-semibold"
                         >
                             {showAll ? `${translations.showLess}` : `${translations.showMore}`}
                         </button>
@@ -136,6 +136,6 @@ const HeroSection: FC = () => {
             </div>
         </section>
     );
-};
+}
 
 export default HeroSection;

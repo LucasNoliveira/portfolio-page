@@ -72,12 +72,12 @@ const AboutSection: FC = () => {
     }, [inView]);
 
     return (
-        <section className="bg-gray-100 py-12 md:py-16 lg:py-20" id="about">
+        <section className="bg-gray-50 dark:bg-gray-800 py-12 md:py-16 lg:py-20" id="about">
             <div ref={ref} className="container mx-auto flex flex-col-reverse lg:flex-row items-center px-4 sm:px-8 md:px-12 lg:px-16">
                 {/* Text Section */}
                 <div className="w-full lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
                     <motion.h2
-                        className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 sm:mb-6 lg:mb-8"
+                        className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-gray-200 mb-4 sm:mb-6 lg:mb-8"
                         initial={{ opacity: 0, x: -30 }}
                         animate={hasAnimated ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -85,7 +85,7 @@ const AboutSection: FC = () => {
                         {translations.aboutMe}
                     </motion.h2>
                     <motion.p
-                        className="text-base sm:text-lg md:text-xl text-gray-700 mb-4 sm:mb-6 lg:mb-8"
+                        className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 lg:mb-8"
                         initial={{ opacity: 0, y: 30 }}
                         animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -93,14 +93,14 @@ const AboutSection: FC = () => {
                         {translations.aboutIntro}
                     </motion.p>
                     <motion.p
-                        className="text-base sm:text-lg md:text-xl text-gray-700"
+                        className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                     >
                         {translations.profileDescription}
                     </motion.p>
-
+    
                     {/* Spoken Languages Section */}
                     <motion.div
                         className="mt-8 space-y-4"
@@ -108,13 +108,13 @@ const AboutSection: FC = () => {
                         animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                     >
-                        <h3 className="text-2xl font-bold text-gray-800 mb-4">{translations.spokenLanguages}</h3>
+                        <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">{translations.spokenLanguages}</h3>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {translations.languages.map((language: { name: string; level: string }) => (
                                 <li key={language.name} className="flex items-center">
                                     <Flag code={languageFlags[language.name]} className="w-6 h-6 mr-2" />
-                                    <span className="text-lg font-semibold text-gray-800 mr-1">{language.name}</span>
-                                    <div className="ml-auto bg-gray-300 rounded-full h-2 w-3/4 overflow-hidden">
+                                    <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 mr-1">{language.name}</span>
+                                    <div className="ml-auto bg-gray-300 dark:bg-gray-700 rounded-full h-2 w-3/4 overflow-hidden">
                                         <motion.div
                                             className={`h-2 ${['native', 'nativo', 'ネイティブ'].includes(language.level)
                                                 ? 'bg-green-500'
@@ -132,13 +132,13 @@ const AboutSection: FC = () => {
                                             transition={{ duration: 0.6, ease: 'easeOut' }}
                                         ></motion.div>
                                     </div>
-                                    <span className="ml-2 text-sm font-medium text-gray-800">{language.level}</span>
+                                    <span className="ml-2 text-sm font-medium text-gray-800 dark:text-gray-200">{language.level}</span>
                                 </li>
                             ))}
                         </ul>
                     </motion.div>
                 </div>
-
+    
                 {/* Image Section */}
                 <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-8 lg:mb-0">
                     <motion.div
@@ -148,19 +148,18 @@ const AboutSection: FC = () => {
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                     >
                         <Image
-                            src="/img/me.jpeg"
+                            src="/img/undraw.svg"
                             alt="About Me"
-                            width={500}
-                            height={500}
-                            className="rounded-full shadow-lg"
+                            width={400}
+                            height={400}
                         />
                     </motion.div>
-
+    
                 </div>
             </div>
             <HobbiesSection />
         </section>
-    );
+    );    
 };
 
 export default AboutSection;

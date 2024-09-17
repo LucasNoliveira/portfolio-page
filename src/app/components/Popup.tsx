@@ -27,7 +27,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
       aria-hidden={!isVisible}
     >
       <div
-        className={`bg-white p-6 md:p-8 rounded-lg shadow-lg transform transition-transform duration-300 w-full max-w-md mx-4 relative ${
+        className={`bg-white dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg transform transition-transform duration-300 w-full max-w-md mx-4 relative ${
           isVisible ? "scale-100" : "scale-95"
         }`}
         role="dialog"
@@ -52,13 +52,13 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
           />
         </div>
 
-        <h2 id="popup-title" className="text-lg md:text-xl lg:text-2xl font-semibold mb-4 text-gray-700 mt-5">
+        <h2 id="popup-title" className="text-lg md:text-xl lg:text-2xl font-semibold mb-4 text-gray-700 dark:text-gray-200 mt-5">
           {translations.getInTouch}
         </h2>
         <div className="space-y-4">
           <a
             href="mailto:lucasnoliveira126@gmail.com"
-            className="flex items-center bg-blue-600 text-white px-4 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+            className="flex items-center bg-blue-600 text-white px-4 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 dark:bg-blue-700 dark:hover:bg-blue-600"
           >
             <FaEnvelope className="mr-2 text-lg md:text-xl" />
             {translations.sendMeAnEmail}
@@ -67,7 +67,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
             href="https://wa.me/+551972571089"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center bg-green-600 text-white px-4 py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300"
+            className="flex items-center bg-green-600 text-white px-4 py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300 dark:bg-green-700 dark:hover:bg-green-600"
           >
             <FaWhatsapp className="mr-2 text-lg md:text-xl" />
             {translations.sendMeAWhatsapp}
@@ -76,7 +76,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
             href="https://t.me/lucasnoliveira126"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center bg-blue-500 text-white px-4 py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
+            className="flex items-center bg-blue-500 text-white px-4 py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 dark:bg-blue-600 dark:hover:bg-blue-500"
           >
             <FaTelegramPlane className="mr-2 text-lg md:text-xl" />
             {translations.sendMeATelegram}
@@ -85,7 +85,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
             href="https://discord.com/users/yagami_rukasu"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center bg-indigo-600 text-white px-4 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300"
+            className="flex items-center bg-indigo-600 text-white px-4 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 dark:bg-indigo-700 dark:hover:bg-indigo-600"
           >
             <FaDiscord className="mr-2 text-lg md:text-xl" />
             {translations.sendMeADiscord}

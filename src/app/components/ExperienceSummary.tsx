@@ -18,18 +18,14 @@ const ExperienceSummary: FC = () => {
     const { translations } = useLanguage();
 
     useEffect(() => {
-        // Atualize o threshold baseado no tamanho da tela no lado do cliente
         const handleResize = () => {
             setThreshold(window.innerWidth <= 640 ? 0.3 : 0.8);
         };
 
-        // Defina o threshold inicial
         handleResize();
 
-        // Adicione o listener para redimensionamento da janela
         window.addEventListener('resize', handleResize);
 
-        // Limpeza do listener ao desmontar o componente
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -43,10 +39,12 @@ const ExperienceSummary: FC = () => {
     }, [inView]);
 
     return (
-        <section className="bg-gray-900 py-10" id="experience-summary">
+        <section className="bg-gray-100 dark:bg-gray-800 py-10" id="experience-summary">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-50">{translations.experience}</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-200">
+                        {translations.experience}
+                    </h2>
                 </div>
                 <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <motion.div
@@ -104,14 +102,16 @@ interface ExperienceBlockProps {
 
 const ExperienceBlock: FC<ExperienceBlockProps> = ({ icon, title, description, backgroundColor, textColor }) => {
     return (
-        <div
-            className={`p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ${backgroundColor} ${textColor} flex flex-col items-center`}
-        >
+        <div className={`p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ${backgroundColor} ${textColor} flex flex-col items-center`}>
             <div className="flex items-center justify-center mb-4">
                 {icon}
             </div>
-            <h3 className="text-xl md:text-2xl font-semibold mb-2 text-center">{title}</h3>
-            <p className={`text-3xl md:text-4xl font-bold text-center ${textColor}`}>{description}</p>
+            <h3 className="text-xl md:text-2xl font-semibold mb-2 text-center">
+                {title}
+            </h3>
+            <p className={`text-3xl md:text-4xl font-bold text-center ${textColor}`}>
+                {description}
+            </p>
         </div>
     );
 };

@@ -1,5 +1,5 @@
 'use client';
-import { FC, useState, useRef, useEffect, useCallback } from 'react';
+import { FC, useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
 import { techColors } from './techTags'; // Ensure techColors is imported
@@ -10,7 +10,6 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
     const [isTruncated, setIsTruncated] = useState(false);
     const descriptionRef = useRef<HTMLParagraphElement>(null);
     const { translations } = useLanguage();
-
 
     const toggleTechStack = () => {
         setShowAllTechs(!showAllTechs);
@@ -91,7 +90,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
 
             {/* Experience Card */}
             <div
-                className={`w-full p-6 bg-gray-100 rounded-lg shadow-lg transform ${index % 2 === 0 ? 'md:-translate-x-1' : 'md:translate-x-1'
+                className={`w-full p-6 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg transform ${index % 2 === 0 ? 'md:-translate-x-1' : 'md:translate-x-1'
                     } md:w-5/12`}
             >
                 <div className='flex items-center gap-3 md:gap-4'>
@@ -99,23 +98,21 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                         src={exp.logo}
                         className='rounded-full h-10 w-10 block md:hidden'
                     />
-                    <h3 className="text-md md:text-lg lg:text-xl font-semibold text-gray-800 mb-1 md:mb-2">
+                    <h3 className="text-md md:text-lg lg:text-xl font-semibold text-gray-800 dark:text-gray-200 mb-1 md:mb-2">
                         {exp.company}
                     </h3>
                 </div>
                 <p className="text-sm md:text-md lg:text-lg text-blue-600">{exp.role}</p>
 
                 {/* Duration for mobile and smaller screens */}
-                <div
-                    className="text-gray-800 text-sm font-semibold mt-2 md:hidden"
-                >
+                <div className="text-gray-800 dark:text-gray-200 text-sm font-semibold mt-2 md:hidden">
                     {exp.startDate} - {exp.endDate}
                 </div>
 
                 <div className="relative">
                     <p
                         ref={descriptionRef}
-                        className={`text-sm md:text-base text-gray-600 whitespace-pre-line ${!showMore ? 'line-clamp-5' : ''}`}
+                        className={`text-sm md:text-base text-gray-600 dark:text-gray-300 whitespace-pre-line ${!showMore ? 'line-clamp-5' : ''}`}
                     >
                         {exp.description}
                     </p>
@@ -131,7 +128,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
 
                 {exp.techStack && (
                     <div className="mt-4">
-                        <h4 className="text-gray-700 font-semibold sm:text-sm md:text-md lg:text-lg">Tech Stack:</h4>
+                        <h4 className="text-gray-700 dark:text-gray-300 font-semibold sm:text-sm md:text-md lg:text-lg">Tech Stack:</h4>
                         {renderTechStack(exp.techStack, showAllTechs)}
                     </div>
                 )}
@@ -140,7 +137,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
             {/* Duration for desktop */}
             <div
                 className={`absolute hidden md:block ${index % 2 === 0 ? 'left-1/2 translate-x-8' : 'right-1/2 -translate-x-8 mr-3'
-                    } bg-gray-100 text-gray-800 text-sm font-semibold px-4 py-2 rounded-full ml-3`}
+                    } bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-semibold px-4 py-2 rounded-full ml-3`}
             >
                 {exp.startDate} - {exp.endDate}
             </div>
@@ -153,10 +150,10 @@ const ExperienceSection: FC = () => {
     const { experiences } = translations;
 
     return (
-        <section className="bg-gray-800 py-20 md:px-5" id="experience">
+        <section className="bg-gray-100 dark:bg-gray-800 py-20 md:px-5" id="experience">
             <div className="container mx-auto px-4">
                 <motion.h2
-                    className="text-3xl font-bold text-gray-50 text-center mb-6"
+                    className="text-3xl font-bold text-gray-800 dark:text-gray-200 text-center mb-6"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
