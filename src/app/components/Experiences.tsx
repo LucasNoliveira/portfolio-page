@@ -102,7 +102,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                         {exp.company}
                     </h3>
                 </div>
-                <p className="text-sm md:text-md lg:text-lg text-blue-600">{exp.role}</p>
+                <p className="text-sm md:text-md lg:text-lg text-blue-600 dark:text-blue-400">{exp.role}</p>
 
                 {/* Duration for mobile and smaller screens */}
                 <div className="text-gray-800 dark:text-gray-200 text-sm font-semibold mt-2 md:hidden">
@@ -118,7 +118,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                     </p>
                     {isTruncated && (
                         <span
-                            className="sm:text-sm md:text-md lg:text-lg text-blue-600 cursor-pointer hover:underline"
+                            className="sm:text-sm md:text-md lg:text-lg text-blue-600 dark:text-blue-400 cursor-pointer hover:underline"
                             onClick={() => setShowMore(!showMore)}
                         >
                             {showMore ? translations.readLess : translations.readMore}
