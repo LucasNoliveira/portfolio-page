@@ -115,8 +115,8 @@ const HeroSection: FC = () => {
     
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-0 mt-10">
                         {displayedSkills.map((skill) => (
-                            <div key={skill} className="flex items-center border p-3 lg:p-4 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300">
-                                <div className="mr-3">
+                            <div key={skill} className="flex items-center border p-3 lg:p-4 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300 dark:border-gray-600">
+                                <div className="mr-3 rounded-full shadow-sm">
                                     {skillIcons[skill as SkillIconKeys]}
                                 </div>
                                 <p className="text-sm md:text-md lg:text-lg font-semibold text-gray-700 dark:text-gray-300">{skill}</p>
@@ -127,7 +127,7 @@ const HeroSection: FC = () => {
                     <div className="mt-6 text-center">
                         <button
                             onClick={() => setShowAll(!showAll)}
-                            className="bg-transparent border border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 hover:bg-blue-600 hover:text-white transition duration-300 px-4 py-2 rounded-full text-lg font-semibold"
+                            className="bg-transparent border border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 hover:bg-blue-600 hover:text-white transition duration-300 px-4 py-2 rounded-full text-lg font-semibold dark:hover:text-white"
                         >
                             {showAll ? `${translations.showLess}` : `${translations.showMore}`}
                         </button>
