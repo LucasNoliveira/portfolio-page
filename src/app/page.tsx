@@ -8,6 +8,7 @@ import HeroSection from "./components/Hero";
 import AboutSection from "./components/About";
 import './globals.css'
 import { LanguageProvider } from './context/LanguageContext';
+import { ThemeProvider } from './context/themeContext';
 import ExperienceSection from "./components/Experiences";
 import ProjectsSection from "./components/ProjectsSection";
 import WelcomePopup from "./components/WelcomePopup";
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
 
     return (
         <div>
+            <ThemeProvider>
             <LanguageProvider>
                 <Header />
                 <Warning />
@@ -46,6 +48,7 @@ const Home: NextPage = () => {
                 {showPopup && <WelcomePopup />}
                 <Footer />
             </LanguageProvider>
+            </ ThemeProvider>
         </div>
     );
 };
