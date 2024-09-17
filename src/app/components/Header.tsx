@@ -134,9 +134,10 @@ const Header: React.FC = () => {
                 <div className="md:hidden absolute right-5 top-5 flex gap-3 items-center">
                     <button
                         onClick={toggleTheme}
-                        className="mr-3 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700 transition duration-300 flex items-center justify-center"
+                        className="dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700 transition duration-300 flex items-center justify-center"
+                        style={{marginRight: '-1rem'}}
                     >
-                        {theme === 'light' ? <FiMoon size={24} /> : <FiSun size={24} />}
+                        {theme === 'light' ? <FiMoon size={22} /> : <FiSun size={22} />}
                     </button>
                     {/* Language Toggle for Mobile */}
                     <div className="relative">
