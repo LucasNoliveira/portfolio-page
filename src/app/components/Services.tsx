@@ -215,10 +215,10 @@ const Modal: FC<ModalProps> = ({ title, description, details, icon, closeModal }
                     </ul>
                 )}
 
-                <div className="mt-6 text-center">
+                <div className="sticky bottom-0 py-4 text-center">
                     <a
                         onClick={handleGetInTouchButtonClick}
-                        className="inline-flex justify-center items-center bg-blue-600 text-white px-3 py-1 lg:px-4 lg:py-2 rounded-full text-sm md:text-md lg:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300 cursor-pointer"
+                        className="inline-flex justify-center items-center bg-blue-600 text-white px-3 py-1 lg:px-4 lg:py-2 rounded-full text-md lg:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300 cursor-pointer"
                     >
                         <FaComments className="mr-2" />
                         {translations.getInTouch}
