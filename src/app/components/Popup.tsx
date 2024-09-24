@@ -21,7 +21,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300 ${
+      className={`fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 transition-opacity duration-300 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
       aria-hidden={!isVisible}
