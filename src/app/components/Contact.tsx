@@ -99,7 +99,7 @@ const ContactSection: FC = () => {
 
                 <div className="flex justify-center mt-12">
                     <motion.a
-                        href="https://calendly.com/your-scheduling-link" // Altere para o seu link de agendamento
+                        href="https://calendly.com/lucasnoliveira126" // Altere para o seu link de agendamento
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-6 py-3 bg-blue-700 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-800 transition duration-300 ease-in-out"
