@@ -127,7 +127,7 @@ const HeroSection: FC = () => {
                     <div className="mt-6 text-center">
                         <button
                             onClick={() => setShowAll(!showAll)}
-                            className="bg-transparent border border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 hover:bg-blue-600 hover:text-white transition duration-300 px-4 py-2 rounded-full text-lg font-semibold dark:hover:text-white"
+                            className="bg-transparent border border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:border-transparent transition duration-300 px-4 py-2 rounded-full text-lg font-semibold dark:hover:text-white"
                         >
                             {showAll ? `${translations.showLess}` : `${translations.showMore}`}
                         </button>
