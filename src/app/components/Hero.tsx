@@ -109,7 +109,7 @@ const HeroSection: FC = () => {
                         Full Stack Web Developer
                     </p>
     
-                    <p className="max-w-lg text-gray-500 dark:text-gray-400 mt-6 text-sm md:text-md lg:text-lg">
+                    <p className="max-w-lg text-gray-700 dark:text-gray-300 mt-6 text-base sm:text-lg md:text-xl">
                         {translations.heroDescription}
                     </p>
     
