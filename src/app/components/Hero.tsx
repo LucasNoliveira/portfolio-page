@@ -6,6 +6,7 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaDownload, FaComments } from 'react-
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql, SiJavascript, SiDocker, SiJest, SiPython, SiKubernetes, SiIcloud } from 'react-icons/si';
 import Popup from "./Popup";
+import Typical from 'react-typical';
 
 type SkillIconKeys = 'React' | 'Next.js' | 'TypeScript' | 'Tailwind CSS' | 'Node.js' | 'GraphQL' | 'JavaScript' | 'Docker' | 'Jest' | 'Express' | 'Python' | 'Django' | 'AWS' | 'Kubernetes';
 
@@ -86,7 +87,7 @@ const HeroSection: FC = () => {
                             <FaComments className="mr-2" />
                             {translations.getInTouch}
                         </a>
-    
+
                         {isPopupVisible && <Popup onClose={closeGetInTouchPopup} />}
                         <a
                             href={getCVLink()}
@@ -98,21 +99,32 @@ const HeroSection: FC = () => {
                         </a>
                     </div>
                 </div>
-    
+
                 <div className="w-full md:w-1/2 text-center md:text-left">
                     <h1 className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-gray-200">
                         <span className="text-blue-600">Lucas</span> Oliveira
                     </h1>
                     <hr className="my-4 border-t-4 border-blue-600 mx-auto md:mx-0 w-24" />
-    
+
                     <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mt-4">
-                        Full Stack Web Developer
+                        <Typical
+                            steps={[
+                                'Full Stack Web Developer', 5000,
+                                '', 500,
+                                'Front End Developer', 5000,
+                                '', 500,
+                                'Backend Developer', 5000,
+                                '', 500
+                            ]}
+                            loop={Infinity}
+                            wrapper="span"
+                        />
                     </p>
-    
+
                     <p className="max-w-lg text-gray-700 dark:text-gray-300 mt-6 text-base sm:text-lg md:text-xl">
                         {translations.heroDescription}
                     </p>
-    
+
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-0 mt-10">
                         {displayedSkills.map((skill) => (
                             <div key={skill} className="flex items-center border p-3 lg:p-4 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300 dark:border-gray-600">
@@ -123,7 +135,7 @@ const HeroSection: FC = () => {
                             </div>
                         ))}
                     </div>
-    
+
                     <div className="mt-6 text-center">
                         <button
                             onClick={() => setShowAll(!showAll)}
