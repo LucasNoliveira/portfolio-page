@@ -164,7 +164,7 @@ const Modal: FC<ModalProps> = ({ title, description, details, icon, closeModal }
             exit={{ opacity: 0 }}
         >
             <motion.div
-                className="bg-white rounded-lg shadow-lg max-w-[95vw] max-h-[80vh] mx-auto p-6 relative overflow-y-auto"
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-[95vw] max-h-[80vh] mx-auto p-6 relative overflow-y-auto"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.3 }}
@@ -194,12 +194,12 @@ const Modal: FC<ModalProps> = ({ title, description, details, icon, closeModal }
                         </div>
                     </div>
                     {/* Título com fontes responsivas */}
-                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">{title}</h3>
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 dark:text-gray-50">{title}</h3>
                 </div>
 
                 {/* Descrição com fontes responsivas */}
                 <p
-                    className="text-sm md:text-base lg:text-lg text-gray-600 mb-4"
+                    className="text-sm md:text-base lg:text-lg text-gray-600 mb-4 dark:text-gray-100"
                     dangerouslySetInnerHTML={{ __html: description }}
                 />
 
@@ -207,7 +207,7 @@ const Modal: FC<ModalProps> = ({ title, description, details, icon, closeModal }
                 {details && (
                     <ul className="list-none space-y-2 mb-4 pl-6">
                         {details.map((detail, index) => (
-                            <li key={index} className="flex items-center space-x-2 text-sm md:text-base lg:text-lg text-gray-700">
+                            <li key={index} className="flex items-center space-x-2 text-sm md:text-base lg:text-lg text-gray-700 dark:text-gray-100">
                                 <BsCheckCircle className="text-blue-500 text-xl w-7 h-7 flex-shrink-0" />
                                 <span className="flex-1" dangerouslySetInnerHTML={{ __html: detail }} />
                             </li>
