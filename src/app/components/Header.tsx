@@ -69,28 +69,28 @@ const Header: React.FC = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex space-x-6 items-center mx-auto border border-gray-300 dark:border-gray-700 rounded-full p-1 px-8">
-                    <Link href="/" className="font-bold text-[#555] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
-                        <FontAwesomeIcon icon={faHome} className="h-5 w-5 mr-1" /> {translations.home}
+                <div className="hidden md:flex space-x-6 items-center mx-auto dark:border-gray-700 rounded-full p-1 px-8">
+                    <Link href="/" className="font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                        {translations.home}
                     </Link>
-                    <Link href="/about" className="font-bold text-[#555] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
-                        <FontAwesomeIcon icon={faUser} className="h-5 w-5 mr-1" /> {translations.about}
+                    <Link href="/about" className="font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                        {translations.about}
                     </Link>
-                    <Link href="#experiences" className="font-bold text-[#555] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
-                        <FontAwesomeIcon icon={faBriefcase} className="h-5 w-5 mr-1" /> {translations.experience}
+                    <Link href="#experiences" className="font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                        {translations.experience}
                     </Link>
-                    <Link href="#services" className="font-bold text-[#555] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
-                        <FontAwesomeIcon icon={faCog} className="h-5 w-5 mr-1" /> {translations.services}
+                    <Link href="#services" className="font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                        {translations.services}
                     </Link>
-                    <Link href="/projects" className="font-bold text-[#555] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
-                        <FontAwesomeIcon icon={faFolder} className="h-5 w-5 mr-1" /> {translations.projects}
+                    <Link href="/projects" className="font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                        {translations.projects}
                     </Link>
-                    <Link href="/contact" className="font-bold text-[#555] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
-                        <IoChatboxEllipsesSharp className="h-5 w-5 mr-1" /> {translations.contact}
+                    <Link href="/contact" className="font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                        {translations.contact}
                     </Link>
 
                     <div className="relative" ref={dropdownRef}>
-                        <button onClick={toggleDropdown} className="bg-blue-600 text-white px-4 py-2 rounded flex items-center hover:bg-blue-700 transition duration-300">
+                        <button onClick={toggleDropdown} className=" bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 rounded flex items-center transition duration-300">
                             {translations.downloadCV}
                             <FontAwesomeIcon icon={faChevronDown} className="h-5 w-5 ml-2" />
                         </button>
@@ -135,7 +135,7 @@ const Header: React.FC = () => {
                     <button
                         onClick={toggleTheme}
                         className="dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700 transition duration-300 flex items-center justify-center"
-                        style={{marginRight: '-1rem'}}
+                        style={{ marginRight: '' }}
                     >
                         {theme === 'light' ? <FiMoon size={22} /> : <FiSun size={22} />}
                     </button>
@@ -176,22 +176,22 @@ const Header: React.FC = () => {
 
             <div className={`fixed inset-0 bg-white dark:bg-gray-900 bg-opacity-80 backdrop-blur-sm overflow-hidden transition-transform ${isOpen ? 'translate-x-0 duration-200 ease-in' : 'translate-x-full duration-500 ease-out'}`}>
                 <nav className={`flex flex-col h-full items-center justify-center space-y-4 p-6 transition-opacity ${isOpen ? 'opacity-100 duration-300 ease-in' : 'opacity-0 duration-500 ease-out'}`}>
-                    <Link href="/" onClick={toggleMenu} className="font-bold text-xl text-[#333] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                    <Link href="/" onClick={toggleMenu} className="font-bold text-xl text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
                         <FontAwesomeIcon icon={faHome} className="h-5 w-5 mr-2" /> {translations.home}
                     </Link>
-                    <Link href="/about" onClick={toggleMenu} className="font-bold text-xl text-[#333] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                    <Link href="/about" onClick={toggleMenu} className="font-bold text-xl text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
                         <FontAwesomeIcon icon={faUser} className="h-5 w-5 mr-2" /> {translations.about}
                     </Link>
-                    <Link href="#experiences" onClick={toggleMenu} className="font-bold text-xl text-[#333] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                    <Link href="#experiences" onClick={toggleMenu} className="font-bold text-xl text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
                         <FontAwesomeIcon icon={faBriefcase} className="h-5 w-5 mr-2" /> {translations.experience}
                     </Link>
-                    <Link href="#services" onClick={toggleMenu} className="font-bold text-xl text-[#333] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                    <Link href="#services" onClick={toggleMenu} className="font-bold text-xl text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
                         <FontAwesomeIcon icon={faCog} className="h-5 w-5 mr-2" /> {translations.services}
                     </Link>
-                    <Link href="/projects" onClick={toggleMenu} className="font-bold text-xl text-[#333] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                    <Link href="/projects" onClick={toggleMenu} className="font-bold text-xl text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
                         <FontAwesomeIcon icon={faFolder} className="h-5 w-5 mr-2" /> {translations.projects}
                     </Link>
-                    <Link href="/contact" onClick={toggleMenu} className="font-bold text-xl text-[#333] dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
+                    <Link href="/contact" onClick={toggleMenu} className="font-bold text-xl text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center">
                         <IoChatboxEllipsesSharp className="h-5 w-5 mr-2" /> {translations.contact}
                     </Link>
                     <div className="relative" ref={dropdownRef}>
