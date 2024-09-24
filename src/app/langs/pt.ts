@@ -59,8 +59,8 @@ export const pt = {
       logo: '/img/company_logos/montcapitalasset_logo.jpeg',
       role: 'Desenvolvedor Full Stack Python',
       techStack: ["Typescript", "React", "Nextjs", "TailwindCSS", "Node", "Python", "Django", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Git", "GitHub", "AWS"],
-      startDate: 'Jan 2022',
-      endDate: 'Presente',
+      startDate: 'Abr 2024',
+      endDate: 'Ago 2024',
       description: `- Desenvolvimento Backend com Python, Django, Flask, FastAPI, além de outras tecnologias como Node.js, Express, Sequelize
       - Criação de interfaces com React, Typescript, Material UI, Styled Components, HTML, CSS
       - Requisições SOAP/REST, Webservices, JWT

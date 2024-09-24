@@ -61,7 +61,7 @@ export const es = {
       "techStack": ["Typescript", "React", "Nextjs", "TailwindCSS", "Node", "Python", "Django", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Git", "GitHub", "AWS"
       ],
       "startDate": "Abr 2024",
-      "endDate": "Presente",
+      "endDate": "Ago 2024",
       "description": `
         - Desarrollo de backend con Python, Django, Flask, FastAPI, así como otras tecnologías como Node.js, Express, Sequelize.
         - Creación de interfaces con React, TypeScript, Material UI, Styled Components, HTML, CSS.

@@ -63,7 +63,7 @@ export const jp = {
             role: 'フルスタックPython開発者',
             techStack: ["Typescript", "React", "Nextjs", "TailwindCSS", "Node", "Python", "Django", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Git", "GitHub", "AWS"],
             startDate: '2024年4月',
-            endDate: '現在',
+            endDate: '2024年8月',
             description: `
       - Python, Django, Flask, FastAPIなどを使用したバックエンド開発
         - React, TypeScript, Material UI, Styled Components, HTML, CSSを使用したインターフェースの作成
