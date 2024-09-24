@@ -193,18 +193,21 @@ const Modal: FC<ModalProps> = ({ title, description, details, icon, closeModal }
                             {icon}
                         </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
+                    {/* Título com fontes responsivas */}
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">{title}</h3>
                 </div>
 
+                {/* Descrição com fontes responsivas */}
                 <p
-                    className="text-gray-600 text-lg mb-4"
+                    className="text-sm md:text-base lg:text-lg text-gray-600 mb-4"
                     dangerouslySetInnerHTML={{ __html: description }}
                 />
 
+                {/* Detalhes com fontes responsivas */}
                 {details && (
                     <ul className="list-none space-y-2 mb-4 pl-6">
                         {details.map((detail, index) => (
-                            <li key={index} className="flex items-center space-x-2 text-gray-700">
+                            <li key={index} className="flex items-center space-x-2 text-sm md:text-base lg:text-lg text-gray-700">
                                 <BsCheckCircle className="text-blue-500 text-xl w-7 h-7 flex-shrink-0" />
                                 <span className="flex-1" dangerouslySetInnerHTML={{ __html: detail }} />
                             </li>
@@ -215,7 +218,7 @@ const Modal: FC<ModalProps> = ({ title, description, details, icon, closeModal }
                 <div className="mt-6 text-center">
                     <a
                         onClick={handleGetInTouchButtonClick}
-                        className="inline-flex justify-center items-center bg-blue-600 text-white px-3 py-1 lg:px-4 lg:py-2 rounded-full text-md lg:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300 cursor-pointer"
+                        className="inline-flex justify-center items-center bg-blue-600 text-white px-3 py-1 lg:px-4 lg:py-2 rounded-full text-sm md:text-md lg:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300 cursor-pointer"
                     >
                         <FaComments className="mr-2" />
                         {translations.getInTouch}
