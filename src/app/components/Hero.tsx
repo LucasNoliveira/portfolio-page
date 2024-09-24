@@ -6,7 +6,7 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaDownload, FaComments } from 'react-
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql, SiJavascript, SiDocker, SiJest, SiPython, SiKubernetes, SiIcloud } from 'react-icons/si';
 import Popup from "./Popup";
-import Typical from 'react-typical';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 type SkillIconKeys = 'React' | 'Next.js' | 'TypeScript' | 'Tailwind CSS' | 'Node.js' | 'GraphQL' | 'JavaScript' | 'Docker' | 'Jest' | 'Express' | 'Python' | 'Django' | 'AWS' | 'Kubernetes';
 
@@ -51,6 +51,14 @@ const HeroSection: FC = () => {
             ? '/cv/cv-update.pdf'
             : '/cv/Lucas Neves Oliveira - english cv.pdf';
     };
+
+    const [text] = useTypewriter({
+        words: ['Full Stack Web Developer', 'Front End Developer', 'Backend Developer'],
+        loop: 0,
+        typeSpeed: 100,
+        deleteSpeed: 50,
+        delaySpeed: 3000,
+      });
 
     return (
         <section className="bg-gray-50 dark:bg-gray-800 py-20 mt-3 md:mt-10">
@@ -107,18 +115,8 @@ const HeroSection: FC = () => {
                     <hr className="my-4 border-t-4 border-blue-600 mx-auto md:mx-0 w-24" />
 
                     <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mt-4">
-                        <Typical
-                            steps={[
-                                'Full Stack Web Developer', 5000,
-                                '', 500,
-                                'Front End Developer', 5000,
-                                '', 500,
-                                'Backend Developer', 5000,
-                                '', 500
-                            ]}
-                            loop={Infinity}
-                            wrapper="span"
-                        />
+                        {text}
+                        <Cursor cursorStyle="|" />
                     </p>
 
                     <p className="max-w-lg text-gray-700 dark:text-gray-300 mt-6 text-base sm:text-lg md:text-xl">
