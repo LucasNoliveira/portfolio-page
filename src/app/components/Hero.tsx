@@ -52,7 +52,7 @@ const HeroSection: FC = () => {
     };
 
     return (
-        <section className="bg-gray-50 dark:bg-gray-800 py-20 mt-3">
+        <section className="bg-gray-50 dark:bg-gray-800 py-20 mt-3 md:mt-10">
             <div className="container mx-auto flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center">
                     <div className="relative inline-block">
