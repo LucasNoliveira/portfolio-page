@@ -58,11 +58,12 @@ const HeroSection: FC = () => {
         typeSpeed: 100,
         deleteSpeed: 50,
         delaySpeed: 3000,
-      });
+    });
 
     return (
         <section className="bg-gray-50 dark:bg-gray-800 py-20 mt-3 md:mt-10">
             <div className="container mx-auto flex flex-col md:flex-row items-center">
+                {/* <div className='h-full w-1/3 bg-yellow-400 absolute top-0 -z-1 clip-right-triangle'></div> */}
                 <div className="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center">
                     <div className="relative inline-block">
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full border-2 border-transparent -z-10"></div>
@@ -71,7 +72,7 @@ const HeroSection: FC = () => {
                             alt="Lucas Oliveira"
                             width={400}
                             height={400}
-                            className="mb-2 md:w-96 md:h-96 w-64 h-64 rounded-full"
+                            className="mb-2 md:w-96 md:h-96 w-64 h-64 rounded-3xl"
                             priority
                         />
                     </div>
@@ -90,7 +91,7 @@ const HeroSection: FC = () => {
                         <a
                             href="#"
                             onClick={handleGetInTouchButtonClick}
-                            className="inline-flex justify-center items-center bg-blue-600 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-md lg:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300"
+                            className="inline-flex justify-center items-center bg-blue-600 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-md lg:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300 z-10"
                         >
                             <FaComments className="mr-2" />
                             {translations.getInTouch}
@@ -109,15 +110,15 @@ const HeroSection: FC = () => {
                 </div>
 
                 <div className="w-full md:w-1/2 text-center md:text-left">
-                    <h1 className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-gray-200">
-                        <span className="text-blue-600">Lucas</span> Oliveira
+                    <h1 className="text-4xl md:text-6xl font-bold text-blue-600 dark:text-yellow-400">
+                        <span>I'm Lucas</span> Oliveira.
                     </h1>
-                    <hr className="my-4 border-t-4 border-blue-600 mx-auto md:mx-0 w-24" />
+                    <hr className="my-4 border-t-4 border-blue-600 dark:border-yellow-400 mx-auto md:mx-0 w-24" />
 
-                    <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mt-4">
+                    <h2 className="text-xl md:text-4xl font-bold text-gray-600 dark:text-gray-200 mt-4">
                         {text}
                         <Cursor cursorStyle="|" />
-                    </p>
+                    </h2>
 
                     <p className="max-w-lg text-gray-700 dark:text-gray-300 mt-6 text-base sm:text-lg md:text-xl">
                         {translations.heroDescription}
