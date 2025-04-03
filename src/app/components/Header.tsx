@@ -60,12 +60,13 @@ const Header: React.FC = () => {
             : '/cv/Lucas Neves Oliveira - english cv.pdf';
     };
 
+    const logoSrc = theme === 'dark' ? '/img/logo_dark.png' : '/img/logo.png';
+
     return (
         <header className="bg-gray-50 dark:bg-gray-800 fixed w-full z-10 top-0 left-0">
-            <div className="container mx-auto flex justify-between items-center p-5 relative">
-                {/* Logo */}
+            <div className="container mx-auto flex justify-between items-center px-5 relative">
                 <Link href="/" className="flex items-center space-x-2">
-                    <img src="/logo.png" alt="Logo" className="h-8" />
+                    <img src={logoSrc} alt="Logo" className="h-20" />
                 </Link>
 
                 {/* Desktop Menu */}
