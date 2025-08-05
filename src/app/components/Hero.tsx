@@ -92,8 +92,8 @@ const HeroSection: FC = () => {
 
   const getCVLink = () => {
     return language === "PT"
-      ? "/cv/cv-update.pdf"
-      : "/cv/Lucas Neves Oliveira - english cv.pdf";
+      ? "/cv/Lucas_Oliveira_CV_FullStack_2025.pdf"
+      : "/cv/Lucas_Oliveira_CV_FullStack_2025.pdf";
   };
 
   const [text] = useTypewriter({

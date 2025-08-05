@@ -66,8 +66,8 @@ const Header: React.FC = () => {
 
   const getCVLink = () => {
     return language === "PT"
-      ? "/cv/cv-update.pdf"
-      : "/cv/Lucas Neves Oliveira - english cv.pdf";
+      ? "/cv/Lucas_Oliveira_CV_FullStack_2025.pdf"
+      : "/cv/Lucas_Oliveira_CV_FullStack_2025.pdf";
   };
 
   const logoSrc = theme === "dark" ? "/img/logo_dark.png" : "/img/logo.png";
