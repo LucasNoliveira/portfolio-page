@@ -3,7 +3,6 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
-import Warning from './components/Warning';
 import HeroSection from "./components/Hero";
 import AboutSection from "./components/About";
 import './globals.css'
@@ -34,7 +33,6 @@ const Home: NextPage = () => {
             <ThemeProvider>
             <LanguageProvider>
                 <Header />
-                <Warning />
                 <main>
                     <HeroSection />
                 </main>
