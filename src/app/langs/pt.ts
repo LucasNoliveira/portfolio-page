@@ -49,7 +49,7 @@ export const pt = {
   professionalBackground: "Histórico Profissional",
   ExperienceSummary: {
     techXp: { name: "Experiência em Tecnologia", experienceYears: "3" },
-    webDevXp: { name: "Desenvolvimento WEB", experienceYears: "2" },
+    webDevXp: { name: "Desenvolvimento WEB", experienceYears: "3" },
     services: { name: "Serviços prestados", quantity: "27" }
   },
   years: "anos",

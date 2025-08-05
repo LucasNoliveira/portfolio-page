@@ -57,7 +57,7 @@ export const jp = {
   // furtherDetails: "プロジェクトや実績についての詳細は、ぜひ私のポートフォリオをご覧ください。",
   ExperienceSummary: {
     techXp: { name: "技術経験", experienceYears: "3年" },
-    webDevXp: { name: "ウェブ開発", experienceYears: "2年" },
+    webDevXp: { name: "ウェブ開発", experienceYears: "3年" },
     services: { name: "提供するサービス", quantity: "27件" },
   },
   years: "年",

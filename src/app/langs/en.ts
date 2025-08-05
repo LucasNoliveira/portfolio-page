@@ -57,7 +57,7 @@ export const en = {
   // furtherDetails: "For more information about my projects and achievements, feel free to explore my portfolio.",
   ExperienceSummary: {
     techXp: { name: "Technology Experience", experienceYears: "3" },
-    webDevXp: { name: "Web Development", experienceYears: "2" },
+    webDevXp: { name: "Web Development", experienceYears: "3" },
     services: { name: "Services Provided", quantity: "27" },
   },
   years: "years",
