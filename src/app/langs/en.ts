@@ -7,10 +7,12 @@ export const en = {
   services: "Services",
   contact: "Contact",
   warningTitle: "Under Development",
-  warningMessage: "This portfolio is currently under rapid development. It will soon be complete, but you can already get a good idea of my experience.",
+  warningMessage:
+    "This portfolio is currently under rapid development. It will soon be complete, but you can already get a good idea of my experience.",
   downloadCV: "Download Resume",
   readOnline: "Read Online",
-  heroDescription: "I am a software engineer with 3+ years in building efficient, scalable applications across a range of industries. I specialize in both front-end and back-end development, creating high-performance systems that drive business impact. I am always seeking new challenges to enhance my skills.",
+  heroDescription:
+    "I am a software engineer with 3+ years in building efficient, scalable applications across a range of industries. I specialize in both front-end and back-end development, creating high-performance systems that drive business impact. I am always seeking new challenges to enhance my skills.",
   getInTouch: "Get in Touch",
   experience: "Experience",
   showMore: "Show More",
@@ -21,11 +23,14 @@ export const en = {
   sendMeADiscord: "Send me a Discord message",
   close: "Close",
   hiThere: "Hi there! 👋",
-  welcomeMessage: "Check out some of my projects, and if you like them, let me know about your next project. Enjoy your visit!",
+  welcomeMessage:
+    "Check out some of my projects, and if you like them, let me know about your next project. Enjoy your visit!",
   aboutMe: "About Me",
-  aboutIntro: "Hello! I'm Lucas, a Full Stack Web Developer with a passion for creating dynamic and interactive web applications.",
+  aboutIntro:
+    "Hello! I'm Lucas, a Full Stack Web Developer with a passion for creating dynamic and interactive web applications.",
   profile: "Profile",
-  profileDescription: "I specialize in developing front-end and back-end solutions, focusing on user-centered design and efficient code.",
+  profileDescription:
+    "I specialize in developing front-end and back-end solutions, focusing on user-centered design and efficient code.",
   spokenLanguages: "Spoken Languages",
   languages: [
     { name: "portuguese", level: "native" },
@@ -51,52 +56,168 @@ export const en = {
   professionalBackground: "Professional Background",
   // furtherDetails: "For more information about my projects and achievements, feel free to explore my portfolio.",
   ExperienceSummary: {
-    techXp: { name: "Technology Experience", experienceYears: '3' },
-    webDevXp: { name: "Web Development", experienceYears: '2' },
-    services: { name: "Services Provided", quantity: '27' }
+    techXp: { name: "Technology Experience", experienceYears: "3" },
+    webDevXp: { name: "Web Development", experienceYears: "2" },
+    services: { name: "Services Provided", quantity: "27" },
   },
   years: "years",
   experiences: [
     {
-      company: 'Mont Capital Asset',
-      logo: '/img/company_logos/montcapitalasset_logo.jpeg',
-      role: 'Full Stack Python Developer',
-      techStack: ["Typescript", "React", "Nextjs", "TailwindCSS", "Node", "Python", "Django", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Git", "GitHub", "AWS"],
-      startDate: 'Apr 2024',
-      endDate: 'Aug 2024',
+      company: "Accenture",
+      logo: "/img/company_logos/accenture_logo.jpeg",
+      role: "Custom Software Engineering Analyst",
+      techStack: [
+        "Python",
+        "Flask",
+        "JavaScript",
+        "Angular",
+        "Typescript",
+        "GraphQL",
+        "Git",
+        "Azure",
+        "GCP"
+      ],
+      startDate: "Jan 2025",
+      endDate: "Current",
       description: `
-      - Backend development with Python, Django, Flask, FastAPI, as well as other technologies like Node.js, Express, Sequelize.
-        - Creating interfaces with React, TypeScript, Material UI, Styled Components, HTML, CSS.
-        - Handling SOAP/REST requests, Webservices.
-        - Implementing WebSockets, socket.io for real-time communication.
-        - Managing databases: MySQL, PostgreSQL, MongoDB.
-        - Containerizing applications with Docker, Docker Compose, Kubernetes.
-        - Utilizing AWS Services: EC2, RDS, S3.
+• Developed smart automations using Pipefy to streamline workflows and enhance operational efficiency.
+• Continuously improved automation scripts with a focus on performance, scalability, and code readability.
+• Designed and maintained modern, secure, and market-aligned architectures ensuring maintainability and reliability.
+• Collaborated with distributed teams using Git, agile methodologies (Scrum/Kanban), and task/version control tools.
+• Built and maintained RPAs and web scraping routines, automating critical processes and reducing operational overhead.
+• Developed backend systems in Python, following clean code principles and best practices.
+• Maintained and optimized HR-focused systems, improving internal operations and user experience.
+• Developed frontend interfaces using Angular and implemented serverless backends with Python and Google Cloud Functions.
+• Used Podman to containerize and manage services in scalable environments.
         `,
     },
     {
-      company: 'Vitta Group Franchising',
-      logo: '/img/company_logos/vitta_logo.jpeg',
-      role: 'Full Stack Web Developer',
-      techStack: ["React", "HTML", "CSS", "JavaScript", "Node", "Python", "Django", "PostgreSQL", "Git", "GitHub"],
-      startDate: 'Oct 2023',
-      endDate: 'Apr 2024',
+      company: "Indra Energia",
+      logo: "/img/company_logos/indra_energia_logo.jpeg",
+      role: "Full Stack Developer",
+      techStack: [
+        "Python",
+        "Django",
+        "FastAPI",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "JQuery",
+        "PostgreSQL",
+        "SQLite",
+        "Docker",
+        "Git",
+        "GitHub",
+        "AWS",
+      ],
+      startDate: "Oct 2024",
+      endDate: "Jan 2025",
       description: `
-        - Development of applications in React.js
-        - Project, implementation, and maintenance of APIs using JavaScript, Node.js, and Django, including RESTful APIs
-        - Creation, modeling, and administration of PostgreSQL databases
-        - Utilization of Postman for API testing
-        - Configuration of Linux VPS server to host React applications with Django Back-End using Nginx
-        - Development of scripts for task automation and productivity enhancement
-        - Development and maintenance of Landing Pages with WordPress and Elementor for design and layout
-        - Performance analysis and implementation of SEO
+• Contributed to the development and maintenance of web applications supporting energy trading and customer retail operations, improving internal tools
+• Helped reduce API response times by up to 30% through optimization efforts using FastAPI, caching techniques and asynchronous programming
+• Assisted in migrating legacy components to containerized environments using Docker and Docker Compose, improving deployment consistency and reducing environment-related issues by 40%
+• Collaborated on frontend development, leading to a 15% improvement in user satisfaction based on internal feedback, by enhancing UI responsiveness.
+• Supported the team in identifying and resolving bugs, contributing to a 20% reduction in post-deployment incidents.
+        `,
+    },
+    {
+      company: "Mont Capital Asset",
+      logo: "/img/company_logos/montcapitalasset_logo.jpeg",
+      role: "Full Stack Python Developer",
+      techStack: [
+        "Typescript",
+        "React",
+        "Nextjs",
+        "TailwindCSS",
+        "Node",
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Docker",
+        "Git",
+        "GitHub",
+        "AWS",
+      ],
+      startDate: "Apr 2024",
+      endDate: "Aug 2024",
+      description: `
+• Contributed to the development of backend services using Python (Django, Flask, FastAPI), working alongside other engineers to deliver scalable and well-tested APIs
+• Assisted in the development and maintenance of frontend features using React, TypeScript, Material UI, and Styled Components, enhancing UI consistency and responsiveness
+• Collaborated on projects involving WebSockets and real-time communication using Socket.io, improving system interactivity
+• Worked with SOAP/REST APIs and external web services to integrate financial data sources into internal systems
+• Participated in containerizing services using Docker, Docker Compose, and basic Kubernetes setups for development environments.
+• Managed and queried relational and non-relational databases including PostgreSQL, MySQL, and MongoDB
+• Contributed to deploying applications using AWS EC2, S3, and RDS, reducing deployment time by ~30% through automation scripts.
+• Collaborated in a small agile team and helped deliver over 10 features and bug fixes across the stack during my time on the project.
+• Wrote unit tests for backend services, increasing code reliability and contributing to 10–15% higher test coverage on some modules
+        `,
+    },
+    {
+      company: "Vitta Group Franchising",
+      logo: "/img/company_logos/vitta_logo.jpeg",
+      role: "Full Stack Web Developer",
+      techStack: [
+        "React",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node",
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Git",
+        "GitHub",
+      ],
+      startDate: "Oct 2023",
+      endDate: "Dec 2024",
+      description: `
+• Development of applications in React.js
+• Project, implementation, and maintenance of APIs using JavaScript, Node.js, and Django, including RESTful APIs
+• Creation, modeling, and administration of PostgreSQL databases
+• Utilization of Postman for API testing
+• Configuration of Linux VPS server to host React applications with Django Back-End using Nginx
+• Development of scripts for task automation and productivity enhancement
+• Development and maintenance of Landing Pages with WordPress and Elementor for design and layout
+• Performance analysis and implementation of SEO
+      `,
+    },
+        {
+      company: "Fundação de Rotarianos de São Paulo",
+      logo: "/img/company_logos/fundacao_rotarianos_sp_logo.jpeg",
+      role: "IT Analyst / Automation Developer",
+      techStack: [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Node",
+        "Python",
+        "MySQL",
+        "Git",
+        "GitHub",
+      ],
+      startDate: "Mar 2022",
+      endDate: "Oct 2023",
+      description: `
+• Developed scripts using Python and PowerShell to automate tasks such as installation, configuration, and computer management. These automations reduced setup time from over an hour to 15 minutes or less.
+• Assist and guide users in the use of IT tools.
+• Assist in user internet support.
+• Aid in supporting users with intranet and internet emails.
+• Assist in system maintenance.
+• Installation of physical printers and through the server.
+• Proficient in Linux, Windows, and Mac OS operating systems.
+• MySQL database management.
+• Proficient in the Microsoft Office suite.
+• Computer networks expertise.
       `,
     },
   ],
   servicesList: [
     {
       title: "Web Development",
-      description: "Building modern, responsive websites using the latest web technologies.",
+      description:
+        "Building modern, responsive websites using the latest web technologies.",
       icon: "development",
       details: [
         'Custom website design and development using <span class="text-[tomato] font-bold">HTML</span>, <span class="text-[tomato] font-bold">CSS</span>, <span class="text-[tomato] font-bold">JavaScript</span>, and <span class="text-[tomato] font-bold">React</span>',
@@ -104,12 +225,13 @@ export const en = {
         'Ensuring website <span class="text-[tomato] font-bold">responsiveness</span> for all screen sizes and devices',
         'Optimizing performance for fast load times and <span class="text-[tomato] font-bold">SEO</span> best practices',
         'Creating <span class="text-[tomato] font-bold">e-commerce</span> platforms with payment gateway integrations',
-        'Developing <span class="text-[tomato] font-bold">single-page applications (SPA)</span> using <span class="text-[tomato] font-bold">React</span> and <span class="text-[tomato] font-bold">Next.js</span>'
-      ]
+        'Developing <span class="text-[tomato] font-bold">single-page applications (SPA)</span> using <span class="text-[tomato] font-bold">React</span> and <span class="text-[tomato] font-bold">Next.js</span>',
+      ],
     },
     {
       title: "Backend Development",
-      description: "Developing robust and scalable backend systems with Node.js, Python, and more.",
+      description:
+        "Developing robust and scalable backend systems with Node.js, Python, and more.",
       icon: "database",
       details: [
         'API development and integration (<span class="text-[tomato] font-bold">RESTful</span> and <span class="text-[tomato] font-bold">GraphQL</span>)',
@@ -117,12 +239,13 @@ export const en = {
         'Authentication and authorization systems implementation (<span class="text-[tomato] font-bold">OAuth</span>, <span class="text-[tomato] font-bold">JWT</span>)',
         'Building <span class="text-[tomato] font-bold">microservices</span> architectures for large-scale applications',
         'Cloud infrastructure setup and server management with <span class="text-[tomato] font-bold">AWS</span>, <span class="text-[tomato] font-bold">GCP</span>, or <span class="text-[tomato] font-bold">Azure</span>',
-        'Handling third-party integrations, such as <span class="text-[tomato] font-bold">payment processors</span>, <span class="text-[tomato] font-bold">email services</span>, and more'
-      ]
+        'Handling third-party integrations, such as <span class="text-[tomato] font-bold">payment processors</span>, <span class="text-[tomato] font-bold">email services</span>, and more',
+      ],
     },
     {
       title: "Mobile Development",
-      description: "Creating cross-platform mobile applications with React Native.",
+      description:
+        "Creating cross-platform mobile applications with React Native.",
       icon: "mobile",
       details: [
         'Building <span class="text-[tomato] font-bold">iOS</span> and <span class="text-[tomato] font-bold">Android</span> apps using <span class="text-[tomato] font-bold">React Native</span>',
@@ -130,73 +253,88 @@ export const en = {
         'Implementing features like <span class="text-[tomato] font-bold">push notifications</span>, <span class="text-[tomato] font-bold">offline mode</span>, and <span class="text-[tomato] font-bold">real-time updates</span>',
         'Integration with backend APIs for <span class="text-[tomato] font-bold">data synchronization</span>',
         'Deploying apps to the <span class="text-[tomato] font-bold">App Store</span> and <span class="text-[tomato] font-bold">Google Play Store</span>',
-        'Maintaining and updating existing mobile applications'
-      ]
-    }
+        "Maintaining and updating existing mobile applications",
+      ],
+    },
   ],
-      servicesTitle: "Services",
+  servicesTitle: "Services",
   servicesSubtitle: "What I Can Do For You",
   learnMore: "Learn More",
-  someThingsBuilt: 'Some things I’ve built',
+  someThingsBuilt: "Some things I’ve built",
   projectsList: [
     {
-      title: 'Portfolio Website',
-      shortDescription: 'A personal portfolio website to showcase my skills, projects, and experience.',
-      image: '/portfolio-website.png',
-      link: 'https://www.myportfolio.com',
+      title: "Portfolio Website",
+      shortDescription:
+        "A personal portfolio website to showcase my skills, projects, and experience.",
+      image: "/portfolio-website.png",
+      link: "https://www.myportfolio.com",
       github: "#",
-      techStack: ["Typescript", "React", "Nextjs", "TailwindCSS", "Git", "GitHub"]
+      techStack: [
+        "Typescript",
+        "React",
+        "Nextjs",
+        "TailwindCSS",
+        "Git",
+        "GitHub",
+      ],
     },
     {
-      title: 'E-commerce Platform',
-      shortDescription: 'An advanced e-commerce platform with payment integration, shopping cart, and user authentication.',
-      image: '/ecommerce-platform.png',
-      link: 'https://www.ecommerceplatform.com',
+      title: "E-commerce Platform",
+      shortDescription:
+        "An advanced e-commerce platform with payment integration, shopping cart, and user authentication.",
+      image: "/ecommerce-platform.png",
+      link: "https://www.ecommerceplatform.com",
       github: "#",
-      techStack: ["React", "Django", "PostgreSQL"]
+      techStack: ["React", "Django", "PostgreSQL"],
     },
     {
-      title: 'Task Management App',
-      shortDescription: 'A task management app to help teams organize their work and improve productivity.',
-      image: '/task-management-app.png',
-      link: 'https://www.taskmanagementapp.com',
+      title: "Task Management App",
+      shortDescription:
+        "A task management app to help teams organize their work and improve productivity.",
+      image: "/task-management-app.png",
+      link: "https://www.taskmanagementapp.com",
       github: "#",
-      techStack: ["Nextjs"]
+      techStack: ["Nextjs"],
     },
     {
-      title: 'Social Media Dashboard',
-      shortDescription: 'A dashboard for managing and analyzing social media accounts with real-time analytics and post scheduling.',
-      image: '/social-media-dashboard.png',
-      link: 'https://www.socialmediadashboard.com',
+      title: "Social Media Dashboard",
+      shortDescription:
+        "A dashboard for managing and analyzing social media accounts with real-time analytics and post scheduling.",
+      image: "/social-media-dashboard.png",
+      link: "https://www.socialmediadashboard.com",
       github: "#",
-      techStack: ["PHP", "jQuery", "Bootstrap"]
+      techStack: ["PHP", "jQuery", "Bootstrap"],
     },
     {
-      title: 'Real Estate Listing Site',
-      shortDescription: 'A platform for browsing and managing real estate listings with advanced search filters and property details.',
-      image: '/real-estate-listing.png',
-      link: 'https://www.realestatelistingsite.com',
+      title: "Real Estate Listing Site",
+      shortDescription:
+        "A platform for browsing and managing real estate listings with advanced search filters and property details.",
+      image: "/real-estate-listing.png",
+      link: "https://www.realestatelistingsite.com",
       github: "#",
-      techStack: ["Node"]
+      techStack: ["Node"],
     },
     {
-      title: 'Fitness Tracker App',
-      shortDescription: 'A mobile app for tracking fitness activities, setting goals, and monitoring progress with integration to health devices.',
-      image: '/fitness-tracker-app.png',
-      link: 'https://www.fitnesstrackerapp.com',
+      title: "Fitness Tracker App",
+      shortDescription:
+        "A mobile app for tracking fitness activities, setting goals, and monitoring progress with integration to health devices.",
+      image: "/fitness-tracker-app.png",
+      link: "https://www.fitnesstrackerapp.com",
       github: "#",
-      techStack: ["Kotlin"]
+      techStack: ["Kotlin"],
     },
   ],
   viewProject: "View Project",
-  viewMoreProjects: 'View More Projects',
+  viewMoreProjects: "View More Projects",
   hoverDescription: "Explore the project",
-  contactIntro: "I'd love to hear from you! Whether you have a project in mind, want to collaborate, or just want to say hi, feel free to reach out. Let's create something amazing together.",
+  contactIntro:
+    "I'd love to hear from you! Whether you have a project in mind, want to collaborate, or just want to say hi, feel free to reach out. Let's create something amazing together.",
   phoneLabel: "Phone",
   locationLabel: "Location",
   emailLabel: "Email",
   scheduleMeeting: "Schedule Meeting",
-  elevatingYourWebXp: "Elevating your web experience with cutting-edge technology and elegant design.",
+  elevatingYourWebXp:
+    "Elevating your web experience with cutting-edge technology and elegant design.",
   quickLinks: "Quick Links",
   contactUs: "Contact Us",
   rightsReserved: "Rights Reserved",

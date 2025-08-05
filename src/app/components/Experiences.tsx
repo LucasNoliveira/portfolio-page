@@ -2,7 +2,7 @@
 import { FC, useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
-import { techColors } from './techTags'; // Ensure techColors is imported
+import { techColors } from './techTags';
 
 const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
     const [showAllTechs, setShowAllTechs] = useState(false);
@@ -17,7 +17,6 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
 
     useEffect(() => {
         if (descriptionRef.current) {
-            // Verifica se a altura do parágrafo é maior que o limite de 5 linhas
             const isOverflowing = descriptionRef.current.scrollHeight > descriptionRef.current.clientHeight;
             setIsTruncated(isOverflowing);
         }
@@ -77,7 +76,6 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.3 }}
         >
-            {/* Timeline Circle with Logo */}
             <div className="absolute left-1/2 transform -translate-x-1/2 bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center">
                 {exp.logo && (
                     <img
@@ -88,7 +86,6 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                 )}
             </div>
 
-            {/* Experience Card */}
             <div
                 className={`w-full p-6 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg transform ${index % 2 === 0 ? 'md:-translate-x-1' : 'md:translate-x-1'
                     } md:w-5/12`}
@@ -104,7 +101,6 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                 </div>
                 <p className="text-sm md:text-md lg:text-lg text-blue-600 dark:text-blue-400">{exp.role}</p>
 
-                {/* Duration for mobile and smaller screens */}
                 <div className="text-gray-800 dark:text-gray-200 text-sm font-semibold mt-2 md:hidden">
                     {exp.startDate} - {exp.endDate}
                 </div>
@@ -134,7 +130,6 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
                 )}
             </div>
 
-            {/* Duration for desktop */}
             <div
                 className={`absolute hidden md:block ${index % 2 === 0 ? 'left-1/2 translate-x-8' : 'right-1/2 -translate-x-8 mr-3'
                     } bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-semibold px-4 py-2 rounded-full ml-3`}
