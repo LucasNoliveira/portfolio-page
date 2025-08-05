@@ -8,7 +8,7 @@ export const pt = {
   warningMessage: "Este portfólio está em rápido desenvolvimento. Em breve estará completo, mas você já pode ter uma boa ideia da minha experiência.",
   downloadCV: "Baixar Currículo",
   readOnline: "Ler Online",
-  heroDescription: "Sou um desenvolvedor web apaixonado por criar interfaces modernas, elegantes e funcionais. Com 3 anos de experiência, domino diversas tecnologias e estou sempre em busca de novos desafios para aprimorar minhas habilidades.",
+  heroDescription: "Sou desenvolvedor de software com mais de 3 anos de experiência na construção de aplicações eficientes e escaláveis em diversos setores. Especializo-me tanto em desenvolvimento front-end quanto back-end, criando sistemas de alto desempenho que geram impacto nos negócios. Estou sempre em busca de novos desafios para aprimorar minhas habilidades.",
   getInTouch: "Entrar em Contato",
   experience: "Experiência",
   showMore: "Mostrar Mais",

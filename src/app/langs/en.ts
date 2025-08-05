@@ -10,7 +10,7 @@ export const en = {
   warningMessage: "This portfolio is currently under rapid development. It will soon be complete, but you can already get a good idea of my experience.",
   downloadCV: "Download Resume",
   readOnline: "Read Online",
-  heroDescription: "I am a passionate web developer creating modern, elegant, and functional interfaces. With 3 years of experience, I master various technologies and am always seeking new challenges to enhance my skills.",
+  heroDescription: "I am a software engineer with 3+ years in building efficient, scalable applications across a range of industries. I specialize in both front-end and back-end development, creating high-performance systems that drive business impact. I am always seeking new challenges to enhance my skills.",
   getInTouch: "Get in Touch",
   experience: "Experience",
   showMore: "Show More",

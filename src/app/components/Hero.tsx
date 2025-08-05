@@ -98,9 +98,10 @@ const HeroSection: FC = () => {
 
   const [text] = useTypewriter({
     words: [
-      "Full Stack Web Developer",
-      "Front End Developer",
+      "Full Stack Developer",
+      "Software Engineer",
       "Backend Developer",
+      "Frontend Developer",
     ],
     loop: 0,
     typeSpeed: 100,

@@ -8,7 +8,7 @@ export const es = {
   warningMessage: "Este portafolio está en desarrollo acelerado. Pronto estará completo, pero ya puedes tener una buena idea de mi experiencia.",
   downloadCV: "Descargar Resumen",
   readOnline: "Leer en línea",
-  heroDescription: "Soy un desarrollador web apasionado por crear interfaces modernas, elegantes y funcionales. Con 3 años de experiencia, domino diversas tecnologías y siempre estoy buscando nuevos desafíos para mejorar mis habilidades.",
+  heroDescription: "Soy ingeniero de software con más de 3 años de experiencia en el desarrollo de aplicaciones eficientes y escalables en diversos sectores. Me especializo tanto en desarrollo front-end como back-end, creando sistemas de alto rendimiento que generan impacto empresarial. Siempre estoy buscando nuevos desafíos para mejorar mis habilidades.",
   getInTouch: "Ponerse en Contacto",
   experience: "Experiencia",
   showMore: "Mostrar Más",
