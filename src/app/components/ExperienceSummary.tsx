@@ -68,7 +68,7 @@ const ExperienceSummary: FC = () => {
                         <ExperienceBlock
                             icon={<FaCog className="text-white h-8 w-8 md:h-10 md:w-10" />}
                             title={translations.ExperienceSummary.webDevXp.name}
-                            description={hasAnimated ? <CountUp end={2} duration={4} suffix={` ${translations.years}`} /> : `${translations.ExperienceSummary.webDevXp.experienceYears}`}
+                            description={hasAnimated ? <CountUp end={3} duration={4} suffix={` ${translations.years}`} /> : `${translations.ExperienceSummary.webDevXp.experienceYears}`}
                             backgroundColor="bg-teal-500"
                             textColor="text-white"
                         />
