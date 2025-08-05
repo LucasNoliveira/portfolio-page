@@ -14,7 +14,7 @@ const ProjectsSection: FC = () => {
     const { translations } = useLanguage();
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.3, // 30% do viewport
+        threshold: 0.3,
     });
 
     const settings = {
@@ -61,7 +61,7 @@ const ProjectsSection: FC = () => {
         <section
             className="bg-gray-100 dark:bg-gray-900 py-20 px-4 md:px-8 lg:px-12 xl:px-16"
             id="projects"
-            ref={ref} // Referência para o elemento
+            ref={ref}
         >
             <div className="container mx-auto">
                 <motion.h2

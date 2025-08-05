@@ -119,37 +119,19 @@ const Header: React.FC = () => {
           </Link>
 
           <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={toggleDropdown}
-              className=" bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 rounded flex items-center transition duration-300"
+            <Link
+              href={getCVLink()}
+              download
+              onClick={() => setIsDropdownOpen(false)}
+              className="bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 rounded flex items-center transition duration-300"
             >
               {translations.downloadCV}
-              <FontAwesomeIcon
-                icon={faChevronDown as IconProp}
-                className="h-5 w-5 ml-2"
-              />
-            </button>
+            </Link>
             <div
               className={`absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out transform ${
                 isDropdownOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
               }`}
-            >
-              <Link
-                href={getCVLink()}
-                download
-                onClick={() => setIsDropdownOpen(false)}
-                className="block px-4 py-2 text-black-600 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                {translations.downloadCV}
-              </Link>
-              <Link
-                href="/curriculo-online"
-                onClick={() => setIsDropdownOpen(false)}
-                className="block px-4 py-2 text-black-600 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                {translations.readOnline}
-              </Link>
-            </div>
+            ></div>
           </div>
         </div>
 
@@ -228,7 +210,10 @@ const Header: React.FC = () => {
             >
               <HiOutlineGlobeAlt className="h-5 w-5" />
               <span>{language}</span>
-              <FontAwesomeIcon icon={faChevronDown as IconProp} className="h-4 w-4" />
+              <FontAwesomeIcon
+                icon={faChevronDown as IconProp}
+                className="h-4 w-4"
+              />
             </button>
             <div
               className={`absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out transform ${
@@ -366,37 +351,18 @@ const Header: React.FC = () => {
             {translations.contact}
           </Link>
           <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={toggleDropdown}
-              className="bg-blue-600 text-white px-4 py-2 rounded flex items-center hover:bg-blue-700 transition duration-300"
-            >
+            <Link
+              href={getCVLink()}
+              download
+              onClick={() => setIsDropdownOpen(false)}
+              className="bg-blue-600 text-white px-4 py-2 rounded flex items-center hover:bg-blue-700 transition duration-300">
               {translations.downloadCV}
-              <FontAwesomeIcon
-                icon={faChevronDown as IconProp}
-                className="h-5 w-5 ml-2"
-              />
-            </button>
+            </Link>
             <div
               className={`absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out transform ${
                 isDropdownOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
               }`}
-            >
-              <Link
-                href={getCVLink()}
-                download
-                onClick={() => setIsDropdownOpen(false)}
-                className="block px-4 py-2 text-black-600 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                {translations.downloadCV}
-              </Link>
-              <Link
-                href="/curriculo-online"
-                onClick={() => setIsDropdownOpen(false)}
-                className="block px-4 py-2 text-black-600 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                {translations.readOnline}
-              </Link>
-            </div>
+            ></div>
           </div>
         </nav>
       </div>
