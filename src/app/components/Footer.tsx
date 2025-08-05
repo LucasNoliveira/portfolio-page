@@ -48,14 +48,14 @@ const Footer: FC = () => {
                         </ul>
                         <div className="flex space-x-4 mt-6">
                             <a
-                                href="https://twitter.com/seu-perfil"
+                                href="#"
                                 aria-label="Twitter"
                                 className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                             >
                                 <FaTwitter className="h-5 w-5 md:h-6 md:w-6" />
                             </a>
                             <a
-                                href="https://www.linkedin.com/in/seu-perfil"
+                                href="https://www.linkedin.com/in/lucasnevesoliveira"
                                 aria-label="LinkedIn"
                                 className="text-gray-400 hover:text-blue-600 transition-colors duration-300"
                             >
