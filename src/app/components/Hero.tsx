@@ -153,7 +153,7 @@ const HeroSection: FC = () => {
             <a
               href="#"
               onClick={handleGetInTouchButtonClick}
-              className="inline-flex justify-center items-center bg-blue-600 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-md lg:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300 z-10"
+              className="inline-flex justify-center items-center bg-blue-600 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-md lg:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300"
             >
               <FaComments className="mr-2" />
               {translations.getInTouch}
