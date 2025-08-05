@@ -59,9 +59,11 @@ const skillIcons: Record<SkillIconKeys, JSX.Element> = {
 };
 
 const allSkills = [
+  "Python",
+  "Django",
+  "React",
   "TypeScript",
   "JavaScript",
-  "React",
   "Next.js",
   "Node.js",
   "Express",
@@ -70,8 +72,6 @@ const allSkills = [
   "Kubernetes",
   "GraphQL",
   "Jest",
-  "Python",
-  "Django",
   "AWS",
 ];
 
