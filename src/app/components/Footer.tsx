@@ -8,7 +8,7 @@ const Footer: FC = () => {
     const { translations } = useLanguage();
 
     return (
-        <footer className="bg-gray-900 text-gray-200 py-12 md:py-16 lg:py-20">
+        <footer className="bg-gray-900 text-gray-200 pt-12 pb-8 md:pt-16 md:pb-8">
             <div className="container mx-auto px-6 md:px-8 lg:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="flex flex-col items-center md:items-start">
@@ -80,12 +80,12 @@ const Footer: FC = () => {
 
                 <hr className="my-8 border-gray-700" />
 
-                <div className="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-gray-400">
-                    <p className="mb-6 md:mb-0 text-center md:text-left">
+                <div className="flex flex-col md:flex-row items-center text-xs md:text-sm text-gray-400 text-center justify-center">
+                    <p className="text-center">
                         &copy; {new Date().getFullYear()} Lucas Oliveira. {translations.rightsReserved}.
                     </p>
 
-                    <div className="flex flex-wrap justify-center gap-4">
+                    {/* <div className="flex flex-wrap justify-center gap-4">
                         <Link href="#" className="hover:text-blue-600 transition duration-300 text-xs md:text-sm">
                             {translations.privacyPolicy}
                         </Link>
@@ -95,7 +95,7 @@ const Footer: FC = () => {
                         <Link href="#" className="hover:text-blue-600 transition duration-300 text-xs md:text-sm">
                             {translations.cookiePolicy}
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </footer>
