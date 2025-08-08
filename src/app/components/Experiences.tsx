@@ -97,7 +97,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
       </div>
 
       <div
-        className={`w-full md:p-6  py-6 px-3 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg transform ${
+        className={`w-full md:p-6  py-6 px-3 bg-gray-700 rounded-lg shadow-lg transform ${
           index % 2 === 0 ? "md:-translate-x-1" : "md:translate-x-1"
         } md:w-5/12`}
       >
@@ -106,22 +106,22 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
             src={exp.logo}
             className="rounded-full h-10 w-10 block md:hidden"
           />
-          <h3 className="sm:text-lg lg:text-xl font-semibold text-gray-800 dark:text-gray-200 mb-1 md:mb-2">
+          <h3 className="sm:text-lg lg:text-xl font-semibold text-gray-200 mb-1 md:mb-2">
             {exp.company}
           </h3>
         </div>
-        <p className="sm:text-lg md:text-md lg:text-lg text-blue-600 dark:text-blue-400">
+        <p className="sm:text-lg md:text-md lg:text-lg text-blue-400">
           {exp.role}
         </p>
 
-        <div className="text-gray-800 dark:text-gray-200 text-sm font-semibold mt-2 md:hidden">
+        <div className="text-gray-200 text-sm font-semibold mt-2 md:hidden">
           {exp.startDate} - {exp.endDate}
         </div>
 
         <div className="relative">
           <p
             ref={descriptionRef}
-            className={`md:text-base sm:text-lg text-gray-600 dark:text-gray-300 whitespace-pre-line ${
+            className={`md:text-base sm:text-lg text-gray-300 whitespace-pre-line ${
               !showMore ? "line-clamp-5" : ""
             }`}
           >
@@ -129,7 +129,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
           </p>
           {isTruncated && (
             <span
-              className="sm:text-sm md:text-md lg:text-lg text-blue-600 dark:text-blue-400 cursor-pointer hover:underline"
+              className="sm:text-sm md:text-md lg:text-lg text-blue-400 cursor-pointer hover:underline"
               onClick={() => setShowMore(!showMore)}
             >
               {showMore ? translations.readLess : translations.readMore}
@@ -152,7 +152,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
           index % 2 === 0
             ? "left-1/2 translate-x-8"
             : "right-1/2 -translate-x-8 mr-3"
-        } bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-semibold px-4 py-2 rounded-full ml-3`}
+        } bg-gray-700 text-gray-200 text-sm font-semibold px-4 py-2 rounded-full ml-3`}
       >
         {exp.startDate} - {exp.endDate}
       </div>
@@ -190,12 +190,12 @@ const ExperienceSection: FC = () => {
 
   return (
     <section
-      className="bg-gray-100 dark:bg-gray-800 py-20 md:px-5"
+      className="bg-gray-800 py-20 md:px-5"
       id="experience"
     >
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold text-gray-800 dark:text-gray-200 text-center mb-6"
+          className="text-3xl font-bold text-gray-200 text-center mb-6"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
