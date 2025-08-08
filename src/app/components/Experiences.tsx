@@ -92,7 +92,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
       </div>
 
       <div
-        className={`w-full p-6 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg transform ${
+        className={`w-full md:p-6  py-6 px-3 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg transform ${
           index % 2 === 0 ? "md:-translate-x-1" : "md:translate-x-1"
         } md:w-5/12`}
       >
