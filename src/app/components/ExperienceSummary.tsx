@@ -38,6 +38,36 @@ const ExperienceSummary: FC = () => {
         }
     }, [inView]);
 
+    const blocks = [
+        {
+            icon: <FaLaptopCode className="text-white h-8 w-8 md:h-10 md:w-10" />,
+            title: translations.ExperienceSummary.techXp.name,
+            description: hasAnimated
+                ? <CountUp end={3} duration={4} suffix={` ${translations.years}`} />
+                : `${translations.ExperienceSummary.techXp.experienceYears}`,
+            backgroundColor: "bg-blue-500",
+            textColor: "text-white",
+        },
+        {
+            icon: <FaCog className="text-white h-8 w-8 md:h-10 md:w-10" />,
+            title: translations.ExperienceSummary.webDevXp.name,
+            description: hasAnimated
+                ? <CountUp end={3} duration={4} suffix={` ${translations.years}`} />
+                : `${translations.ExperienceSummary.webDevXp.experienceYears}`,
+            backgroundColor: "bg-teal-500",
+            textColor: "text-white",
+        },
+        {
+            icon: <FaProjectDiagram className="text-white h-8 w-8 md:h-10 md:w-10" />,
+            title: translations.ExperienceSummary.services.name,
+            description: hasAnimated
+                ? <CountUp end={27} duration={4} />
+                : `${translations.ExperienceSummary.services.quantity}`,
+            backgroundColor: "bg-purple-500",
+            textColor: "text-white",
+        },
+    ];
+
     return (
         <section className="bg-gray-100 dark:bg-gray-800 py-10" id="experience-summary">
             <div className="container mx-auto px-4">
@@ -47,45 +77,16 @@ const ExperienceSummary: FC = () => {
                     </h2>
                 </div>
                 <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                    >
-                        <ExperienceBlock
-                            icon={<FaLaptopCode className="text-white h-8 w-8 md:h-10 md:w-10" />}
-                            title={translations.ExperienceSummary.techXp.name}
-                            description={hasAnimated ? <CountUp end={3} duration={4} suffix={` ${translations.years}`} /> : `${translations.ExperienceSummary.techXp.experienceYears}`}
-                            backgroundColor="bg-blue-500"
-                            textColor="text-white"
-                        />
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                    >
-                        <ExperienceBlock
-                            icon={<FaCog className="text-white h-8 w-8 md:h-10 md:w-10" />}
-                            title={translations.ExperienceSummary.webDevXp.name}
-                            description={hasAnimated ? <CountUp end={3} duration={4} suffix={` ${translations.years}`} /> : `${translations.ExperienceSummary.webDevXp.experienceYears}`}
-                            backgroundColor="bg-teal-500"
-                            textColor="text-white"
-                        />
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                    >
-                        <ExperienceBlock
-                            icon={<FaProjectDiagram className="text-white h-8 w-8 md:h-10 md:w-10" />}
-                            title={translations.ExperienceSummary.services.name}
-                            description={hasAnimated ? <CountUp end={27} duration={4} /> : `${translations.ExperienceSummary.services.quantity}`}
-                            backgroundColor="bg-purple-500"
-                            textColor="text-white"
-                        />
-                    </motion.div>
+                    {blocks.map((block, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+                            transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.5 }}
+                        >
+                            <ExperienceBlock {...block} />
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>
