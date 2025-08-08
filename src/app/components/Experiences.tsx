@@ -3,6 +3,7 @@ import { FC, useState, useRef, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { motion } from "framer-motion";
 import { techColors } from "./techTags";
+import { useInView } from "react-intersection-observer";
 
 const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
   const [showAllTechs, setShowAllTechs] = useState(false);
@@ -10,6 +11,10 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
   const [isTruncated, setIsTruncated] = useState(false);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
   const { translations } = useLanguage();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.6,
+  });
 
   const toggleTechStack = () => {
     setShowAllTechs(!showAllTechs);
@@ -73,13 +78,13 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
 
   return (
     <motion.li
-      key={index}
+      ref={ref}
       className={`flex ${
         index % 2 === 0 ? "justify-start" : "justify-end"
       } relative`}
-      initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.3 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
     >
       <div className="absolute left-1/2 transform -translate-x-1/2 bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center">
         {exp.logo && (
@@ -169,7 +174,7 @@ const ExperienceSection: FC = () => {
       const windowHeight = window.innerHeight;
 
       const visible = Math.min(
-        Math.max(windowHeight - rect.top -500, 0),
+        Math.max(windowHeight - rect.top - 500, 0),
         rect.height
       );
       setFillHeight(visible);
