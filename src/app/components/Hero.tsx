@@ -111,9 +111,9 @@ const HeroSection: FC = () => {
 
   return (
     <section className="bg-gray-50 dark:bg-gray-800 py-20 mt-3 md:mt-10">
-      <div className="container mx-auto flex flex-col md:flex-row items-center">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center">
         {/* <div className='h-full w-1/3 bg-yellow-400 absolute top-0 -z-1 clip-right-triangle'></div> */}
-        <div className="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center">
+        <div className="w-full lg:w-1/2 mb-10 md:mb-0 flex flex-col items-center">
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full border-2 border-transparent -z-10"></div>
             <Image
@@ -149,7 +149,7 @@ const HeroSection: FC = () => {
               <FaEnvelope className="h-8 w-8" />
             </a>
           </div>
-          <div className="flex flex-col md:flex-row mt-8 gap-4">
+          <div className="flex flex-col lg:flex-row mt-8 gap-4">
             <a
               href="#"
               onClick={handleGetInTouchButtonClick}
@@ -171,19 +171,19 @@ const HeroSection: FC = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 text-center md:text-left">
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h1 className="text-4xl md:text-6xl font-bold text-blue-600 dark:text-yellow-400">
             <span>{"I'm Lucas"}</span> Oliveira.
           </h1>
 
-          <hr className="my-4 border-t-4 border-blue-600 dark:border-yellow-400 mx-auto md:mx-0 w-24" />
+          <hr className="my-4 border-t-4 border-blue-600 dark:border-yellow-400 mx-auto lg:mx-0 w-24" />
 
           <h2 className="text-xl md:text-4xl font-bold text-gray-600 dark:text-gray-200 mt-4">
             {text}
             <Cursor cursorStyle="|" />
           </h2>
 
-          <p className="max-w-lg text-gray-700 dark:text-gray-300 mt-6 text-base sm:text-lg md:text-xl">
+          <p className="max-w-5/5 lg:max-w-lg text-gray-700 dark:text-gray-300 mt-6 text-base sm:text-lg md:text-xl">
             {translations.heroDescription}
           </p>
 
