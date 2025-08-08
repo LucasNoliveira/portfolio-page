@@ -65,7 +65,7 @@ const ContactSection: FC = () => {
                     >
                         <FaPhoneAlt className="text-blue-600 text-3xl md:text-4xl mr-4" />
                         <div>
-                            <p className="text-gray-800 dark:text-gray-200 text-lg md:text-xl font-semibold">{translations.phoneLabel}</p>
+                            <p className="text-gray-800 dark:text-gray-200 text-lg md:text-xl sm:text-lg font-semibold hidden sm:inline md:inline">{translations.phoneLabel}</p>
                             <p className="text-gray-800 dark:text-gray-200 text-sm md:text-base">+55 (11) 972571089</p>
                         </div>
                     </motion.div>
@@ -78,7 +78,7 @@ const ContactSection: FC = () => {
                     >
                         <FaEnvelope className="text-blue-600 text-3xl md:text-4xl mr-4" />
                         <div>
-                            <p className="text-gray-800 dark:text-gray-200 text-lg md:text-xl font-semibold">{translations.emailLabel}</p>
+                            <p className="text-gray-800 dark:text-gray-200 text-lg md:text-xl sm:text-lg font-semibold hidden sm:inline md:inline">{translations.emailLabel}</p>
                             <p className="text-gray-800 dark:text-gray-200 text-sm md:text-base">lucasnoliveira126@gmail.com</p>
                         </div>
                     </motion.div>
@@ -91,7 +91,7 @@ const ContactSection: FC = () => {
                     >
                         <FaMapMarkerAlt className="text-blue-600 text-3xl md:text-4xl mr-4" />
                         <div>
-                            <p className="text-gray-800 dark:text-gray-200 text-lg md:text-xl font-semibold">{translations.locationLabel}</p>
+                            <p className="text-gray-800 dark:text-gray-200 text-lg md:text-xl sm:text-lg font-semibold hidden sm:inline md:inline">{translations.locationLabel}</p>
                             <p className="text-gray-800 dark:text-gray-200 text-sm md:text-base">São Paulo, SP</p>
                         </div>
                     </motion.div>

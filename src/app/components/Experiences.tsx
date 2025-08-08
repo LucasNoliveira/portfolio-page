@@ -101,11 +101,11 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
             src={exp.logo}
             className="rounded-full h-10 w-10 block md:hidden"
           />
-          <h3 className="text-md md:text-lg lg:text-xl font-semibold text-gray-800 dark:text-gray-200 mb-1 md:mb-2">
+          <h3 className="sm:text-lg lg:text-xl font-semibold text-gray-800 dark:text-gray-200 mb-1 md:mb-2">
             {exp.company}
           </h3>
         </div>
-        <p className="text-sm md:text-md lg:text-lg text-blue-600 dark:text-blue-400">
+        <p className="sm:text-lg md:text-md lg:text-lg text-blue-600 dark:text-blue-400">
           {exp.role}
         </p>
 
@@ -116,7 +116,7 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
         <div className="relative">
           <p
             ref={descriptionRef}
-            className={`text-sm md:text-base text-gray-600 dark:text-gray-300 whitespace-pre-line ${
+            className={`md:text-base sm:text-lg text-gray-600 dark:text-gray-300 whitespace-pre-line ${
               !showMore ? "line-clamp-5" : ""
             }`}
           >

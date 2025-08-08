@@ -75,18 +75,18 @@ const Header: React.FC = () => {
   return (
     <header className="bg-gray-50 dark:bg-gray-800 fixed w-full z-10 top-0 left-0">
       <div className="container mx-auto flex justify-between items-center px-5 relative">
-        <Link href="/" className="flex items-center space-x-2">
-          <img src={logoSrc} alt="Logo" className="h-20" />
+        <Link href="/">
+          <img src={logoSrc} alt="Logo" className="h-20 relative -left-5" />
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 items-center mx-auto dark:border-gray-700 rounded-full p-1 px-8">
-          <Link
+          {/* <Link
             href="/"
             className="font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center"
           >
             {translations.home}
-          </Link>
+          </Link> */}
           <Link
             href="/about"
             className="font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center"
@@ -287,7 +287,7 @@ const Header: React.FC = () => {
               : "opacity-0 duration-500 ease-out"
           }`}
         >
-          <Link
+          {/* <Link
             href="/"
             onClick={toggleMenu}
             className="font-bold text-xl text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center"
@@ -297,7 +297,7 @@ const Header: React.FC = () => {
               className="h-5 w-5 mr-2"
             />
             {translations.home}
-          </Link>
+          </Link> */}
           <Link
             href="/about"
             onClick={toggleMenu}

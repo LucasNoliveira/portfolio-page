@@ -100,7 +100,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ service, isInView, index }) => {
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 dark:text-gray-200">
                         {title}
                     </h3>
-                    <p className="text-gray-800 dark:text-gray-300 mt-2 text-sm sm:text-base lg:text-lg">
+                    <p className="text-gray-800 dark:text-gray-300 mt-2 text-sm sm:text-lg lg:text-lg">
                         {description}
                     </p>
                     <motion.button
