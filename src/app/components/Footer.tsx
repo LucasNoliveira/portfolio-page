@@ -36,7 +36,7 @@ const Footer: FC = () => {
                     </div>
 
                     <div className="flex flex-col items-center md:items-start">
-                        <h3 className="text-lg font-semibold mb-4">{translations.contactUs}</h3>
+                        <h3 className="text-lg font-semibold mb-4">{translations.contactMe}</h3>
                         <ul className="space-y-2 text-lg md:text-base">
                             <li className="flex items-center">
                                 <FaEnvelope className="text-teal-500 mr-2" />
@@ -47,16 +47,10 @@ const Footer: FC = () => {
                         </ul>
                         <div className="flex space-x-4 mt-6">
                             <a
-                                href="#"
-                                aria-label="Twitter"
-                                className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
-                            >
-                                <FaTwitter className="h-5 w-5 md:h-6 md:w-6" />
-                            </a>
-                            <a
                                 href="https://www.linkedin.com/in/lucasnevesoliveira"
                                 aria-label="LinkedIn"
                                 className="text-gray-400 hover:text-blue-600 transition-colors duration-300"
+                                target='blank_'
                             >
                                 <FaLinkedin className="h-5 w-5 md:h-6 md:w-6" />
                             </a>
@@ -64,13 +58,15 @@ const Footer: FC = () => {
                                 href="https://github.com/lucasnoliveira"
                                 aria-label="GitHub"
                                 className="text-gray-400 hover:text-white transition-colors duration-300"
+                                target='blank_'
                             >
                                 <FaGithub className="h-5 w-5 md:h-6 md:w-6" />
                             </a>
                             <a
-                                href="https://instagram.com/lucas127"
+                                href="https://instagram.com/luc.as_oliveira_"
                                 aria-label="Instagram"
                                 className="text-gray-400 hover:text-pink-500 transition-colors duration-300"
+                                target='blank_'
                             >
                                 <FaInstagram className="h-5 w-5 md:h-6 md:w-6" />
                             </a>

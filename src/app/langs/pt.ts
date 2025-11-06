@@ -310,7 +310,7 @@ experiences: [
   scheduleMeeting: "Agendar Reunião",
   elevatingYourWebXp: "Elevando sua experiência web com tecnologia de ponta e design elegante.",
   quickLinks: "Links Rápidos",
-  contactUs: "Entre em contato",
+  contactMe: "Entre em contato",
   rightsReserved: "Direitos Reservados",
   privacyPolicy: "Política de Privacidade",
   termsOfService: "Termos de Serviço",

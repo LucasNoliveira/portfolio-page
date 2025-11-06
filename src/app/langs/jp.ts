@@ -336,7 +336,7 @@ export const jp = {
   elevatingYourWebXp:
     "最先端の技術と洗練されたデザインで、あなたのウェブ体験を向上させます。",
   quickLinks: "クイックリンク",
-  contactUs: "お問い合わせ",
+  contactMe: "お問い合わせ",
   rightsReserved: "全著作権所有",
   privacyPolicy: "プライバシーポリシー",
   termsOfService: "利用規約",

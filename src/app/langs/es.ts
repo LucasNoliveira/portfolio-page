@@ -329,7 +329,7 @@ export const es = {
   elevatingYourWebXp:
     "Elevando tu experiencia web con tecnología de vanguardia y diseño elegante.",
   quickLinks: "Enlaces Rápidos",
-  contactUs: "Contáctanos",
+  contactMe: "Contáctanos",
   rightsReserved: "Derechos Reservados",
   privacyPolicy: "Política de Privacidad",
   termsOfService: "Términos de Servicio",

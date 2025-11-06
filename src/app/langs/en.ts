@@ -336,7 +336,7 @@ export const en = {
   elevatingYourWebXp:
     "Elevating your web experience with cutting-edge technology and elegant design.",
   quickLinks: "Quick Links",
-  contactUs: "Contact Us",
+  contactMe: "Contact Me",
   rightsReserved: "Rights Reserved",
   privacyPolicy: "Privacy Policy",
   termsOfService: "Terms of Service",
