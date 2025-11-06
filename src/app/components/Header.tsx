@@ -105,12 +105,12 @@ const Header: React.FC = () => {
           >
             {translations.services}
           </Link>
-          <Link
+          {/* <Link
             href="/projects"
             className="font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center"
           >
             {translations.projects}
-          </Link>
+          </Link> */}
           <Link
             href="/contact"
             className="font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center"
@@ -331,7 +331,7 @@ const Header: React.FC = () => {
             />{" "}
             {translations.services}
           </Link>
-          <Link
+          {/* <Link
             href="/projects"
             onClick={toggleMenu}
             className="font-bold text-xl text-gray-800 dark:text-gray-300 hover:text-blue-600 transition duration-300 flex items-center"
@@ -341,7 +341,7 @@ const Header: React.FC = () => {
               className="h-5 w-5 mr-2"
             />{" "}
             {translations.projects}
-          </Link>
+          </Link> */}
           <Link
             href="/contact"
             onClick={toggleMenu}

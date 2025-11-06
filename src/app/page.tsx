@@ -40,7 +40,7 @@ const Home: NextPage = () => {
                 <ExperienceSummary />
                 <ExperienceSection />
                 <ServicesSection />
-                <ProjectsSection />
+                {/* <ProjectsSection /> */}
                 <ContactSection />
                 <ScrollToTopButton />
                 {showPopup && <WelcomePopup />}
