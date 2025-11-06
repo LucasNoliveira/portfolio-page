@@ -102,7 +102,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
       const storedLanguage = localStorage.getItem('language') as Language | null;
       return storedLanguage || getBrowserLanguage();
     }
-    return 'EN'; // Valor padrão se for SSR
+    return 'EN';
   });
 
   useEffect(() => {

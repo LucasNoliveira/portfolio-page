@@ -1,4 +1,4 @@
-"use client";
+
 import { FC, useState, useRef, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { motion } from "framer-motion";

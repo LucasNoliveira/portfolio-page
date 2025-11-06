@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import HeroSection from "./components/Hero";
 import AboutSection from "./components/About";
-import './globals.css'
-import { LanguageProvider } from './context/LanguageContext';
-import { ThemeProvider } from './context/themeContext';
+import "./globals.css";
+import { LanguageProvider } from "./context/LanguageContext";
+import { ThemeProvider } from "./context/themeContext";
 import ExperienceSection from "./components/Experiences";
 import ProjectsSection from "./components/ProjectsSection";
 import WelcomePopup from "./components/WelcomePopup";
@@ -18,37 +18,37 @@ import Footer from "./components/Footer";
 import ContactSection from "./components/Contact";
 
 const Home: NextPage = () => {
-    const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setShowPopup(true);
-        }, 2000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 2000);
 
-        return () => clearTimeout(timer);
-    }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-    return (
-        <div>
-            <ThemeProvider>
-            <LanguageProvider>
-                <Header />
-                <main>
-                    <HeroSection />
-                </main>
-                <AboutSection />
-                <ExperienceSummary />
-                <ExperienceSection />
-                <ServicesSection />
-                {/* <ProjectsSection /> */}
-                <ContactSection />
-                <ScrollToTopButton />
-                {showPopup && <WelcomePopup />}
-                <Footer />
-            </LanguageProvider>
-            </ ThemeProvider>
-        </div>
-    );
+  return (
+    <>
+      <ThemeProvider>
+        <LanguageProvider>
+          <Header />
+          <main>
+            <HeroSection />
+            <AboutSection />
+            <ExperienceSummary />
+            <ExperienceSection />
+            <ServicesSection />
+            {/* <ProjectsSection /> */}
+            <ContactSection />
+          </main>
+          <ScrollToTopButton />
+          {showPopup && <WelcomePopup />}
+          <Footer />
+        </LanguageProvider>
+      </ThemeProvider>
+    </>
+  );
 };
 
 export default Home;
